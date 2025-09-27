@@ -263,7 +263,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
               </div>
             </div>
 
-            {/* TransUnion.com Redesign */}
+            {/* Atom Manager Redesign */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
@@ -284,24 +284,24 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
               </div>
             </div>
 
-            {/* Aramark Redesign */}
+            {/* ZS SaaS product Redesign */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
                 <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png" 
-                  alt="Aramark Redesign" 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/ZS-Deployment.png" 
+                  alt="ZS SaaS Redesign" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Aramark Redesign
+                  ZS SaaS Product
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Focused on users, we redesigned Aramark's site with clear navigation, bold visuals, and storytelling that showcased their services while staying true to their brand pillars.
+                  I spent eight years helping ZS transform their SaaS deployment platform—advocating for a modern design system and shaping user-focused experiences that aligned client needs with business goals.
                 </p>
               </div>
             </div>

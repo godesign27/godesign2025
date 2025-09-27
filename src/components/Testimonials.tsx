@@ -52,12 +52,12 @@ const Testimonials: React.FC = () => {
                 AC
               </div>
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-900 dark:text-white">Ginman Bia</h4>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Ginmann Bia</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Experience Director</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              "As a tech-oriented member of our team responsible for UI/UX decision from scratch. Even when things got complex, they remained dedicated to delivering a professional, future-proof solution. We had a wonderful customer experience through complex design phases."
+              "Tim was such a valuable member of our team because of his ability to adapt. Even when things were vague, he was able to come to the table with fresh, innovative ideas expressed through cleanly designed mockups and prototypes at exactly the right level of detail. He has a relentless customer service mindset, listening earnestly and responding to client needs, while maintaining a solid foundation in UX principles. He brings a humility and warmth to every project that is so hard to find these days. I recommend Tim for your next UX project."
             </p>
             <div className="flex text-yellow-400">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

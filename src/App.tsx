@@ -74,11 +74,11 @@ function App() {
         return <MobileWebDesign setCurrentPage={setCurrentPage} />;
       case 'solutions':
         if (selectedCaseStudy === 'CoreTechs SaaS Healthcare Product') {
-          return <CaseStudyDetail setCurrentPage={setCurrentPage} />;
+          return <CaseStudyDetail setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
         } else if (selectedCaseStudy === 'Accenture - Employee Onboarding') {
-          return <CaseStudyDetail2 setCurrentPage={setCurrentPage} />;
+          return <CaseStudyDetail2 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
         } else if (selectedCaseStudy === 'Jim Beam - The Cocktail Project') {
-          return <CaseStudyDetail3 setCurrentPage={setCurrentPage} />;
+          return <CaseStudyDetail3 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
         } else {
           return (
             <Solutions 

@@ -4,10 +4,16 @@ import ImageWithSkeleton from './ui/ImageWithSkeleton';
 
 interface CaseStudyDetailProps {
   setCurrentPage: (page: string) => void;
+  setSelectedCaseStudy: (study: string | null) => void;
 }
 
-const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage }) => {
+const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSelectedCaseStudy }) => {
   const handleBackClick = () => {
+    // Scroll to top first
+    window.scrollTo(0, 0);
+    // Clear the selected case study first
+    setSelectedCaseStudy(null);
+    // Then navigate back to solutions
     setCurrentPage('solutions');
   };
 
@@ -20,10 +26,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage }) => 
           {/* Back to Solutions Button */}
           <div className="py-4">
             <button
-              onClick={() => {
-                window.scrollTo(0, 0);
-                setCurrentPage('solutions');
-              }}
+              onClick={handleBackClick}
               className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
             >
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

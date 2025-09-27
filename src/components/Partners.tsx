@@ -7,27 +7,28 @@ const Partners: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {/* Partner logos */}
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" alt="Accenture" className="h-8 object-contain dark:invert" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/accenture-white.svg" alt="Accenture" className="h-8 object-contain hidden dark:block" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" alt="Accenture" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Transunion_Logo.svg" alt="TransUnion" className="h-8 object-contain dark:invert" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/transunion-white.svg" alt="TransUnion" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/transunion.svg" alt="TransUnion" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Squarespace_Logo_2014.svg" alt="Squarespace" className="h-7 object-contain dark:invert" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/sapient-white.svg" alt="Sapient Nitro" className="h-7 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/sapientnitro_logo%201.png" alt="Sapient Nitro" className="h-7 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Logo_FCB_New.svg" alt="FCB" className="h-7 object-contain dark:invert" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/FCB-white.svg" alt="FCB" className="h-7 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/FCB_Logo_Black_RGB%201.svg" alt="FCB" className="h-7 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Agitate_Solutions_logo.svg" alt="Agitate" className="h-8 object-contain dark:invert" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/Agate-white.svg" alt="Agate Software" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/Agate.svg" alt="Agate Software" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-8 object-contain hidden dark:block" viewBox="0 0 80 40" fill="currentColor">
-              <text x="10" y="25" className="text-xl font-bold">ZS</text>
-            </svg>
-            <svg className="h-8 object-contain dark:hidden" viewBox="0 0 80 40" fill="currentColor">
-              <text x="10" y="25" className="text-xl font-bold">ZS</text>
-            </svg>
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/ZS-white.svg" alt="ZS" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/ZS.svg" alt="ZS" className="h-8 object-contain dark:hidden" />
           </div>
         </div>
 

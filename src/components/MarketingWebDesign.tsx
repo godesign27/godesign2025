@@ -288,7 +288,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                   SaaS
                 </span>
                 <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png" 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atomanger-web-design.png" 
                   alt="Atom Manager Redesign" 
                   className="w-full h-full object-contain"
                 />

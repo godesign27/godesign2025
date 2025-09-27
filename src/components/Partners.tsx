@@ -7,44 +7,19 @@ const Partners: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {/* Partner logos */}
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-8 object-contain hidden dark:block" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">Accenture</text>
-            </svg>
-            <svg className="h-8 object-contain dark:hidden" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">Accenture</text>
-            </svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" alt="Accenture" className="h-8 object-contain dark:invert" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-8 object-contain hidden dark:block" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">TransUnion</text>
-            </svg>
-            <svg className="h-8 object-contain dark:hidden" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">TransUnion</text>
-            </svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Transunion_Logo.svg" alt="TransUnion" className="h-8 object-contain dark:invert" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-7 object-contain hidden dark:block" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-base font-semibold">Sapient Nitro</text>
-            </svg>
-            <svg className="h-7 object-contain dark:hidden" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-base font-semibold">Sapient Nitro</text>
-            </svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Squarespace_Logo_2014.svg" alt="Squarespace" className="h-7 object-contain dark:invert" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-7 object-contain hidden dark:block" viewBox="0 0 120 40" fill="currentColor">
-              <text x="10" y="25" className="text-xl font-bold">FCB</text>
-            </svg>
-            <svg className="h-7 object-contain dark:hidden" viewBox="0 0 120 40" fill="currentColor">
-              <text x="10" y="25" className="text-xl font-bold">FCB</text>
-            </svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Logo_FCB_New.svg" alt="FCB" className="h-7 object-contain dark:invert" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <svg className="h-8 object-contain hidden dark:block" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">Agate Software</text>
-            </svg>
-            <svg className="h-8 object-contain dark:hidden" viewBox="0 0 200 40" fill="currentColor">
-              <text x="10" y="25" className="text-lg font-semibold">Agate Software</text>
-            </svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Agitate_Solutions_logo.svg" alt="Agitate" className="h-8 object-contain dark:invert" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
             <svg className="h-8 object-contain hidden dark:block" viewBox="0 0 80 40" fill="currentColor">

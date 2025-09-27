@@ -20,7 +20,7 @@ const Testimonials: React.FC = () => {
               </div>
               <div className="ml-4">
                 <h4 className="font-semibold text-gray-900 dark:text-white">Linda Corsey</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">VP Digital Director</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">VP Program Management</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">

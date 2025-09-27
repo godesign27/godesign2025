@@ -11,7 +11,7 @@ const Partners: React.FC = () => {
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" alt="Accenture" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/transunion-white.svg" alt="TransUnion" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/client-logos-reverse/TransUnion-logo-reverse.png" alt="TransUnion" className="h-8 object-contain hidden dark:block" />
             <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/transunion.svg" alt="TransUnion" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">

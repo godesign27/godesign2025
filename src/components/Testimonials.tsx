@@ -90,7 +90,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              "The TransUnion team completely revamped our user experience and created a great experience. The willingness to listen to our needs, to dive deep into our customers' challenges, and to think outside the box resulted in a UX overhaul that has driven measurable results for us."
+              "Tim is an impressive designer. Tim understands our underlying interest and creates a user experience that serves us even better than what we had been envisioning. I think this is because Tim has strong business acumen in addition to expert creative skills. He is also a pleasure to work with and always punctual and responsive. Finally, he is one of the few designers I have met who offers true customization -- he has never had any problem revising his work or completely shifting the user experience to accommodate new requests. Tim's work has been extremely profitable for us. It is my pleasure to give Tim my strongest recommendation."
             </p>
             <div className="flex text-yellow-400">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

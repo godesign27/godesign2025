@@ -175,20 +175,20 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
-                  Autmotive
+                  Automotive
                 </span>
                 <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture.png"
-                  alt="Accenture Onboarding Redesign" 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Mopar-web-design.png"
+                  alt="Mopar Redesign" 
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Accenture - Onboarding Redesign
+                  Mopar Redesign
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Redesigned Accenture's onboarding site to create a welcoming first impression. Provided clear, timely info to help new hires prepare for their start date and strengthen their connection to the company.
+                  A Redesigned the Mopar.com website using bold type and photography to energize this audience.
                 </p>
               </div>
             </div>

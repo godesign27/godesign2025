@@ -19,7 +19,7 @@ const Partners: React.FC = () => {
             <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/sapientnitro_logo%201.png" alt="Sapient Nitro" className="h-7 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/FCB-white.svg" alt="FCB" className="h-7 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/client-logos-reverse/fcb-reverse.png" alt="FCB" className="h-7 object-contain hidden dark:block" />
             <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/FCB_Logo_Black_RGB%201.svg" alt="FCB" className="h-7 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">

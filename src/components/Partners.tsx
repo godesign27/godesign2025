@@ -7,7 +7,7 @@ const Partners: React.FC = () => {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
           {/* Partner logos */}
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/client-logos-reverse/Accenture-Logo-reverse.svg" alt="Accenture" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/client-logos-reverse/Accenture-Logo-reverse%20(1).svg" alt="Accenture" className="h-8 object-contain hidden dark:block" />
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Accenture.svg" alt="Accenture" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">

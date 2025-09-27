@@ -258,7 +258,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                   UL SaaS Tool
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  A Redesigned the Mopar.com website using bold type and photography to energize this audience.
+                  An MVP Design for UL Clients to assess product leaks.
                 </p>
               </div>
             </div>

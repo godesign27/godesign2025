@@ -270,14 +270,13 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                   Government
                 </span>
                 <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png" 
-                  alt="TransUnion.com Redesign" 
-                  className="w-full h-full object-contain"
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png" 
+                  alt="Atom Manager full object-contain"
                 />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  TransUnion Redesign
+                  Atom Manager SaaS Application Tool
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
                   Designed a responsive, user-friendly site that works seamlessly on desktop and mobile. We transformed the experience to focus on what users need, rather than just how the business operates.

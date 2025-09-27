@@ -252,6 +252,147 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
         </div>
       </section>
 
+      {/* Design Solutions Grid */}
+      <section className="py-20 bg-gray-100 dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">A Sample of Design Solutions</h2>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Mopar Redesign */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  Automotive
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Mopar-web-design.png"
+                  alt="Mopar Redesign" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Mopar Redesign
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  A Redesigned the Mopar.com website using bold type and photography to energize this audience.
+                </p>
+              </div>
+            </div>
+
+            {/* TransUnion.com Redesign */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  Enterprise
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png" 
+                  alt="TransUnion.com Redesign" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  TransUnion Redesign
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  Designed a responsive, user-friendly site that works seamlessly on desktop and mobile. We transformed the experience to focus on what users need, rather than just how the business operates.
+                </p>
+              </div>
+            </div>
+
+            {/* Aramark Redesign */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  Enterprise
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png" 
+                  alt="Aramark Redesign" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Aramark Redesign
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  Focused on users, we redesigned Aramark's site with clear navigation, bold visuals, and storytelling that showcased their services while staying true to their brand pillars.
+                </p>
+              </div>
+            </div>
+
+            {/* Chrysler Redesign */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  Automotive
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Chrysler-web-design.png" 
+                  alt="Chrysler Redesign" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Chrysler Redesign
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  We reimagined Chrylser's site with user-first design, reorganizing content to match user needs. Bold typography, dynamic photography, and rich storytelling highlighted services and aligned with brand strategy.
+                </p>
+              </div>
+            </div>
+
+            {/* Accenture - Leave of Absence */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  HR Solutions
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture-employeeleave.png" 
+                  alt="Accenture Leave of Absence" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Accenture - Leave of Absence
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  We redesigned Accenture's leave of absence experience with a responsive, user-centered solution, creating custom design patterns for a consistent and engaging experience on all devices.
+                </p>
+              </div>
+            </div>
+
+            {/* Atom Manager Web Redesign */}
+            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+              <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                  FinTech
+                </span>
+                <img 
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atomanger-web-design.png" 
+                  alt="Atom Manager Redesign" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Atom Manager Redesign
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  I reimagined the Atom Manager marketing site, designing a new logo and a CRM form flow that integrates with the SaaS dashboard for lead generation. The responsive design ensured a seamless user experience across devices.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-teal-400 via-blue-500 to-purple-600 dark:from-teal-900 dark:via-blue-900 dark:to-purple-900"></div>

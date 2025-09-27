@@ -24,7 +24,7 @@ const Testimonials: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              "FCB has worked with a lot of agencies before, so when we say this was the best partner we've ever had, it means something. They understood our complex needs for UI design and delivered a seamless experience. Their approach was methodical, yet efficient, high quality creative."
+              "Tim is at the top of my list of UX/Creative leads to work with. He was the Creative lead for 2+ years on a program of brands for Fiat Chrysler Automobiles that we worked on. Tim seamlessly transitions between strategic concept development, complex UX projects, and efficient, high-quality creative production. He's one of the smartest, most reliable, professional, efficient, and pleasant people I've had the pleasure of working with; so much so that I've recommended him to my current agency for a few high-profile, large-scale website redesign projects for international brands. I look forward to an opportunity to work with Tim again in the future. Highly recommend."
             </p>
             <div className="flex text-yellow-400">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">

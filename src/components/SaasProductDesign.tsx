@@ -258,7 +258,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                   UL SaaS Tool
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  An MVP Design for UL Clients to assess product leaks.
+                  An MVP Design for UL Clients to perform compliance analysis.
                 </p>
               </div>
             </div>

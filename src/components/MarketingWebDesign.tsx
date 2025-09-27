@@ -168,7 +168,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
       {/* Design Solutions Grid */}
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">More Design Solutions</h2>
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">A Sample of Design Solutions</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Accenture - Onboarding Redesign */}

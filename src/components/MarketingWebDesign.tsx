@@ -15,6 +15,11 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
     setCurrentPage('contact');
   };
 
+  const handleSolutionsClick = () => {
+    window.scrollTo(0, 0);
+    setCurrentPage('solutions');
+  };
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section with Breadcrumb */}

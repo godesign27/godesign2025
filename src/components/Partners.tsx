@@ -27,7 +27,7 @@ const Partners: React.FC = () => {
             <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/Agate.svg" alt="Agate Software" className="h-8 object-contain dark:hidden" />
           </div>
           <div className="grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all">
-            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/ZS-white.svg" alt="ZS" className="h-8 object-contain hidden dark:block" />
+            <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/client-logos-reverse/ZS.svg" alt="ZS" className="h-8 object-contain hidden dark:block" />
             <img src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/ZS.svg" alt="ZS" className="h-8 object-contain dark:hidden" />
           </div>
         </div>

@@ -52,8 +52,8 @@ const Testimonials: React.FC = () => {
                 AC
               </div>
               <div className="ml-4">
-                <h4 className="font-semibold text-gray-900 dark:text-white">Damian Bell</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Product Lead</p>
+                <h4 className="font-semibold text-gray-900 dark:text-white">Doa Boyle</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">VP Product</p>
               </div>
             </div>
             <p className="text-gray-600 dark:text-gray-300 mb-4">

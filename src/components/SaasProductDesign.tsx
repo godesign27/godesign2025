@@ -248,7 +248,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                   Enterprise
                 </span>
                 <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Mopar-web-design.png"
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Ion-SaaS-design.png"
                   alt="Mopar Redesign" 
                   className="w-full h-full object-contain"
                 />

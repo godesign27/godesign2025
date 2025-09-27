@@ -279,7 +279,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                   Atom Manager SaaS Application Tool
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm">
-                  Designed a responsive, user-friendly site that works seamlessly on desktop and mobile. We transformed the experience to focus on what users need, rather than just how the business operates.
+                  Redesign Designed a user-friendly SaaS tool. We transformed the experience to focus on what users need, rather than just how the business operates.
                 </p>
               </div>
             </div>

@@ -8,7 +8,7 @@ interface SuccessStoriesProps {
 const SuccessStories: React.FC<SuccessStoriesProps> = ({ setCurrentPage, setSelectedCaseStudy }) => {
   const handleCaseStudyClick = () => {
     window.scrollTo(0, 0);
-    setSelectedCaseStudy('Accenture - Employee Onboarding');
+    setSelectedCaseStudy('CoreTechs SaaS Healthcare Product');
     setCurrentPage('solutions');
   };
 

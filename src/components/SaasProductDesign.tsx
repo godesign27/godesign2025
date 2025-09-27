@@ -288,7 +288,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
-                  Enterprise
+                  Healthcare
                 </span>
                 <img 
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/ZS-Deployment.png" 

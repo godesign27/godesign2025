@@ -17,6 +17,21 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage }) => 
       <section className="relative pt-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Back to Solutions Button */}
+          <div className="py-4">
+            <button
+              onClick={() => {
+                window.scrollTo(0, 0);
+                setCurrentPage('solutions');
+              }}
+              className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to Solutions
+            </button>
+          </div>
         
           <div className="py-2">
             <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white tracking-tight mb-6">

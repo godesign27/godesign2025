@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Clock, Calendar } from 'lucide-react';
+import { Mail, Phone, Clock, Calendar } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,18 +45,9 @@ const Contact: React.FC = () => {
             <h1 className="text-5xl md:text-7xl text-white mb-6">
               Let's Create<br />Something Together.
             </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <p className="text-xl text-white/90">
               Ready to transform your digital presence? We're here to help bring your vision to life. Tell us about your project, and we'll get back to you within 24 hours.
             </p>
-            <a
-              href="https://cal.com/timothy-mcguire-27"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center space-x-2 bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              <Calendar className="w-5 h-5" />
-              <span>Schedule a Meeting</span>
-            </a>
           </div>
         </div>
       </section>
@@ -81,11 +72,11 @@ const Contact: React.FC = () => {
 
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-brand-600 dark:text-brand-400" />
+                  <Phone className="w-6 h-6 text-brand-600 dark:text-brand-400" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">Location</h3>
-                  <p className="mt-1 text-gray-600 dark:text-gray-300">Chicago, IL</p>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white">Phone</h3>
+                  <p className="mt-1 text-gray-600 dark:text-gray-300">(773) 724-0473</p>
                 </div>
               </div>
 
@@ -98,6 +89,16 @@ const Contact: React.FC = () => {
                   <p className="mt-1 text-gray-600 dark:text-gray-300">Monday - Friday, 9am - 5pm CST</p>
                 </div>
               </div>
+
+              <a
+                href="https://cal.com/timothy-mcguire-27"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-teal-500 to-blue-600 text-white font-semibold px-6 py-3 rounded-lg hover:from-teal-600 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                <Calendar className="w-5 h-5" />
+                <span>Schedule a Meeting</span>
+              </a>
             </div>
 
             {/* Contact Form */}

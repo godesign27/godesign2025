@@ -147,15 +147,56 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-                    Message *
+                  <label htmlFor="project_type" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    Project Type *
+                  </label>
+                  <select
+                    id="project_type"
+                    name="project_type"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors appearance-none cursor-pointer"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>Select a project type</option>
+                    <option value="Marketing Website Design">Marketing Website Design</option>
+                    <option value="Mobile/Web App Design">Mobile/Web App Design</option>
+                    <option value="SaaS Product Design">SaaS Product Design</option>
+                    <option value="E-commerce Design">E-commerce Design</option>
+                    <option value="Brand Identity">Brand Identity</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="budget_range" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    Budget Range
+                  </label>
+                  <select
+                    id="budget_range"
+                    name="budget_range"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors appearance-none cursor-pointer"
+                    defaultValue=""
+                  >
+                    <option value="" disabled>Select a budget range</option>
+                    <option value="Under $5,000">Under $5,000</option>
+                    <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+                    <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+                    <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+                    <option value="$50,000+">$50,000+</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="project_details" className="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+                    Project Details *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="project_details"
+                    name="project_details"
                     rows={6}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors resize-none"
+                    placeholder="Tell us about your project, timeline, and any specific requirements..."
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:ring-2 focus:ring-brand-500 focus:border-transparent transition-colors resize-none"
                   ></textarea>
                 </div>
 

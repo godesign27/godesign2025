@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin, Clock, Calendar } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,9 +45,18 @@ const Contact: React.FC = () => {
             <h1 className="text-5xl md:text-7xl text-white mb-6">
               Let's Create<br />Something Together.
             </h1>
-            <p className="text-xl text-white/90">
+            <p className="text-xl text-white/90 mb-8">
               Ready to transform your digital presence? We're here to help bring your vision to life. Tell us about your project, and we'll get back to you within 24 hours.
             </p>
+            <a
+              href="https://cal.com/timothy-mcguire-27"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center space-x-2 bg-white text-blue-600 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <Calendar className="w-5 h-5" />
+              <span>Schedule a Meeting</span>
+            </a>
           </div>
         </div>
       </section>

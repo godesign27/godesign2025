@@ -27,16 +27,6 @@ function App() {
   React.useEffect(() => {
     // Update document title
     document.title = 'GO Design | Human-Centered Digital Design Agency';
-    
-    // Find the element with the data-default attribute and update favicon if it exists
-    const titleElement = document.querySelector('[data-default]');
-    if (titleElement) {
-      // Update favicon
-      const faviconLink = document.querySelector('link[rel="icon"]');
-      if (faviconLink) {
-        faviconLink.setAttribute('href', 'https://upload.wikimedia.org/wikipedia/commons/0/0e/Apple_logo.svg');
-      }
-    }
   }, []);
 
   // Reset selectedCaseStudy when changing pages

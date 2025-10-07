@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -21,75 +22,82 @@ import SaasProductDesign from './components/SaasProductDesign';
 import MobileWebDesign from './components/MobileWebDesign';
 
 function App() {
-  const [currentPage, setCurrentPage] = React.useState('home');
+  const navigate = useNavigate();
+  const location = useLocation();
   const [selectedCaseStudy, setSelectedCaseStudy] = React.useState<string | null>(null);
 
   React.useEffect(() => {
-    // Update document title
     document.title = 'GO Design | Human-Centered Digital Design Agency';
   }, []);
 
-  // Reset selectedCaseStudy when changing pages
-  React.useEffect(() => {
-    if (currentPage !== 'solutions' && selectedCaseStudy) {
-      setSelectedCaseStudy(null);
-    }
-  }, [currentPage]);
+  const setCurrentPage = (page: string) => {
+    const routes: { [key: string]: string } = {
+      'home': '/',
+      'about': '/about',
+      'contact': '/contact',
+      'services': '/services',
+      'solutions': '/solutions',
+      'marketing-web-design': '/services/marketing-web-design',
+      'saas-product-design': '/services/saas-product-design',
+      'mobile-web-design': '/services/mobile-web-design'
+    };
+    navigate(routes[page] || '/');
+  };
 
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return (
-          <>
-            <Hero setCurrentPage={setCurrentPage} />
-            <Partners />
-            <ValueProposition />
-            <SuccessStories setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
-            <Testimonials />
-            <SpecializedExpertise setCurrentPage={setCurrentPage} />
-            <CTA setCurrentPage={setCurrentPage} />
-          </>
-        );
-      case 'about':
-        return <About />;
-      case 'contact':
-        return <Contact />;
-      case 'services':
-        return <Services setCurrentPage={setCurrentPage} />;
-      case 'marketing-web-design':
-        return <MarketingWebDesign setCurrentPage={setCurrentPage} />;
-      case 'saas-product-design':
-        return <SaasProductDesign setCurrentPage={setCurrentPage} />;
-      case 'mobile-web-design':
-        return <MobileWebDesign setCurrentPage={setCurrentPage} />;
-      case 'solutions':
-        if (selectedCaseStudy === 'CoreTechs SaaS Healthcare Product') {
-          return <CaseStudyDetail setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
-        } else if (selectedCaseStudy === 'Accenture - Employee Onboarding') {
-          return <CaseStudyDetail2 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
-        } else if (selectedCaseStudy === 'Jim Beam - The Cocktail Project') {
-          return <CaseStudyDetail3 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
-        } else {
-          return (
-            <Solutions 
-              setCurrentPage={setCurrentPage} 
-              setSelectedCaseStudy={setSelectedCaseStudy}
-            />
-          );
-        }
-      default:
-        return null;
+  const currentPage = React.useMemo(() => {
+    const path = location.pathname;
+    if (path === '/') return 'home';
+    if (path === '/about') return 'about';
+    if (path === '/contact') return 'contact';
+    if (path === '/services') return 'services';
+    if (path === '/solutions') return 'solutions';
+    if (path.startsWith('/services/')) {
+      const service = path.split('/services/')[1];
+      return service;
     }
+    return 'home';
+  }, [location.pathname]);
+
+  const HomePage = () => (
+    <>
+      <Hero setCurrentPage={setCurrentPage} />
+      <Partners />
+      <ValueProposition />
+      <SuccessStories setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
+      <Testimonials />
+      <SpecializedExpertise setCurrentPage={setCurrentPage} />
+      <CTA setCurrentPage={setCurrentPage} />
+    </>
+  );
+
+  const SolutionsPage = () => {
+    if (selectedCaseStudy === 'CoreTechs SaaS Healthcare Product') {
+      return <CaseStudyDetail setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
+    } else if (selectedCaseStudy === 'Accenture - Employee Onboarding') {
+      return <CaseStudyDetail2 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
+    } else if (selectedCaseStudy === 'Jim Beam - The Cocktail Project') {
+      return <CaseStudyDetail3 setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
+    }
+    return <Solutions setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />;
   };
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <div className="min-h-screen bg-white dark:bg-brand-950">
-        <Navbar 
+        <Navbar
           currentPage={currentPage}
           setCurrentPage={setCurrentPage}
         />
-        {renderPage()}
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/services" element={<Services setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/marketing-web-design" element={<MarketingWebDesign setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/saas-product-design" element={<SaasProductDesign setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/mobile-web-design" element={<MobileWebDesign setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions" element={<SolutionsPage />} />
+        </Routes>
         <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>
     </ThemeProvider>

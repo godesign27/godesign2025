@@ -47,7 +47,7 @@ Deno.serve(async (req: Request) => {
     `;
 
     const { data, error } = await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>",
+      from: "Contact Form <timothy@godesign.one>",
       to: ["godesigngo@gmail.com"],
       subject: `New Contact Form: ${formData.project_type} - ${formData.firstname} ${formData.lastname}`,
       html: emailHtml,

@@ -13,13 +13,26 @@ const Contact: React.FC = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    const data = {
+      firstname: formData.get('firstname') as string,
+      lastname: formData.get('lastname') as string,
+      email: formData.get('email') as string,
+      company: formData.get('company') as string,
+      project_type: formData.get('project_type') as string,
+      budget_range: formData.get('budget_range') as string,
+      project_details: formData.get('project_details') as string,
+    };
+
     try {
-      const response = await fetch('https://formspree.io/f/mrbykyqe', {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`;
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
-        body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+        },
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {

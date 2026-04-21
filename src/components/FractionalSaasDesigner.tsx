@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, CheckCircle2, Layers, BarChart3, GitBranch, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers, BarChart3, GitBranch, ArrowUpRight, ChevronRight } from 'lucide-react';
 
 interface FractionalSaasDesignerProps {
   setCurrentPage: (page: string) => void;
@@ -247,35 +247,49 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
   }, []);
 
   return (
-    <div className="bg-white min-h-screen">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <SectionLabel>Fractional Product Design</SectionLabel>
-          <h1 className="text-[32px] md:text-[42px] font-semibold text-slate-900 leading-[1.15] tracking-tight max-w-[720px]">
-            Senior product design for SaaS teams—without the full-time commitment.
-          </h1>
-          <p className="mt-6 text-[17px] text-slate-500 leading-relaxed max-w-[600px]">
-            SaaS teams don't usually have a product problem—they have a UX and system evolution problem. I help teams modernize their product UX and design systems without slowing down engineering or requiring a full-time hire.
-          </p>
-          <p className="mt-4 text-[15px] text-slate-400 leading-relaxed max-w-[600px]">
-            Through a flexible, embedded model, I work directly with product and engineering teams to simplify workflows, improve usability, and evolve the product experience in a way that compounds over time.
-          </p>
-          <div className="mt-10 flex items-center gap-4">
-            <button
-              onClick={() => setCurrentPage('contact')}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
-            >
-              Start a Conversation <ArrowRight className="w-4 h-4" />
-            </button>
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-sky-100 to-slate-200 dark:from-slate-900 dark:via-sky-900 dark:to-slate-900"></div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+          <nav className="flex py-4" aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-2">
+              <li>
+                <button
+                  onClick={() => setCurrentPage('services')}
+                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
+                >
+                  Services
+                </button>
+              </li>
+              <ChevronRight className="w-4 h-4 text-gray-500" />
+              <li className="text-gray-900 dark:text-white font-medium">Fractional SaaS Designer</li>
+            </ol>
+          </nav>
+
+          <div className="py-16">
+            <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white mb-6">
+              Senior Product Design<br />
+              for SaaS Teams
+            </h1>
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
+              SaaS teams don't usually have a product problem—they have a UX and system evolution problem. I help teams modernize their product UX and design systems without slowing down engineering or requiring a full-time hire.
+            </p>
+            <p className="mt-4 text-base text-gray-500 dark:text-gray-400 max-w-2xl">
+              Through a flexible, embedded model, I work directly with product and engineering teams to simplify workflows, improve usability, and evolve the product experience in a way that compounds over time.
+            </p>
+            <div className="mt-10">
+              <button
+                onClick={() => setCurrentPage('contact')}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-medium rounded-lg hover:bg-slate-800 transition-colors"
+              >
+                Start a Conversation <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-        <div className="h-px bg-slate-100" />
-      </div>
 
       {/* The Common Problem */}
       <section className="py-20 md:py-28">

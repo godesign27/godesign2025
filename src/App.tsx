@@ -20,6 +20,7 @@ import MarketingWebDesign from './components/MarketingWebDesign';
 import SpecializedExpertise from './components/SpecializedExpertise';
 import SaasProductDesign from './components/SaasProductDesign';
 import MobileWebDesign from './components/MobileWebDesign';
+import FractionalSaasDesigner from './components/FractionalSaasDesigner';
 
 function App() {
   const navigate = useNavigate();
@@ -96,6 +97,7 @@ function App() {
           <Route path="/services/marketing-web-design" element={<MarketingWebDesign setCurrentPage={setCurrentPage} />} />
           <Route path="/services/saas-product-design" element={<SaasProductDesign setCurrentPage={setCurrentPage} />} />
           <Route path="/services/mobile-web-design" element={<MobileWebDesign setCurrentPage={setCurrentPage} />} />
+          <Route path="/fractional-saas-designer" element={<FractionalSaasDesigner setCurrentPage={setCurrentPage} />} />
           <Route path="/solutions" element={<SolutionsPage />} />
         </Routes>
         <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />

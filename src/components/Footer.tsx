@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface FooterProps {
   currentPage: string;
@@ -72,6 +73,11 @@ const Footer: React.FC<FooterProps> = ({ currentPage, setCurrentPage }) => {
                 <a href="#" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                   SaaS Product Design
                 </a>
+              </li>
+              <li>
+                <Link to="/fractional-saas-designer" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                  Fractional SaaS Designer
+                </Link>
               </li>
             </ul>
           </div>

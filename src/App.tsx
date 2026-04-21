@@ -65,7 +65,7 @@ function App() {
 
   const HomePage = () => (
     <>
-      <Hero setCurrentPage={setCurrentPage} />
+      <Hero />
       <Partners />
       <ValueProposition />
       <SuccessStories setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />

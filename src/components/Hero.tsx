@@ -3,10 +3,6 @@ import { MonitorSmartphone, PaintBucket, Brain, BarChart3 } from 'lucide-react';
 import { BackgroundGradientAnimation } from './ui/background-gradient-animation';
 import { useTheme } from 'next-themes';
 
-interface HeroProps {
-  setCurrentPage: (page: string) => void;
-}
-
 const LightHero = () => (
   <BackgroundGradientAnimation
     gradientBackgroundStart="rgb(190, 205, 255)"
@@ -39,7 +35,7 @@ const DarkHero = () => (
   />
 );
 
-const Hero: React.FC<HeroProps> = (_props) => {
+const Hero: React.FC = () => {
   const { resolvedTheme } = useTheme();
 
   return (

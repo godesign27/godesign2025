@@ -39,7 +39,7 @@ const DarkHero = () => (
   />
 );
 
-const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
+const Hero: React.FC<HeroProps> = (_props) => {
   const { resolvedTheme } = useTheme();
 
   return (

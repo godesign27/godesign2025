@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowLeft, Clock, Users, PenTool as Tool } from 'lucide-react';
+
 import ImageWithSkeleton from './ui/ImageWithSkeleton';
 
 interface CaseStudyDetailProps {

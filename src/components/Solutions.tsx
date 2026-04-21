@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
 
 interface CaseStudyCardProps {
   title: string;
@@ -64,48 +63,6 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
       description: "Designed a new recipe responsive web site.",
       image: "https://images.pexels.com/photos/602750/pexels-photo-602750.jpeg",
       tags: ["Beverage", "UX/UI Design", "Service Design"]
-    }
-  ];
-
-  const saasProducts = [
-    {
-      title: "Z5-Field Deployment",
-      description: "Redesigned a Salesforce deployment tool that major healthcare companies use to management territory sales.",
-      image: "https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg",
-      tags: ["Enterprise", "SaaS", "UX/UI Design"]
-    },
-    {
-      title: "Atom Manager Product",
-      description: "Redesigned a SaaS product Tax professionals Client Management tool.",
-      image: "https://images.pexels.com/photos/8567472/pexels-photo-8567472.jpeg",
-      tags: ["Finance", "SaaS", "UX/UI Design"]
-    },
-    {
-      title: "UL Complaint Product MVP",
-      description: "Designed a white label UL tool for their clients to identify and handled customer complaints.",
-      image: "https://images.pexels.com/photos/8567482/pexels-photo-8567482.jpeg",
-      tags: ["Enterprise", "SaaS", "UX/UI Design"]
-    }
-  ];
-
-  const webDesigns = [
-    {
-      title: "Accenture - Onboarding Redesign",
-      description: "Redesigned Accenture's onboarding site to create a welcoming first impression. Provided clear, timely info to help new hires prepare for their start date and strengthen their connection to the company.",
-      image: "https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg",
-      tags: ["Enterprise", "Web Design", "UX/UI"]
-    },
-    {
-      title: "Dremel.com Redesign",
-      description: "Designed a responsive, user-friendly site that works seamlessly on desktop and mobile. We transformed the experience to focus on what users need, rather than just how the business operates.",
-      image: "https://images.pexels.com/photos/3182813/pexels-photo-3182813.jpeg",
-      tags: ["E-commerce", "Web Design", "UX/UI"]
-    },
-    {
-      title: "Aramark Redesign",
-      description: "Focused on users, we redesigned Aramark's site with clear navigation, bold visuals, and storytelling that showcased their services while staying true to their brand pillars.",
-      image: "https://images.pexels.com/photos/3182814/pexels-photo-3182814.jpeg",
-      tags: ["Enterprise", "Web Design", "UX/UI"]
     }
   ];
 

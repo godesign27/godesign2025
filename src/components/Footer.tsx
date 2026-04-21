@@ -6,7 +6,7 @@ interface FooterProps {
   setCurrentPage: (page: string) => void;
 }
 
-const Footer: React.FC<FooterProps> = ({ currentPage, setCurrentPage }) => {
+const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
   return (
     <footer className="bg-white dark:bg-gray-900 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

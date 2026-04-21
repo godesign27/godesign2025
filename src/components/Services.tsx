@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Box, Smartphone, ArrowRight, ClipboardList, Grid, Briefcase } from 'lucide-react';
+import { Globe, Box, Smartphone, ClipboardList, Grid, Briefcase } from 'lucide-react';
 
 interface ServicesProps {
   setCurrentPage: (page: string) => void;

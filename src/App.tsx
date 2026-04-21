@@ -31,6 +31,10 @@ function App() {
     document.title = 'GO Design | Human-Centered Digital Design Agency';
   }, []);
 
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const setCurrentPage = (page: string) => {
     const routes: { [key: string]: string } = {
       'home': '/',

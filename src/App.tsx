@@ -22,7 +22,8 @@ import CaseStudyDetail from './components/CaseStudyDetail';
 import CaseStudyDetail2 from './components/CaseStudyDetail2';
 import CaseStudyDetail3 from './components/CaseStudyDetail3';
 import FractionalSaasDesigner from './components/FractionalSaasDesigner';
-import SEOHead, { BASE_URL, SITE_NAME } from './components/SEOHead';
+import SEOHead from './components/SEOHead';
+import { BASE_URL, SITE_NAME } from './lib/site';
 
 const Analytics = lazy(() => import('./components/Analytics'));
 
@@ -360,7 +361,7 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [currentPage, setCurrentPageState] = useState('home');
-  const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null);
+  const [, setSelectedCaseStudy] = useState<string | null>(null);
 
   usePageTracking();
 

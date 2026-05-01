@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { BASE_URL, SITE_NAME } from '../lib/site';
 
 interface SEOHeadProps {
   title: string;
@@ -9,9 +10,7 @@ interface SEOHeadProps {
   structuredData?: object | object[];
 }
 
-const BASE_URL = 'https://godesign.one';
 const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
-const SITE_NAME = 'GO Design, Inc.';
 
 function setMetaTag(property: string, content: string, isName = false) {
   const attr = isName ? 'name' : 'property';
@@ -93,4 +92,3 @@ export default function SEOHead({
   return null;
 }
 
-export { BASE_URL, SITE_NAME };

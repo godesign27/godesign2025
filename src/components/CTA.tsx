@@ -4,7 +4,7 @@ interface CTAProps {
   setCurrentPage: (page: string) => void;
 }
 
-const CTA: React.FC<CTAProps> = ({ setCurrentPage }) => {
+export default function CTA({ setCurrentPage }: CTAProps) {
   return (
     <section className="relative py-16 overflow-hidden">
       {/* Gradient background */}
@@ -26,6 +26,4 @@ const CTA: React.FC<CTAProps> = ({ setCurrentPage }) => {
       </div>
     </section>
   );
-};
-
-export default CTA;
+}

@@ -9,7 +9,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ setCurrentPage, setSele
   const handleCaseStudyClick = () => {
     window.scrollTo(0, 0);
     setSelectedCaseStudy('CoreTechs SaaS Healthcare Product');
-    setCurrentPage('solutions');
+    setCurrentPage('/solutions/coretechs');
   };
 
   return (

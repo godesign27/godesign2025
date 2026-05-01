@@ -74,7 +74,10 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                 <a 
                   href="#services" 
                   className={getLinkClasses('services')}
-                  onClick={() => setCurrentPage('services')}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentPage('services');
+                  }}
                 >
                   Services
                 </a>
@@ -140,7 +143,8 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
             <a 
               href="#services" 
               className="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setCurrentPage('services');
                 setIsMenuOpen(false);
               }}

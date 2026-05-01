@@ -333,12 +333,6 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
               { icon: BarChart3, title: 'Analyze workflows', desc: 'Identify friction and inefficiencies in core user paths' },
               { icon: Layers, title: 'Simplify navigation', desc: 'Reduce cognitive load through clearer task flows' },
               { icon: GitBranch, title: 'Refine architecture', desc: 'Improve information clarity across the product' },
-              { icon: SlidersHorizontal, title: 'Evolve design system', desc: 'Standardize patterns and modernize components without a full rebuild' },
-              { icon: GitMerge, title: 'Redesign key flows', desc: 'Rethink high-friction workflows end-to-end for clarity and speed' },
-              { icon: Search, title: 'Audit UI consistency', desc: 'Identify and resolve pattern drift across the product' },
-              { icon: Paintbrush, title: 'Modernize visual layer', desc: 'Update the look and feel to match current SaaS expectations' },
-              { icon: Link2, title: 'Align design + engineering', desc: 'Bridge the gap between design intent and implementation' },
-              { icon: Network, title: 'Map information architecture', desc: 'Restructure how content and features are organized across the product' },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
                 <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 mb-4" />
@@ -486,8 +480,37 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
         </div>
       </section>
 
-      {/* Forward-Looking */}
+      {/* The Work */}
       <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-slate-800/40">
+        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
+          <SectionLabel>The Work</SectionLabel>
+          <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[600px]">
+            The work takes different forms.
+          </h2>
+          <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[600px]">
+            Depending on where the product is, I draw on these services to improve experience, consistency, and velocity—without disrupting what's already working.
+          </p>
+          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { icon: SlidersHorizontal, title: 'Evolve design system', desc: 'Standardize patterns and modernize components without a full rebuild' },
+              { icon: GitMerge, title: 'Redesign key flows', desc: 'Rethink high-friction workflows end-to-end for clarity and speed' },
+              { icon: Search, title: 'Audit UI consistency', desc: 'Identify and resolve pattern drift across the product' },
+              { icon: Paintbrush, title: 'Modernize visual layer', desc: 'Update the look and feel to match current SaaS expectations' },
+              { icon: Link2, title: 'Align design + engineering', desc: 'Bridge the gap between design intent and implementation' },
+              { icon: Network, title: 'Map information architecture', desc: 'Restructure how content and features are organized across the product' },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
+                <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 mb-4" />
+                <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">{title}</h3>
+                <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Forward-Looking */}
+      <section className="py-20 md:py-28">
         <div className="max-w-[1120px] mx-auto px-6 md:px-8">
           <div className="grid md:grid-cols-2 gap-16 md:gap-24">
             <div>

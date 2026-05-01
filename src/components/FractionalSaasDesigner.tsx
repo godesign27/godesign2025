@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, CheckCircle2, Layers, BarChart3, GitBranch, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Layers, BarChart3, GitBranch, ArrowUpRight, ChevronRight, SlidersHorizontal, GitMerge, Search, Paintbrush, Link2, Network } from 'lucide-react';
 
 interface FractionalSaasDesignerProps {
   setCurrentPage: (page: string) => void;
@@ -333,6 +333,12 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
               { icon: BarChart3, title: 'Analyze workflows', desc: 'Identify friction and inefficiencies in core user paths' },
               { icon: Layers, title: 'Simplify navigation', desc: 'Reduce cognitive load through clearer task flows' },
               { icon: GitBranch, title: 'Refine architecture', desc: 'Improve information clarity across the product' },
+              { icon: SlidersHorizontal, title: 'Evolve design system', desc: 'Standardize patterns and modernize components without a full rebuild' },
+              { icon: GitMerge, title: 'Redesign key flows', desc: 'Rethink high-friction workflows end-to-end for clarity and speed' },
+              { icon: Search, title: 'Audit UI consistency', desc: 'Identify and resolve pattern drift across the product' },
+              { icon: Paintbrush, title: 'Modernize visual layer', desc: 'Update the look and feel to match current SaaS expectations' },
+              { icon: Link2, title: 'Align design + engineering', desc: 'Bridge the gap between design intent and implementation' },
+              { icon: Network, title: 'Map information architecture', desc: 'Restructure how content and features are organized across the product' },
             ].map(({ icon: Icon, title, desc }) => (
               <div key={title} className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
                 <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 mb-4" />

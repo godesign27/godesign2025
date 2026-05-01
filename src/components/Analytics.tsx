@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from 'react';
-import { supabase } from '../lib/supabase';
 import {
   BarChart3,
   Eye,
@@ -194,18 +193,19 @@ export default function Analytics() {
 
   const fetchData = useCallback(async () => {
     setLoading(true);
-    const cutoff = getDateCutoff(range);
-    let query = supabase
-      .from('page_views')
-      .select('*')
-      .order('created_at', { ascending: false });
-
-    if (cutoff) {
-      query = query.gte('created_at', cutoff.toISOString());
+    try {
+      const apiUrl = `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/analytics-data?range=${range}`;
+      const res = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      const data = await res.json();
+      setViews(Array.isArray(data) ? data : []);
+    } catch {
+      setViews([]);
     }
-
-    const { data } = await query.limit(10000);
-    setViews(data || []);
     setLastRefresh(new Date());
     setLoading(false);
   }, [range]);

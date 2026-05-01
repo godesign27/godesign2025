@@ -25,7 +25,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
       {/* Hero Section with Breadcrumb */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 dark:from-blue-900 dark:via-purple-900 dark:to-pink-900"></div>
-        
+
         {/* Breadcrumb */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <nav className="flex py-4" aria-label="Breadcrumb">
@@ -49,8 +49,8 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
               That Drives Growth
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
-              We design intuitive, scalable SaaS products that users love. Our approach 
-              combines deep user research, strategic thinking, and beautiful design to 
+              We design intuitive, scalable SaaS products that users love. Our approach
+              combines deep user research, strategic thinking, and beautiful design to
               create products that drive engagement and business growth.
             </p>
           </div>
@@ -239,7 +239,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">A Sample of SaaS Design Solutions</h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Mopar Redesign */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
@@ -247,9 +247,9 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Ion-SaaS-design.png"
-                  alt="ION MVP" 
+                  alt="ION MVP"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -269,8 +269,8 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Government
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png"
                   alt="Atom Manager full object-contain"
                 />
               </div>
@@ -290,9 +290,9 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Healthcare
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/ZS-Deployment.png" 
-                  alt="ZS SaaS Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/ZS-Deployment.png"
+                  alt="ZS SaaS Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -318,7 +318,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Explore how our services come to life through tailored solutions that solve real problems.
           </p>
-          <button 
+          <button
             onClick={handleSolutionsClick}
             className="px-8 py-4 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
@@ -337,7 +337,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
           <p className="text-xl text-white/90 mb-8">
             We'd love to learn more about how we can help your business.
           </p>
-          <button 
+          <button
             onClick={handleContactClick}
             className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition-colors"
           >

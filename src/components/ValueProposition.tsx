@@ -9,7 +9,7 @@ const ValueProposition: React.FC = () => {
             Big Ideas. Small Studio. <span className="text-purple-700 dark:text-purple-400">Better Results</span>.
           </h2>
           <p className="max-w-2xl mx-auto text-gray-600 dark:text-gray-300">
-            Discover why partnering with a boutique digital studio gives you the agility, 
+            Discover why partnering with a boutique digital studio gives you the agility,
             creativity, and focus that big firms can't deliver.
           </p>
         </div>

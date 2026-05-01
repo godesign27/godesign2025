@@ -38,9 +38,9 @@ const About: React.FC = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="https://img1.wsimg.com/isteam/ip/8750adee-7fef-47ca-9c3a-3982c0b9d811/Timothy-McGuire.png/:/rs=w:740,cg:true,m" 
-                alt="Timothy McGuire" 
+              <img
+                src="https://img1.wsimg.com/isteam/ip/8750adee-7fef-47ca-9c3a-3982c0b9d811/Timothy-McGuire.png/:/rs=w:740,cg:true,m"
+                alt="Timothy McGuire"
                 className="w-full rounded-lg shadow-xl"
               />
             </div>

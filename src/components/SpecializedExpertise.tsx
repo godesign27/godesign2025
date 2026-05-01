@@ -20,7 +20,7 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
     <section className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-16">Specialized Expertise</h2>
-        
+
         <div className="grid md:grid-cols-3 gap-12">
           {/* Marketing Web Design */}
           <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
@@ -31,7 +31,7 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Create impactful web experiences that convert visitors into customers. Our marketing-focused design approach combines aesthetics with strategic user journeys.
             </p>
-            <button 
+            <button
               onClick={handleMarketingWebDesignClick}
               className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
             >
@@ -48,7 +48,7 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Build powerful, scalable software solutions with our comprehensive SaaS design expertise. We focus on creating intuitive interfaces that drive user engagement and business growth.
             </p>
-            <button 
+            <button
               onClick={() => setCurrentPage('saas-product-design')}
               className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
             >
@@ -65,7 +65,7 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Create exceptional mobile experiences that users love. Our mobile-first approach ensures your app is intuitive, engaging, and optimized for all devices.
             </p>
-            <button 
+            <button
               onClick={handleMobileWebDesignClick}
               className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
             >

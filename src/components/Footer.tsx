@@ -20,12 +20,12 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               We specialize in <span className="font-medium">Experience Design</span> by applying responsible design practices that enhance usability, accessibility, and visual appeal. We bring human-centered thinking, creative problem-solving and technology together to create solutions for all types of digital challenges.
             </p>
           </div>
-          
+
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">Navigation</h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <button 
+                <button
                   onClick={() => setCurrentPage('services')}
                   className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 >
@@ -33,7 +33,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => setCurrentPage('solutions')}
                   className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 >
@@ -41,7 +41,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                 </button>
               </li>
               <li>
-                <button 
+                <button
                   onClick={() => setCurrentPage('about')}
                   className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                 >
@@ -50,7 +50,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">Services</h3>
             <ul className="mt-4 space-y-2">
@@ -81,7 +81,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </li>
             </ul>
           </div>
-          
+
           <div>
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">Contact</h3>
             <div className="mt-4">
@@ -94,9 +94,9 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
             </div>
           </div>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-sm text-gray-500 dark:text-gray-400">
-          © 2025 GO Design, Inc. All rights reserved.
+          &copy; 2025 GO Design, Inc. All rights reserved.
         </div>
       </div>
     </footer>

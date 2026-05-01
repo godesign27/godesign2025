@@ -25,7 +25,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
       {/* Hero Section with Breadcrumb */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50 to-rose-100 dark:from-amber-900 dark:to-rose-900"></div>
-        
+
         {/* Breadcrumb */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <nav className="flex py-4" aria-label="Breadcrumb">
@@ -49,8 +49,8 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
               That Drives Results
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
-              We create beautiful, high-performing websites that help businesses grow. 
-              Our designs are crafted to engage visitors, communicate value, and convert 
+              We create beautiful, high-performing websites that help businesses grow.
+              Our designs are crafted to engage visitors, communicate value, and convert
               leads into customers.
             </p>
           </div>
@@ -169,7 +169,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">A Sample of Design Solutions</h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Mopar Redesign */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
@@ -177,9 +177,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Automotive
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Mopar-web-design.png"
-                  alt="Mopar Redesign" 
+                  alt="Mopar Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -199,9 +199,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png" 
-                  alt="TransUnion.com Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png"
+                  alt="TransUnion.com Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -221,9 +221,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png" 
-                  alt="Aramark Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png"
+                  alt="Aramark Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -243,9 +243,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Automotive
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Chrysler-web-design.png" 
-                  alt="Chrysler Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Chrysler-web-design.png"
+                  alt="Chrysler Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -265,9 +265,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   HR Solutions
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture-employeeleave.png" 
-                  alt="Accenture Leave of Absence" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture-employeeleave.png"
+                  alt="Accenture Leave of Absence"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -287,9 +287,9 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   FinTech
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atomanger-web-design.png" 
-                  alt="Atom Manager Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atomanger-web-design.png"
+                  alt="Atom Manager Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -359,7 +359,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Explore how our services come to life through tailored solutions that solve real problems.
           </p>
-          <button 
+          <button
             onClick={handleSolutionsClick}
             className="px-8 py-4 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
@@ -377,7 +377,7 @@ const MarketingWebDesign: React.FC<MarketingWebDesignProps> = ({ setCurrentPage 
           <p className="text-xl text-white/90 mb-8">
             We'd love to learn more about how we can help your business.
           </p>
-          <button 
+          <button
             onClick={handleContactClick}
             className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition-colors"
           >

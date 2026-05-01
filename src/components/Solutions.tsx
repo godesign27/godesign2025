@@ -14,14 +14,14 @@ interface SolutionsProps {
 }
 
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ title, description, image, tags, onClick }) => (
-  <div 
+  <div
     className="group cursor-pointer bg-white dark:bg-white/10 rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl flex flex-col"
     onClick={onClick}
   >
     <div className="p-6 space-y-4">
       <div className="flex gap-2">
         {tags.map((tag, index) => (
-          <span 
+          <span
             key={index}
             className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
           >
@@ -34,9 +34,9 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ title, description, image
     </div>
     <div className="mt-auto">
       <div className="aspect-[4/3] overflow-hidden">
-        <img 
-          src={image} 
-          alt={title} 
+        <img
+          src={image}
+          alt={title}
           className="w-full h-full object-cover transition-transform group-hover:scale-105"
         />
       </div>
@@ -86,7 +86,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               Our Solutions in Action.
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-200 max-w-2xl">
-              Explore our case studies to see how we've helped businesses across various 
+              Explore our case studies to see how we've helped businesses across various
               industries transform their digital presence and achieve meaningful results.
             </p>
           </div>
@@ -113,7 +113,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
       <section className="pt-20 pb-12 bg-gray-100 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12"> Design Solutions</h2>
-          
+
 
           {/* Dremel Bento Grid */}
           <div className="mb-16">
@@ -133,7 +133,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Responsive Design
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Dremel/dremel.png"
                   alt="Dremel Homepage"
                   className="w-full h-full object-contain"
@@ -151,7 +151,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Before
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Dremel/dremel-before.png"
                   alt="Dremel Site Map"
                   className="w-full h-full object-cover"
@@ -163,7 +163,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Sketches
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Dremel/dremel-sketch.png"
                   alt="Dremel Sketches"
                   className="w-full h-full object-cover"
@@ -175,7 +175,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Sitemap
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Dremel/dremel-sitemap.png"
                   alt="Dremel Site Map"
                   className="w-full h-full object-cover object-top"
@@ -193,7 +193,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Final Product Detail Design
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Dremel/dremel-product-detail.png"
                   alt="Dremel Product Detail"
                   className="w-full h-full object-cover"
@@ -217,7 +217,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
       <section className="py-20 bg-gray-100 dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">More Design Solutions</h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Accenture - Onboarding Redesign */}
             <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
@@ -225,9 +225,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
+                <img
                   src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture.png"
-                  alt="Accenture Onboarding Redesign" 
+                  alt="Accenture Onboarding Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -247,9 +247,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png" 
-                  alt="TransUnion.com Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/TransUnion.png"
+                  alt="TransUnion.com Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -269,9 +269,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png" 
-                  alt="Aramark Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/aramark.png"
+                  alt="Aramark Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -291,9 +291,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   Automotive
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Chrysler-web-design.png" 
-                  alt="Chrysler Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Chrysler-web-design.png"
+                  alt="Chrysler Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -313,9 +313,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   HR Solutions
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture-employeeleave.png" 
-                  alt="Accenture Leave of Absence" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/accenture-employeeleave.png"
+                  alt="Accenture Leave of Absence"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -335,9 +335,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
                   SaaS
                 </span>
-                <img 
-                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png" 
-                  alt="Atom Manager Redesign" 
+                <img
+                  src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Atom-Manager.png"
+                  alt="Atom Manager Redesign"
                   className="w-full h-full object-contain"
                 />
               </div>
@@ -364,7 +364,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
           <p className="text-xl text-white/90 mb-8">
             We'd love to learn more about how we can help your business.
           </p>
-          <button 
+          <button
             onClick={handleContactClick}
             className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition-colors"
           >

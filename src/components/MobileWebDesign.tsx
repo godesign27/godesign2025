@@ -20,7 +20,7 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
       {/* Hero Section with Breadcrumb */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-indigo-500 to-violet-600 dark:from-blue-900 dark:via-indigo-900 dark:to-violet-900"></div>
-        
+
         {/* Breadcrumb */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           <nav className="flex py-4" aria-label="Breadcrumb">
@@ -44,8 +44,8 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
               That Drives Engagement
             </h1>
             <p className="text-xl text-white/90 max-w-2xl">
-              We create beautiful, intuitive mobile experiences that users love. 
-              Our designs are crafted to engage users, simplify interactions, and 
+              We create beautiful, intuitive mobile experiences that users love.
+              Our designs are crafted to engage users, simplify interactions, and
               deliver exceptional value across all devices.
             </p>
           </div>
@@ -116,9 +116,9 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
               }
             ].map((project, index) => (
               <div key={index} className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6">
@@ -257,7 +257,7 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
           <p className="text-xl text-white/90 mb-8">
             We'd love to learn more about how we can help your business.
           </p>
-          <button 
+          <button
             onClick={handleContactClick}
             className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition-colors"
           >

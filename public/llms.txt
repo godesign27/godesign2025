@@ -1,0 +1,64 @@
+# GO Design, Inc.
+
+> GO Design is a Chicago-based UI/UX design agency founded by Timothy McGuire, specializing in SaaS product design, mobile app design, marketing web design, and fractional design services. With 12+ years of experience, GO Design transforms digital products for enterprise and startup clients nationwide.
+
+## About
+
+GO Design, Inc. is a professional UI/UX design agency headquartered in Chicago, Illinois. Founded by Timothy McGuire, the agency brings over 12 years of experience in user-centered design to every project. GO Design serves clients across the United States, from startups building their first product to Fortune 500 enterprises optimizing complex workflows.
+
+## Services
+
+### UI/UX Design Consulting
+Full-spectrum UX/UI design consulting including user flows, information architecture, design systems, wireframing, prototyping, and heuristic analysis. GO Design's process is rooted in user research and data-driven decision making.
+
+### SaaS Product Design
+End-to-end design for SaaS applications: user research, strategic thinking, design system creation, workflow optimization, and scalable interface design. Focused on driving user engagement, retention, and business growth.
+
+### Mobile App Design
+Mobile-first design for iOS and Android platforms. Intuitive user experiences with multi-device optimization, responsive layouts, and beautiful interfaces that drive engagement.
+
+### Marketing Web Design
+High-converting marketing websites and landing pages with compelling storytelling, brand alignment, and conversion optimization. Featured projects include work for Aramark, Chrysler, and Accenture.
+
+### Fractional SaaS Designer
+Senior-level UI/UX design expertise available on a part-time, fractional basis. Services include design system evolution, workflow redesign, UI modernization, information architecture mapping, and AI-ready design foundations. Ideal for SaaS teams needing senior design perspective without full-time overhead.
+
+### Experience Research
+User research capabilities including competitive analysis, user testing, persona development, heuristic analysis, and journey mapping.
+
+### Brand & Identity Design
+Complete brand identity design including logo creation, color system definition, typography selection, and comprehensive brand guidelines.
+
+## Notable Case Studies
+
+### CoreTechs Healthcare SaaS
+Redesigned a healthcare SaaS platform for data-driven patient management. Delivered intuitive interfaces for value-based care, contract optimization, population risk management, and performance analytics.
+
+### Accenture Employee Onboarding
+Redesigned the employee onboarding experience for 500,000+ global Accenture employees. Streamlined pre-boarding journeys, created intuitive task navigation, and implemented accessible design systems that measurably improved new hire confidence.
+
+### Jim Beam Cocktail Project
+Created a mobile-first cocktail recipe discovery platform for Suntory Lab and Jim Beam. Designed trending content rails, contextual CTAs, recipe save/share/print functionality, and a responsive web experience.
+
+## Contact
+
+- Website: https://godesign.one
+- Email: godesigngo@gmail.com
+- Phone: (773) 724-0473
+- Location: Chicago, IL, United States
+- Consultation: https://cal.com/timothy-mcguire-27
+
+## Links
+
+- [Home](https://godesign.one/)
+- [Services](https://godesign.one/services)
+- [Solutions & Case Studies](https://godesign.one/solutions)
+- [About](https://godesign.one/about)
+- [Contact](https://godesign.one/contact)
+- [SaaS Product Design](https://godesign.one/saas-product-design)
+- [Marketing Web Design](https://godesign.one/marketing-web-design)
+- [Mobile App Design](https://godesign.one/mobile-web-design)
+- [Fractional SaaS Designer](https://godesign.one/fractional-saas-designer)
+- [CoreTechs Case Study](https://godesign.one/case-study/1)
+- [Accenture Case Study](https://godesign.one/case-study/2)
+- [Jim Beam Case Study](https://godesign.one/case-study/3)

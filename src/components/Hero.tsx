@@ -41,20 +41,20 @@ const Hero: React.FC = () => {
   return (
     <section className="relative pt-16 overflow-hidden">
       {resolvedTheme === 'dark' ? <DarkHero /> : <LightHero />}
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="py-16 md:py-16">
           <div className="max-w-5xl">
             <h1 className="text-5xl md:text-9xl text-gray-900 dark:text-white tracking-tight">
               Human-Centered Design, Built for Results.
             </h1>
-            
+
             <p className="mt-6 text-lg text-gray-700 dark:text-white/90 max-w-4xl">
-              We specialize in <span className="font-medium">Experience Design</span> by applying responsible design practices that 
-              enhance usability, accessibility, and visual appeal. We bring human-centered thinking, 
+              We specialize in <span className="font-medium">Experience Design</span> by applying responsible design practices that
+              enhance usability, accessibility, and visual appeal. We bring human-centered thinking,
               creative problem-solving and technology together to create solutions for all types of challenges.
             </p>
-            
+
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
               <div className="p-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-white/20 rounded-full flex items-center justify-center mb-4">
@@ -63,7 +63,7 @@ const Hero: React.FC = () => {
                 <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">Mobile + Web Design</h3>
                 <p className="text-gray-700 dark:text-white/80">Design and develop professional websites</p>
               </div>
-              
+
               <div className="p-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-white/20 rounded-full flex items-center justify-center mb-4">
                   <PaintBucket className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
                 <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">SaaS Product Design</h3>
                 <p className="text-gray-700 dark:text-white/80">Design and iterate SaaS products</p>
               </div>
-              
+
               <div className="p-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-white/20 rounded-full flex items-center justify-center mb-4">
                   <Brain className="w-6 h-6 text-gray-900 dark:text-white" />
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
                 <h3 className="font-semibold mb-2 text-gray-900 dark:text-white">AI Solutions</h3>
                 <p className="text-gray-700 dark:text-white/80">AI Design and Integration Solutions</p>
               </div>
-              
+
               <div className="p-6 bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-lg">
                 <div className="w-12 h-12 bg-gray-100 dark:bg-white/20 rounded-full flex items-center justify-center mb-4">
                   <BarChart3 className="w-6 h-6 text-gray-900 dark:text-white" />

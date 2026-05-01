@@ -72,7 +72,7 @@ const Contact: React.FC = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Get in Touch</h2>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="flex-shrink-0">
                   <Mail className="w-6 h-6 text-brand-600 dark:text-brand-400" />

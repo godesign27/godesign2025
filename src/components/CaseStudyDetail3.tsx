@@ -35,11 +35,11 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               Back to Solutions
             </button>
           </div>
-        
+
           <div className="py-2">
             <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white tracking-tight mb-6">
               A frictionless, journey that seduces and entices patrons to create cocktails.  <br />
-              
+
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-200 max-w-4xl">
               Mobile-led cards, trending rails, and contextual CTAs guide exploration; the recipe page spotlights essentials (glass type, skill level, main spirit) with one-tap actions to save, share, or print. It's designed to move users from browse → pick → pour in just a few taps.
@@ -350,7 +350,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
                 loading="lazy"
                 decoding="async"
               />
-              
+
               <ImageWithSkeleton
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/JimBeam/TCP_desktop_registration_0002_Layer%20Comp%203.jpg"
                 alt="Measure Detail Card Practices"

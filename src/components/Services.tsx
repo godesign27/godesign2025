@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Box, Smartphone, ClipboardList, Grid, Briefcase } from 'lucide-react';
+import { Globe, Box, Smartphone, ClipboardList, Grid2x2 as Grid, Briefcase } from 'lucide-react';
 
 interface ServicesProps {
   setCurrentPage: (page: string) => void;
@@ -28,9 +28,9 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               Designing Exceptional Experiences.
             </h1>
             <p className="text-xl text-gray-800 dark:text-gray-200 max-w-3xl">
-              At GO Design, we bring clarity and simplicity to complexity. Our suite of 
-              Experience Design services combines deep expertise with human-centered 
-              design principles to help businesses innovate, connect with users and grow 
+              At GO Design, we bring clarity and simplicity to complexity. Our suite of
+              Experience Design services combines deep expertise with human-centered
+              design principles to help businesses innovate, connect with users and grow
               their audiences.
             </p>
           </div>
@@ -41,7 +41,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-regular text-gray-900 dark:text-white mb-16">Services</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             {/* UX/UI Design Consulting */}
             <div>
@@ -50,8 +50,8 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">UX/UI Design Consulting</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Transform your digital presence with user-focused solutions. From crafting intuitive user 
-                flows to building robust design systems, our consulting ensures seamless, engaging, and 
+                Transform your digital presence with user-focused solutions. From crafting intuitive user
+                flows to building robust design systems, our consulting ensures seamless, engaging, and
                 accessible user experiences.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
@@ -71,8 +71,8 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience Research</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Discover insights that matter. We combine heuristic evaluations, user personas, and 
-                competitive analysis to understand your audience and refine your product for peak 
+                Discover insights that matter. We combine heuristic evaluations, user personas, and
+                competitive analysis to understand your audience and refine your product for peak
                 usability.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
@@ -91,7 +91,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Brand & Identity Design</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Develop a strong, cohesive brand identity that resonates with your audience. We create 
+                Develop a strong, cohesive brand identity that resonates with your audience. We create
                 comprehensive brand systems that stand out in today's digital landscape.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
@@ -111,7 +111,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       <section className="py-20 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-16">Specialized Services</h2>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             {/* Marketing Web Design */}
             <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
@@ -122,7 +122,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Create impactful web experiences that convert visitors into customers. Our marketing-focused design approach combines aesthetics with strategic user journeys.
               </p>
-              <button 
+              <button
                 onClick={() => setCurrentPage('marketing-web-design')}
                 className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
               >
@@ -139,7 +139,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Build powerful, scalable software solutions with our comprehensive SaaS design expertise. We focus on creating intuitive interfaces that drive user engagement and business growth.
               </p>
-              <button 
+              <button
                 onClick={() => setCurrentPage('saas-product-design')}
                 className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
               >
@@ -156,7 +156,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Create exceptional mobile experiences that users love. Our mobile-first approach ensures your app is intuitive, engaging, and optimized for all devices.
               </p>
-              <button 
+              <button
                 onClick={() => setCurrentPage('mobile-web-design')}
                 className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
               >
@@ -221,7 +221,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Explore how our services come to life through tailored solutions that solve real problems.
           </p>
-          <button 
+          <button
             onClick={handleSolutionsClick}
             className="px-8 py-4 bg-brand-600 text-white font-medium rounded-full hover:bg-brand-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1"
           >
@@ -240,7 +240,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
           <p className="text-xl text-white/90 mb-8">
             We'd love to learn more about how we can help your business.
           </p>
-          <button 
+          <button
             onClick={handleContactClick}
             className="px-8 py-4 bg-white text-gray-900 rounded-full hover:bg-gray-50 transition-colors"
           >

@@ -48,8 +48,8 @@ const ImageWithSkeleton: React.FC<ImageWithSkeletonProps> = ({
         <div className={`absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 ${className}`}>
           <div className="w-3/4 max-w-md">
             <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mb-4">
-              <div 
-                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300 ease-out" 
+              <div
+                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300 ease-out"
                 style={{ width: `${loadProgress}%` }}
               ></div>
             </div>
@@ -59,7 +59,7 @@ const ImageWithSkeleton: React.FC<ImageWithSkeletonProps> = ({
           </div>
         </div>
       )}
-      
+
       {/* Error state */}
       {hasError && (
         <div className={`absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800 ${className}`}>
@@ -71,7 +71,7 @@ const ImageWithSkeleton: React.FC<ImageWithSkeletonProps> = ({
           </div>
         </div>
       )}
-      
+
       {/* Actual image */}
       <img
         src={src}

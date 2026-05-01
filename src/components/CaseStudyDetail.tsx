@@ -33,7 +33,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               Back to Solutions
             </button>
           </div>
-          
+
           <div className="py-2">
             <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white tracking-tight mb-6">
               Transform Healthcare Decisions with <br />
@@ -46,7 +46,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-8 lg:py-12">
             {/* Dashboard Image - 9 columns (75%) on desktop */}
             <div className="lg:col-span-9 relative bg-white rounded-lg shadow-lg overflow-hidden">
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/core-hero.png"
                 alt="Healthcare Dashboard"
                 className="w-full h-full object-cover"
@@ -121,7 +121,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               <span className="absolute top-6 lg:top-8 left-6 lg:left-8 z-10 inline-flex items-center px-4 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-full">
                 Before
               </span>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/before.png"
                 alt="Before"
                 className="w-full h-full object-cover"
@@ -148,7 +148,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               <span className="absolute top-6 lg:top-8 left-6 lg:left-8 z-10 inline-flex items-center px-4 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-full">
                 Persona
               </span>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/healthcare-user.png"
                 alt="Healthcare Professional"
                 className="w-full h-full object-cover"
@@ -169,7 +169,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               <span className="absolute top-6 lg:top-8 left-6 lg:left-8 z-10 inline-flex items-center px-4 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-full">
                 UX Strategy
               </span>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/requirements.png"
                 alt="Requirements"
                 className="w-full h-full object-cover"
@@ -188,7 +188,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
                   Site Map
                 </span>
               </div>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/site-map.png"
                 alt="Site Map"
                 className="w-full h-full object-cover"
@@ -257,7 +257,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               <span className="absolute top-6 lg:top-8 left-6 lg:left-8 z-10 inline-flex items-center px-4 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-full">
                 UX Design
               </span>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/wireframe.png"
                 alt="Wireframe"
                 className="w-full h-full object-cover"
@@ -271,7 +271,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               <span className="absolute top-6 lg:top-8 left-6 lg:left-8 z-10 inline-flex items-center px-4 py-1.5 bg-gray-700 text-white text-sm font-medium rounded-full">
                 UI Design
               </span>
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/color-harmony%20(1).png"
                 alt="Color Harmony"
                 className="w-full h-full object-cover"
@@ -291,7 +291,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               UI Design
             </span>
             <h2 className="text-2xl lg:text-4xl font-regular text-gray-900 mb-6">Color Palette</h2>
-            <img 
+            <img
               src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/colorpalette2.png"
               alt="Color Palette"
               className="w-full h-full object-cover rounded-lg"
@@ -315,7 +315,7 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
               </span>
             </div>
             <h2 className="text-2xl lg:text-4xl font-regular text-gray-900 mb-6">Button Component</h2>
-            <img 
+            <img
               src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/button-component.png"
               alt="Button Component"
               className="w-full h-full object-cover rounded-lg"
@@ -340,35 +340,35 @@ const CaseStudyDetail: React.FC<CaseStudyDetailProps> = ({ setCurrentPage, setSe
             </div>
             <h2 className="text-2xl lg:text-4xl font-regular text-gray-900 mb-6">Page Designs</h2>
             <div className="space-y-6">
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Dashboard%20-%20Summary.png"
                 alt="Dashboard Summary"
                 className="w-full rounded-lg"
                 loading="lazy"
                 decoding="async"
               />
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Measure-detail-overview.png"
                 alt="Measure Detail Overview"
                 className="w-full rounded-lg"
                 loading="lazy"
                 decoding="async"
               />
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Measure-detailcard-practices.png"
                 alt="Measure Detail Card Practices"
                 className="w-full rounded-lg"
                 loading="lazy"
                 decoding="async"
               />
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Members.detail.png"
                 alt="Members Detail"
                 className="w-full rounded-lg"
                 loading="lazy"
                 decoding="async"
               />
-              <img 
+              <img
                 src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Population%20Builder%20Landing%20Page.png"
                 alt="Population Builder Landing Page"
                 className="w-full rounded-lg"

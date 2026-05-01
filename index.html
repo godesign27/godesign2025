@@ -38,43 +38,113 @@
     <meta property="twitter:description" content="Transform your digital presence with expert UI/UX design, SaaS product development, and mobile app design. Based in Chicago, serving clients nationwide." />
     <meta property="twitter:image" content="https://godesign.one/og-image.jpg" />
 
-    <!-- Structured Data -->
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "GO Design, Inc.",
+      "legalName": "GO Design, Inc.",
+      "url": "https://godesign.one",
+      "logo": "https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/go-new25.png",
+      "image": "https://godesign.one/og-image.jpg",
+      "email": "godesigngo@gmail.com",
+      "telephone": "(773) 724-0473",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Chicago",
+          "addressRegion": "IL",
+          "addressCountry": "US"
+        }
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Timothy McGuire",
+        "jobTitle": "Experience Designer & Founder",
+        "knowsAbout": ["UI/UX Design", "SaaS Product Design", "Mobile App Design", "User Research", "Design Systems", "Information Architecture"]
+      },
+      "sameAs": [
+        "https://cal.com/timothy-mcguire-27"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "godesigngo@gmail.com",
+        "telephone": "(773) 724-0473",
+        "availableLanguage": "English",
+        "areaServed": "US"
+      },
+      "knowsAbout": [
+        "UI/UX Design",
+        "SaaS Product Design",
+        "Mobile App Design",
+        "Marketing Web Design",
+        "User Experience Research",
+        "Design Systems",
+        "Information Architecture",
+        "Wireframing and Prototyping",
+        "Brand Identity Design",
+        "Fractional Design Services",
+        "Healthcare SaaS Design",
+        "Enterprise UX Design"
+      ]
+    }
+    </script>
+
+    <!-- Structured Data: WebSite with SearchAction for GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "GO Design, Inc.",
+      "alternateName": "GO Design",
+      "url": "https://godesign.one",
+      "description": "Expert UI/UX design agency in Chicago specializing in SaaS product design, mobile app design, marketing websites, and fractional design services. 12+ years transforming digital products for enterprise and startup clients.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "GO Design, Inc.",
+        "url": "https://godesign.one"
+      },
+      "inLanguage": "en-US"
+    }
+    </script>
+
+    <!-- Structured Data: Local Business -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "GO Design, Inc.",
-      "image": "https://godesign.one/logo.jpg",
+      "image": "https://godesign.one/og-image.jpg",
       "url": "https://godesign.one",
       "telephone": "(773) 724-0473",
+      "email": "godesigngo@gmail.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Chicago",
         "addressRegion": "IL",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.8781,
+        "longitude": -87.6298
+      },
       "description": "Expert UI/UX design agency specializing in SaaS product development, mobile app design, and marketing websites. Transform your digital presence with our proven design process.",
       "priceRange": "$$",
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "09:00",
         "closes": "17:00"
       },
-      "email": "godesigngo@gmail.com",
-      "sameAs": [
-        "https://cal.com/timothy-mcguire-27"
+      "areaServed": [
+        { "@type": "City", "name": "Chicago" },
+        { "@type": "State", "name": "Illinois" },
+        { "@type": "Country", "name": "United States" }
       ],
-      "areaServed": {
-        "@type": "Country",
-        "name": "United States"
-      },
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Design Services",
@@ -83,8 +153,8 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "UI/UX Design",
-              "description": "User interface and user experience design for digital products"
+              "name": "UI/UX Design Consulting",
+              "description": "User interface and user experience design consulting for digital products, including user flows, information architecture, and design systems"
             }
           },
           {
@@ -92,7 +162,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "SaaS Product Design",
-              "description": "Complete product design for SaaS applications"
+              "description": "End-to-end product design for SaaS applications including user research, design systems, workflow optimization, and scalable interfaces"
             }
           },
           {
@@ -100,7 +170,7 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Mobile App Design",
-              "description": "Mobile application design for iOS and Android"
+              "description": "Native and responsive mobile application design for iOS and Android with mobile-first UX principles"
             }
           },
           {
@@ -108,13 +178,57 @@
             "itemOffered": {
               "@type": "Service",
               "name": "Marketing Website Design",
-              "description": "High-converting marketing websites and landing pages"
+              "description": "High-converting marketing websites and landing pages with compelling storytelling and conversion optimization"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Fractional SaaS Designer",
+              "description": "Senior-level UI/UX design expertise on a fractional basis for SaaS product teams needing design system evolution, workflow optimization, and UI modernization"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Experience Research",
+              "description": "User research including competitive analysis, user testing, persona development, heuristic analysis, and journey mapping"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Brand & Identity Design",
+              "description": "Complete brand identity design including logo, color systems, typography, and brand guidelines"
             }
           }
         ]
-      }
+      },
+      "knowsAbout": ["UI/UX Design", "SaaS Product Design", "Mobile App Design", "Marketing Web Design", "Design Systems", "User Research", "Information Architecture", "Fractional Design"]
     }
     </script>
+
+    <!-- Structured Data: BreadcrumbList for navigation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://godesign.one/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://godesign.one/services" },
+        { "@type": "ListItem", "position": 3, "name": "Solutions", "item": "https://godesign.one/solutions" },
+        { "@type": "ListItem", "position": 4, "name": "About", "item": "https://godesign.one/about" },
+        { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://godesign.one/contact" }
+      ]
+    }
+    </script>
+
+    <!-- GEO: AI-readable content summary for generative search engines -->
+    <meta name="ai-content-summary" content="GO Design, Inc. is a Chicago-based UI/UX design agency founded by Timothy McGuire with 12+ years of experience. Specializes in SaaS product design, mobile app design, marketing web design, and fractional design services. Notable clients include Accenture (employee onboarding for 500K+ users), CoreTechs (healthcare SaaS platform), and Jim Beam (cocktail discovery platform). Services include UX consulting, user research, design systems, brand identity, wireframing, and prototyping. Serves clients across the United States." />
+    <meta name="subject" content="UI/UX Design Agency - SaaS, Mobile, Marketing Web Design" />
   </head>
   <body>
     <div id="root"></div>

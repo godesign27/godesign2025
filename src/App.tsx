@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import { ThemeProvider } from 'next-themes';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { usePageTracking } from './hooks/usePageTracking';
+
+const Analytics = lazy(() => import('./components/Analytics'));
 import Hero from './components/Hero';
 import ValueProposition from './components/ValueProposition';
 import Partners from './components/Partners';
@@ -359,6 +362,8 @@ function App() {
   const [currentPage, setCurrentPageState] = useState('home');
   const [selectedCaseStudy, setSelectedCaseStudy] = useState<string | null>(null);
 
+  usePageTracking();
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
@@ -418,6 +423,7 @@ function App() {
           <Route path="/case-study/2" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-study/3" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/fractional-saas-designer" element={<FractionalPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/analytics" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-6 h-6 border-2 border-neutral-300 border-t-neutral-800 rounded-full animate-spin" /></div>}><Analytics /></Suspense>} />
         </Routes>
         <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>

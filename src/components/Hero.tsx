@@ -15,7 +15,7 @@ const LightHero = () => (
     blendingValue="soft-light"
     size="90%"
     interactive={false}
-    containerClassName="absolute inset-0"
+    containerClassName="absolute inset-0 h-full w-full"
   />
 );
 
@@ -31,7 +31,7 @@ const DarkHero = () => (
     blendingValue="soft-light"
     size="90%"
     interactive={false}
-    containerClassName="absolute inset-0"
+    containerClassName="absolute inset-0 h-full w-full"
   />
 );
 

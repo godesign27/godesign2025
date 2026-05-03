@@ -136,22 +136,22 @@ const services = [
 
 const caseSnippets = [
   {
-    meta: 'Legal Tech · B2B SaaS · 2024',
-    title: 'AI copilot for contract review',
+    meta: 'Euphonic AI · Startup · SaaS 2024',
+    title: 'Brand and interface design for an AI-led product',
     description:
-      'Designed an AI-assisted contract analysis tool that reduced attorney review time by 40% without sacrificing accuracy. Key innovation: a "confidence radar" visualization that surfaces which clauses need human attention, paired with inline contextual explanations for flagged items. Users reported the system "felt like a junior associate who knew when to escalate" — exactly the mental model we designed for.',
+      'Partnered with the Euphonic AI founding team to define the brand identity and design the end-to-end interface for their AI-led SaaS platform. Established a visual system that signaled trust and intelligence without leaning on tired AI tropes, then translated it into a product UI where the model\'s reasoning, confidence, and limits are surfaced naturally inside the workflow. The result was a launch-ready product with a coherent voice across marketing site, onboarding, and core experience — and a design system the team could keep extending as the product matured.',
   },
   {
-    meta: 'Content Platform · Consumer · 2023',
-    title: 'Transparent recommendation system',
+    meta: 'ZS · Agentic AI · Strategy 2026',
+    title: 'Agentic AI experience strategy for an enterprise consultancy',
     description:
-      'Redesigned recommendation UI to make the AI\'s logic visible without overwhelming users. Introduced lightweight "why this?" explanations on each card and a user-controlled interest graph showing how the system\'s model of them evolves. Result: 22% increase in engagement, 35% reduction in "not interested" feedback.',
+      'Led the experience strategy for ZS\'s agentic AI initiative, helping product and consulting leadership define how autonomous agents should fit into existing client workflows. Mapped the spectrum of human-in-the-loop, human-on-the-loop, and fully delegated patterns against real engagement scenarios, then specified the trust signals, escalation paths, and interruption affordances each pattern required. Delivered a strategy framework, prioritized opportunity map, and reference interaction models that gave the org a shared language for designing agentic features without compromising client trust or compliance posture.',
   },
   {
-    meta: 'Data Platform · Enterprise · 2023',
-    title: 'Human-in-the-loop classification workflow',
+    meta: 'ZS · Agentic AI · Design System Evaluation 2026',
+    title: 'Design system evaluation for agentic AI surfaces',
     description:
-      'Designed a hybrid AI/human workflow for sensitive data classification. High-confidence cases handled automatically; borderline cases routed to human review with full context and AI reasoning. System achieved 10× throughput increase with zero accuracy drop. The AI knew its own limits and asked for help — a trust pattern we explicitly designed into the interaction model.',
+      'Audited ZS\'s existing design system against the demands of agentic AI interfaces — streaming outputs, in-progress reasoning, tool use, confidence and provenance, and recoverable error states. Identified gaps where current components quietly broke down under agent behavior, then proposed a layered set of new primitives and patterns (agent status, intent capture, plan preview, action approvals, audit trails) that extend the system rather than fork it. The output gave their design and engineering teams a clear roadmap for evolving the system without losing the consistency they\'d already invested in.',
   },
 ];
 

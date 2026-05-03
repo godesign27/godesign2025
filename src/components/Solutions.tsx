@@ -23,7 +23,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ title, description, image
         {tags.map((tag, index) => (
           <span
             key={index}
-            className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300"
+            className="text-xs font-medium px-2.5 py-0.5 rounded-full bg-gray-100 dark:bg-gray-950 text-gray-600 dark:text-gray-300"
           >
             {tag}
           </span>
@@ -103,7 +103,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
       </section>
 
       {/* Featured Case Studies */}
-      <section className="py-20 bg-gray-100 dark:bg-gray-800">
+      <section className="py-20 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Featured Case Studies</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -119,7 +119,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
       </section>
 
       {/* Web Design Solutions */}
-      <section className="pt-20 pb-12 bg-gray-100 dark:bg-gray-800">
+      <section className="pt-20 pb-12 bg-gray-100 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12"> Design Solutions</h2>
 
@@ -133,13 +133,13 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">DREMEL.COM</h4>
                 <p className="text-sm text-gray-700 dark:text-gray-300">E-commerce Redesign</p>
                 <div className="mt-4">
-                  <span className="text-xs bg-white dark:bg-gray-700 px-2 py-1 rounded text-gray-600 dark:text-gray-300">E-commerce</span>
+                  <span className="text-xs bg-white dark:bg-gray-900 px-2 py-1 rounded text-gray-600 dark:text-gray-300">E-commerce</span>
                 </div>
               </div>
 
               {/* Main Hero Image (2x height) */}
-              <div className="md:col-span-2 md:row-span-2 bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+              <div className="md:col-span-2 md:row-span-2 bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Responsive Design
                 </span>
                 <img
@@ -150,14 +150,14 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               </div>
 
               {/* Conversion Stat */}
-              <div className="bg-gray-900 dark:bg-gray-800 rounded-2xl p-6 flex flex-col justify-center items-center text-white">
+              <div className="bg-gray-900 dark:bg-gray-950 rounded-2xl p-6 flex flex-col justify-center items-center text-white">
                 <div className="text-3xl font-bold mb-2">177%</div>
                 <div className="text-sm text-gray-300">Desktop device increase</div>
               </div>
 
               {/* Dremel - before */}
-              <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Before
                 </span>
                 <img
@@ -168,8 +168,8 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               </div>
 
               {/* Sketches */}
-              <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Sketches
                 </span>
                 <img
@@ -180,8 +180,8 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               </div>
 
               {/* Site Map */}
-              <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+              <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Sitemap
                 </span>
                 <img
@@ -198,8 +198,8 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               </div>
 
               {/* Product Detail Page (2x height) */}
-              <div className="md:col-span-2 md:row-span-2 bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+              <div className="md:col-span-2 md:row-span-2 bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg relative">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Final Product Detail Design
                 </span>
                 <img
@@ -210,7 +210,7 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
               </div>
 
               {/* User Experience Description */}
-              <div className="md:col-span-2 bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 flex flex-col justify-center">
+              <div className="md:col-span-2 bg-gray-50 dark:bg-gray-950 rounded-2xl p-6 flex flex-col justify-center">
                 <div className="text-xs text-gray-600 dark:text-gray-400 mb-2 uppercase tracking-wide">User Experience</div>
                 <div className="text-lg font-bold text-gray-900 dark:text-white mb-2">Intuitive User Centered Product Discovery</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">A responsive, user-friendly commerce site redesign that works seemlessly on desiktop and mobile. We transformed the experiece to focus on how users think in order to make the product finding and buying experience simple and easy rather than on how the business operates. </div>
@@ -229,9 +229,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Accenture - Onboarding Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
                 <img
@@ -251,9 +251,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
             </div>
 
             {/* TransUnion.com Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
                 <img
@@ -273,9 +273,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
             </div>
 
             {/* Aramark Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
                 <img
@@ -295,9 +295,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
             </div>
 
             {/* Chrysler Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Automotive
                 </span>
                 <img
@@ -317,9 +317,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
             </div>
 
             {/* Accenture - Leave of Absence */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   HR Solutions
                 </span>
                 <img
@@ -339,9 +339,9 @@ const Solutions: React.FC<SolutionsProps> = ({ setCurrentPage, setSelectedCaseSt
             </div>
 
             {/* Atom Manager Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   SaaS
                 </span>
                 <img

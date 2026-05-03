@@ -99,7 +99,7 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
       </section>
 
       {/* What's Included */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">What's Included</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -242,9 +242,9 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Mopar Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Enterprise
                 </span>
                 <img
@@ -264,9 +264,9 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
             </div>
 
             {/* Atom Manager Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Government
                 </span>
                 <img
@@ -285,9 +285,9 @@ const SaasProductDesign: React.FC<SaasProductDesignProps> = ({ setCurrentPage })
             </div>
 
             {/* ZS SaaS product Redesign */}
-            <div className="bg-white dark:bg-gray-700 rounded-2xl overflow-hidden shadow-lg">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="aspect-[4/3] bg-white dark:bg-gray-600 relative">
-                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-700 dark:text-purple-400 dark:border-purple-400">
+                <span className="absolute top-4 left-4 z-10 inline-flex items-center px-2.5 py-0.5 rounded-sm bg-purple-100 text-purple-800 text-xs font-medium border border-purple-400 dark:bg-gray-900 dark:text-purple-400 dark:border-purple-400">
                   Healthcare
                 </span>
                 <img

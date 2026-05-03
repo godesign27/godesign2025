@@ -13,7 +13,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ setCurrentPage, setSele
   };
 
   return (
-    <section id="success-stories" className="bg-gray-50 dark:bg-gray-800 py-16">
+    <section id="success-stories" className="bg-gray-50 dark:bg-gray-950 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-16">
           Success Stories
@@ -21,7 +21,7 @@ const SuccessStories: React.FC<SuccessStoriesProps> = ({ setCurrentPage, setSele
 
         {/* First case study */}
         <div className="grid md:grid-cols-2 gap-8 items-start mb-24">
-          <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow-sm">
+          <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow-sm">
             <img
               src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Dashboard%20-%20Summary.png"
               alt="CoreTechs Dashboard"

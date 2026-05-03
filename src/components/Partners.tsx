@@ -33,7 +33,7 @@ const Partners: React.FC = () => {
         </div>
 
         {/* Stats section */}
-        <div className="mt-32 bg-gray-50 dark:bg-gray-800 rounded-xl p-16">
+        <div className="mt-32 bg-gray-50 dark:bg-gray-950 rounded-xl p-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
             <div className="text-center">
               <p className="text-4xl font-bold text-gray-900 dark:text-white">50%</p>

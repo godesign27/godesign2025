@@ -49,7 +49,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Core Values & Philosophy</h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
@@ -57,7 +57,7 @@ const About: React.FC = () => {
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+            <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
@@ -65,7 +65,7 @@ const About: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-300">We prioritize understanding the people behind the screens. By listening, researching, and testing, we design experiences that resonate with real users.</p>
             </div>
 
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+            <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
                 <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               </div>
@@ -73,7 +73,7 @@ const About: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-300">Great ideas are born from teamwork. We work closely with clients, stakeholders, and developers to craft solutions that align with your vision.</p>
             </div>
 
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+            <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
                 <Lightbulb className="w-6 h-6 text-green-600 dark:text-green-400" />
               </div>
@@ -81,7 +81,7 @@ const About: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-300">Good design isn't just about aesthetics—it's about creating results. We measure success by the value we bring to your users and business.</p>
             </div>
 
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+            <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-4">
                 <Sparkles className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
               </div>
@@ -89,7 +89,7 @@ const About: React.FC = () => {
               <p className="text-gray-600 dark:text-gray-300">We believe in the power of clean, functional design. By focusing on what matters, we create experiences that are easy to navigate and enjoyable to use.</p>
             </div>
 
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
+            <div className="p-6 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mb-4">
                 <Heart className="w-6 h-6 text-red-600 dark:text-red-400" />
               </div>

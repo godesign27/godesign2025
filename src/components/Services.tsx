@@ -45,7 +45,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
           <div className="grid md:grid-cols-3 gap-12">
             {/* UX/UI Design Consulting */}
             <div>
-              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-950 rounded-lg flex items-center justify-center mb-6">
                 <ClipboardList className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">UX/UI Design Consulting</h3>
@@ -66,7 +66,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
 
             {/* AI + Agentic Experience */}
             <div>
-              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-950 rounded-lg flex items-center justify-center mb-6">
                 <Sparkles className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">AI + Agentic Experience</h3>
@@ -87,7 +87,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
 
             {/* Brand & Identity Design */}
             <div>
-              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-gray-100 dark:bg-gray-950 rounded-lg flex items-center justify-center mb-6">
                 <Briefcase className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Brand & Identity Design</h3>
@@ -109,13 +109,13 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* Specialized Services Section */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-16">Specialized Services</h2>
 
           <div className="grid md:grid-cols-3 gap-12">
             {/* Marketing Web Design */}
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mb-6">
                 <Globe className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
               </div>
@@ -132,7 +132,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
             </div>
 
             {/* SaaS Product Design */}
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-6">
                 <Box className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               </div>
@@ -149,7 +149,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
             </div>
 
             {/* Agentic Experience */}
-            <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mb-6">
                 <Bot className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
@@ -171,7 +171,7 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Our Process</h2>
           <div className="space-y-12">

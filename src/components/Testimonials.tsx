@@ -13,7 +13,7 @@ const Testimonials: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Testimonial 1 */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-transparent dark:border-gray-800">
             <div className="flex items-center mb-4">
               <div className="h-10 w-10 flex items-center justify-center bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400 rounded-full font-bold">
                 FCB
@@ -46,7 +46,7 @@ const Testimonials: React.FC = () => {
           </div>
 
           {/* Testimonial 2 */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-transparent dark:border-gray-800">
             <div className="flex items-center mb-4">
               <div className="h-10 w-10 flex items-center justify-center bg-indigo-100 dark:bg-indigo-900 text-indigo-600 dark:text-indigo-400 rounded-full font-bold">
                 AC
@@ -79,7 +79,7 @@ const Testimonials: React.FC = () => {
           </div>
 
           {/* Testimonial 3 */}
-          <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg shadow-sm">
+          <div className="bg-gray-50 dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-transparent dark:border-gray-800">
             <div className="flex items-center mb-4">
               <div className="h-10 w-10 flex items-center justify-center bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400 rounded-full font-bold">
                 TU

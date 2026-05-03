@@ -94,7 +94,7 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
       </section>
 
       {/* Design Solutions */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Design Solutions</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -115,7 +115,7 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
                 image: "https://images.pexels.com/photos/5053740/pexels-photo-5053740.jpeg"
               }
             ].map((project, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-sm">
+              <div key={index} className="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-sm">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -181,7 +181,7 @@ const MobileWebDesign: React.FC<MobileWebDesignProps> = ({ setCurrentPage }) => 
       </section>
 
       {/* What's Included */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">What's Included</h2>
           <div className="grid md:grid-cols-2 gap-8">

@@ -166,7 +166,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
+    <div className="min-h-screen bg-white dark:bg-gray-950">
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-amber-300 via-orange-400 to-rose-400 dark:from-amber-900 dark:via-orange-900 dark:to-rose-900"></div>
@@ -257,7 +257,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
       </section>
 
       {/* Four trust layers */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950 dark:border-y dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12">
             <h2 className="text-3xl md:text-5xl font-regular text-gray-900 dark:text-white mb-6">
@@ -277,7 +277,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               return (
                 <div
                   key={layer.title}
-                  className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm"
+                  className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-transparent dark:border-gray-800"
                 >
                   <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900/60 rounded-full flex items-center justify-center mb-6">
                     <Icon className="w-6 h-6 text-amber-600 dark:text-amber-400" />
@@ -316,7 +316,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               return (
                 <div
                   key={pattern.title}
-                  className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg hover:border-amber-500 dark:hover:border-amber-500 transition-colors"
+                  className="border border-gray-200 dark:border-gray-800 p-6 rounded-lg hover:border-amber-500 dark:hover:border-amber-500 transition-colors"
                 >
                   <Icon className="w-8 h-8 text-amber-600 dark:text-amber-400 mb-4" />
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -333,7 +333,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
       </section>
 
       {/* Mental model mapping */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950 dark:border-y dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-5xl font-regular text-gray-900 dark:text-white mb-8">
             Mental model mapping: the missing step.
@@ -376,7 +376,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
             {services.map((service) => (
               <div
                 key={service.number}
-                className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700 hover:border-amber-500 dark:hover:border-amber-500 transition-colors"
+                className="bg-white dark:bg-gray-900 p-8 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800 hover:border-amber-500 dark:hover:border-amber-500 transition-colors"
               >
                 <div className="text-sm font-semibold text-amber-600 dark:text-amber-400 mb-2">
                   {service.number}
@@ -388,7 +388,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
                   {service.description}
                 </p>
 
-                <div className="border-t border-gray-200 dark:border-gray-600 pt-6 space-y-3">
+                <div className="border-t border-gray-200 dark:border-gray-800 pt-6 space-y-3">
                   <div className="flex justify-between text-sm">
                     <span className="text-gray-500 dark:text-gray-400">Timeline</span>
                     <span className="font-semibold text-gray-900 dark:text-white">
@@ -426,7 +426,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
       </section>
 
       {/* Case snippets */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950 dark:border-y dark:border-gray-800">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-sm font-semibold uppercase tracking-widest text-amber-600 dark:text-amber-400">
             Recent AI/AX work
@@ -435,7 +435,7 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
             Case examples.
           </h2>
 
-          <div className="divide-y divide-gray-200 dark:divide-gray-700">
+          <div className="divide-y divide-gray-200 dark:divide-gray-800">
             {caseSnippets.map((snippet) => (
               <article key={snippet.title} className="py-10 first:pt-0 last:pb-0">
                 <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">

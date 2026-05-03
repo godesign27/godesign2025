@@ -193,13 +193,12 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               AI &amp; Agentic Experience Design
             </div>
             <h1 className="text-4xl md:text-7xl font-regular text-gray-900 mb-6 max-w-4xl">
-              Building AI products people actually trust.
+              We help design how AI works—inside your team and inside your product.
             </h1>
             <p className="text-xl text-gray-900 max-w-3xl">
-              Director-level strategy and UX leadership for teams shipping AI-powered products.
-              We bridge the gap between powerful models and interfaces people understand,
-              control, and trust. Helps SaaS and enterprise teams design, govern, and scale
-              AI-driven product experiences that actually work in the real world.
+              From improving how teams use AI tools to designing AI-native product experiences,
+              we help SaaS and enterprise companies turn AI into something usable, controlled,
+              and built for the real world.
             </p>
 
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">

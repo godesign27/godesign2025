@@ -65,9 +65,9 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                <Link to="/agentic-experience" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                   Agentic Experience
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">

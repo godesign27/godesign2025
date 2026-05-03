@@ -177,25 +177,25 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               <li>
                 <button
                   onClick={() => setCurrentPage('services')}
-                  className="text-gray-900 hover:text-black"
+                  className="text-gray-900 hover:text-black dark:text-white dark:hover:text-white"
                 >
                   Services
                 </button>
               </li>
-              <ChevronRight className="w-4 h-4 text-gray-900" />
-              <li className="text-gray-900 font-medium">Agentic Experience</li>
+              <ChevronRight className="w-4 h-4 text-gray-900 dark:text-white" />
+              <li className="text-gray-900 font-medium dark:text-white">Agentic Experience</li>
             </ol>
           </nav>
 
           <div className="py-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-white/40 backdrop-blur-sm text-gray-900 text-sm font-medium tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-white/40 dark:bg-white/10 backdrop-blur-sm text-gray-900 dark:text-white text-sm font-medium tracking-wide">
               <Sparkles className="w-4 h-4" />
               AI &amp; Agentic Experience Design
             </div>
-            <h1 className="text-4xl md:text-7xl font-regular text-gray-900 mb-6 max-w-4xl">
+            <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white mb-6 max-w-4xl">
               We help design how AI works—inside your team and inside your product.
             </h1>
-            <p className="text-xl text-gray-900 max-w-3xl">
+            <p className="text-xl text-gray-900 dark:text-white max-w-3xl">
               From improving how teams use AI tools to designing AI-native product experiences,
               we help SaaS and enterprise companies turn AI into something usable, controlled,
               and built for the real world.
@@ -209,12 +209,12 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               ].map((meta) => (
                 <div
                   key={meta.label}
-                  className="bg-white/40 backdrop-blur-sm rounded-lg p-4"
+                  className="bg-white/40 dark:bg-white/10 backdrop-blur-sm rounded-lg p-4"
                 >
-                  <div className="text-xs uppercase tracking-widest text-gray-900 mb-1">
+                  <div className="text-xs uppercase tracking-widest text-gray-900 dark:text-white mb-1">
                     {meta.label}
                   </div>
-                  <div className="text-base font-semibold text-gray-900">{meta.value}</div>
+                  <div className="text-base font-semibold text-gray-900 dark:text-white">{meta.value}</div>
                 </div>
               ))}
             </div>

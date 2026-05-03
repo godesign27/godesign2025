@@ -22,6 +22,23 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-16">Specialized Expertise</h2>
 
         <div className="grid md:grid-cols-3 gap-12">
+          {/* Agentic Experience */}
+          <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
+            <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mb-6">
+              <Bot className="w-6 h-6 text-amber-600 dark:text-amber-400" />
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Agentic Experience</h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              Director-level UX leadership for teams shipping AI-powered products. Build interfaces that feel transparent, controllable, and genuinely helpful — not just technically impressive.
+            </p>
+            <button
+              onClick={handleAgenticExperienceClick}
+              className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
+            >
+              Learn More →
+            </button>
+          </div>
+
           {/* Marketing Web Design */}
           <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
             <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center mb-6">
@@ -50,23 +67,6 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
             </p>
             <button
               onClick={() => setCurrentPage('saas-product-design')}
-              className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
-            >
-              Learn More →
-            </button>
-          </div>
-
-          {/* Agentic Experience */}
-          <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mb-6">
-              <Bot className="w-6 h-6 text-amber-600 dark:text-amber-400" />
-            </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Agentic Experience</h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Director-level UX leadership for teams shipping AI-powered products. Build interfaces that feel transparent, controllable, and genuinely helpful — not just technically impressive.
-            </p>
-            <button
-              onClick={handleAgenticExperienceClick}
               className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
             >
               Learn More →

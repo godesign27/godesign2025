@@ -76,7 +76,7 @@ const services = [
     title: 'AI/AX Strategy & Assessment',
     description:
       'Comprehensive audit of your AI product or feature set. Evaluate trust layers, mental model gaps, and interaction pattern fit. Leave with a prioritized roadmap grounded in user research and UX heuristics.',
-    timeline: '2–3 weeks',
+    timeline: '4–6 weeks',
     format: 'Remote (async + live sessions)',
     deliverables: [
       'Trust-by-Design audit across all four layers',
@@ -91,7 +91,7 @@ const services = [
     title: 'AI Product Design Sprint',
     description:
       'Rapid, collaborative sprint to design a new AI feature from scratch. Define interaction model, design key flows with edge cases, and prototype before engineering commits to an architecture.',
-    timeline: '3–4 weeks',
+    timeline: '6–8 weeks',
     format: 'Remote (embedded with team)',
     deliverables: [
       'AI interaction pattern definition + mental model specification',
@@ -122,7 +122,7 @@ const services = [
     title: 'Responsible AI Workshop',
     description:
       'Structured workshop series to help your team navigate ethical, legal, and trust challenges. Design patterns for transparency, consent, and user control grounded in responsible AI principles.',
-    timeline: '2 weeks',
+    timeline: '4 weeks',
     format: 'Remote (live workshops + async work)',
     deliverables: [
       'Responsible AI design framework tailored to your context',
@@ -177,25 +177,25 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               <li>
                 <button
                   onClick={() => setCurrentPage('services')}
-                  className="text-white/80 hover:text-white"
+                  className="text-gray-900 hover:text-black"
                 >
                   Services
                 </button>
               </li>
-              <ChevronRight className="w-4 h-4 text-white/60" />
-              <li className="text-white font-medium">Agentic Experience</li>
+              <ChevronRight className="w-4 h-4 text-gray-900" />
+              <li className="text-gray-900 font-medium">Agentic Experience</li>
             </ol>
           </nav>
 
           <div className="py-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-white/15 backdrop-blur-sm text-white text-sm font-medium tracking-wide">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-white/40 backdrop-blur-sm text-gray-900 text-sm font-medium tracking-wide">
               <Sparkles className="w-4 h-4" />
               AI &amp; Agentic Experience Design
             </div>
-            <h1 className="text-4xl md:text-7xl font-regular text-white mb-6 max-w-4xl">
+            <h1 className="text-4xl md:text-7xl font-regular text-gray-900 mb-6 max-w-4xl">
               Building AI products people actually trust.
             </h1>
-            <p className="text-xl text-white/90 max-w-3xl">
+            <p className="text-xl text-gray-900 max-w-3xl">
               Director-level strategy and UX leadership for teams shipping AI-powered products.
               We bridge the gap between powerful models and interfaces people understand,
               control, and trust.
@@ -209,12 +209,12 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
               ].map((meta) => (
                 <div
                   key={meta.label}
-                  className="bg-white/15 backdrop-blur-sm rounded-lg p-4"
+                  className="bg-white/40 backdrop-blur-sm rounded-lg p-4"
                 >
-                  <div className="text-xs uppercase tracking-widest text-white/70 mb-1">
+                  <div className="text-xs uppercase tracking-widest text-gray-900 mb-1">
                     {meta.label}
                   </div>
-                  <div className="text-base font-semibold text-white">{meta.value}</div>
+                  <div className="text-base font-semibold text-gray-900">{meta.value}</div>
                 </div>
               ))}
             </div>

@@ -198,7 +198,8 @@ const AgenticExperience: React.FC<AgenticExperienceProps> = ({ setCurrentPage })
             <p className="text-xl text-gray-900 max-w-3xl">
               Director-level strategy and UX leadership for teams shipping AI-powered products.
               We bridge the gap between powerful models and interfaces people understand,
-              control, and trust.
+              control, and trust. Helps SaaS and enterprise teams design, govern, and scale
+              AI-driven product experiences that actually work in the real world.
             </p>
 
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl">

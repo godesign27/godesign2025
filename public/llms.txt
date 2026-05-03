@@ -1,6 +1,6 @@
 # GO Design, Inc.
 
-> GO Design is a Chicago-based UI/UX design agency founded by Timothy McGuire, specializing in SaaS product design, mobile app design, marketing web design, and fractional design services. With 12+ years of experience, GO Design transforms digital products for enterprise and startup clients nationwide.
+> GO Design is a Chicago-based UI/UX design agency founded by Timothy McGuire, specializing in AI and agentic experience design, SaaS product design, marketing web design, and fractional design services. With 12+ years of experience, GO Design transforms digital products for enterprise and startup clients nationwide.
 
 ## About
 
@@ -13,6 +13,9 @@ Full-spectrum UX/UI design consulting including user flows, information architec
 
 ### SaaS Product Design
 End-to-end design for SaaS applications: user research, strategic thinking, design system creation, workflow optimization, and scalable interface design. Focused on driving user engagement, retention, and business growth.
+
+### AI & Agentic Experience Design
+Director-level UX strategy and design for teams shipping AI-powered products. Built around the Trust-by-Design framework (predictability, transparency, control, accountability) and mental model mapping. Capabilities include AI/AX strategy and assessment, AI product design sprints, fractional AI design leadership, interaction pattern design (copilot, agent, classifier, advisor), and responsible AI workshops. Recent engagements include Euphonic AI (brand and interface design for an AI-led SaaS product, 2024) and ZS (agentic AI experience strategy and design system evaluation, 2026).
 
 ### Mobile App Design
 Mobile-first design for iOS and Android platforms. Intuitive user experiences with multi-device optimization, responsive layouts, and beautiful interfaces that drive engagement.
@@ -59,6 +62,7 @@ Created a mobile-first cocktail recipe discovery platform for Suntory Lab and Ji
 - [Marketing Web Design](https://godesign.one/marketing-web-design)
 - [Mobile App Design](https://godesign.one/mobile-web-design)
 - [Fractional SaaS Designer](https://godesign.one/fractional-saas-designer)
+- [AI & Agentic Experience](https://godesign.one/agentic-experience)
 - [CoreTechs Case Study](https://godesign.one/case-study/1)
 - [Accenture Case Study](https://godesign.one/case-study/2)
 - [Jim Beam Case Study](https://godesign.one/case-study/3)

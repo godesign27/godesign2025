@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Box, Smartphone, ClipboardList, Grid2x2 as Grid, Briefcase } from 'lucide-react';
+import { Globe, Box, Sparkles, ClipboardList, Bot, Briefcase } from 'lucide-react';
 
 interface ServicesProps {
   setCurrentPage: (page: string) => void;
@@ -64,23 +64,24 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               </ul>
             </div>
 
-            {/* Experience Research */}
+            {/* AI + Agentic Experience */}
             <div>
               <div className="w-12 h-12 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center mb-6">
-                <Grid className="w-6 h-6 text-gray-900 dark:text-white" />
+                <Sparkles className="w-6 h-6 text-gray-900 dark:text-white" />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Experience Research</h3>
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">AI + Agentic Experience</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Discover insights that matter. We combine heuristic evaluations, user personas, and
-                competitive analysis to understand your audience and refine your product for peak
-                usability.
+                Design AI products people actually trust. We bridge the gap between powerful
+                models and interfaces users understand, control, and rely on — through our
+                Trust-by-Design framework.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
-                <li>• Heuristic Analysis</li>
-                <li>• Competitive Analysis</li>
-                <li>• User Testing</li>
-                <li>• User Personas</li>
-                <li>• Research Analysis</li>
+                <li>• AI/AX Strategy</li>
+                <li>• Mental Model Mapping</li>
+                <li>• Interaction Pattern Design</li>
+                <li>• Trust-by-Design Audits</li>
+                <li>• Responsible AI Workshops</li>
+                <li>• Prototyping &amp; Testing</li>
               </ul>
             </div>
 
@@ -147,17 +148,19 @@ const Services: React.FC<ServicesProps> = ({ setCurrentPage }) => {
               </button>
             </div>
 
-            {/* Mobile App Design */}
+            {/* Agentic Experience */}
             <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
-                <Smartphone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+              <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mb-6">
+                <Bot className="w-6 h-6 text-amber-600 dark:text-amber-400" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Mobile App Design</h3>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Agentic Experience</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Create exceptional mobile experiences that users love. Our mobile-first approach ensures your app is intuitive, engaging, and optimized for all devices.
+                Director-level UX leadership for teams shipping AI-powered products. Build
+                interfaces that feel transparent, controllable, and genuinely helpful — not
+                just technically impressive.
               </p>
               <button
-                onClick={() => setCurrentPage('mobile-web-design')}
+                onClick={() => setCurrentPage('agentic-experience')}
                 className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
               >
                 Learn More →

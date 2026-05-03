@@ -66,7 +66,7 @@ const Footer: React.FC<FooterProps> = ({ setCurrentPage }) => {
               </li>
               <li>
                 <a href="#" className="text-base text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                  Mobile App Design
+                  Agentic Experience
                 </a>
               </li>
               <li>

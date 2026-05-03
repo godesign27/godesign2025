@@ -22,6 +22,7 @@ import CaseStudyDetail from './components/CaseStudyDetail';
 import CaseStudyDetail2 from './components/CaseStudyDetail2';
 import CaseStudyDetail3 from './components/CaseStudyDetail3';
 import FractionalSaasDesigner from './components/FractionalSaasDesigner';
+import AgenticExperience from './components/AgenticExperience';
 import SEOHead from './components/SEOHead';
 import { BASE_URL, SITE_NAME } from './lib/site';
 
@@ -88,10 +89,10 @@ function ServicesPage({ setCurrentPage }: { setCurrentPage: (page: string) => vo
             name: 'Design Services',
             itemListElement: [
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UX/UI Design Consulting' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Experience Research' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI + Agentic Experience' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand & Identity Design' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SaaS Product Design' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Design' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Agentic Experience' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Marketing Web Design' } },
             ],
           },
@@ -357,6 +358,29 @@ function FractionalPage({ setCurrentPage }: { setCurrentPage: (page: string) => 
   );
 }
 
+function AgenticExperiencePage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="AI & Agentic Experience Design - Building AI Products People Trust | GO Design"
+        description="Director-level UX leadership for teams shipping AI-powered products. Trust-by-Design framework, mental model mapping, AI interaction pattern design, and responsible AI workshops. Build interfaces that feel transparent, controllable, and genuinely helpful."
+        canonical="/agentic-experience"
+        keywords="AI UX design, agentic experience, AI product design, trust by design, mental model mapping, AI interaction patterns, responsible AI, copilot design, AI agent UX"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AI & Agentic Experience Design',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'Director-level UX strategy and design for AI-powered products. Trust-by-Design framework, interaction pattern selection, mental model mapping, and responsible AI workshops.',
+          serviceType: 'AI Experience Design',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <AgenticExperience setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -384,6 +408,7 @@ function App() {
       'case-study-2': '/case-study/2',
       'case-study-3': '/case-study/3',
       'fractional-saas-designer': '/fractional-saas-designer',
+      'agentic-experience': '/agentic-experience',
     };
     navigate(routes[page] ?? (page.startsWith('/') ? page : '/'));
   };
@@ -403,6 +428,7 @@ function App() {
       '/case-study/2': 'case-study-2',
       '/case-study/3': 'case-study-3',
       '/fractional-saas-designer': 'fractional-saas-designer',
+      '/agentic-experience': 'agentic-experience',
     };
     setCurrentPageState(pageMap[path] || 'home');
   }, [location.pathname]);
@@ -424,6 +450,7 @@ function App() {
           <Route path="/case-study/2" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-study/3" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/fractional-saas-designer" element={<FractionalPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/agentic-experience" element={<AgenticExperiencePage setCurrentPage={setCurrentPage} />} />
           <Route path="/analytics" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-6 h-6 border-2 border-neutral-300 border-t-neutral-800 rounded-full animate-spin" /></div>}><Analytics /></Suspense>} />
         </Routes>
         <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />

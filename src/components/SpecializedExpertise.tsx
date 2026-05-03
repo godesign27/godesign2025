@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Box, Smartphone } from 'lucide-react';
+import { Globe, Box, Bot } from 'lucide-react';
 
 interface SpecializedExpertiseProps {
   setCurrentPage: (page: string) => void;
@@ -11,9 +11,9 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
     setCurrentPage('marketing-web-design');
   };
 
-  const handleMobileWebDesignClick = () => {
+  const handleAgenticExperienceClick = () => {
     window.scrollTo(0, 0);
-    setCurrentPage('mobile-web-design');
+    setCurrentPage('agentic-experience');
   };
 
   return (
@@ -56,17 +56,17 @@ const SpecializedExpertise: React.FC<SpecializedExpertiseProps> = ({ setCurrentP
             </button>
           </div>
 
-          {/* Mobile App Design */}
+          {/* Agentic Experience */}
           <div className="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-sm">
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-6">
-              <Smartphone className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <div className="w-12 h-12 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center mb-6">
+              <Bot className="w-6 h-6 text-amber-600 dark:text-amber-400" />
             </div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Mobile App Design</h3>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Agentic Experience</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              Create exceptional mobile experiences that users love. Our mobile-first approach ensures your app is intuitive, engaging, and optimized for all devices.
+              Director-level UX leadership for teams shipping AI-powered products. Build interfaces that feel transparent, controllable, and genuinely helpful — not just technically impressive.
             </p>
             <button
-              onClick={handleMobileWebDesignClick}
+              onClick={handleAgenticExperienceClick}
               className="text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300 rounded-full"
             >
               Learn More →

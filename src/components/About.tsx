@@ -1,111 +1,216 @@
 import React from 'react';
-import { Brain, Users, Lightbulb, Sparkles, Heart } from 'lucide-react';
+import { Brain, Users, Lightbulb, Sparkles, Heart, Award, TrendingUp, MessageSquare } from 'lucide-react';
+import SectionCTA from './SectionCTA';
 
-const About: React.FC = () => {
+interface AboutProps {
+  setCurrentPage: (page: string) => void;
+}
+
+const values = [
+  { icon: Brain, title: 'Human-Centered', description: 'Design starts with understanding the people using the product, their goals, their mental models, their frustrations. Aesthetics come after.' },
+  { icon: Users, title: 'Collaboration', description: 'The best design decisions are made with product and engineering in the room, not delivered to them as final artifacts.' },
+  { icon: Lightbulb, title: 'Impact', description: 'Good design is measured by outcomes: tasks completed, errors reduced, decisions supported. Not by how the comp looks in a portfolio.' },
+  { icon: Sparkles, title: 'Simplicity', description: 'Complexity in the system, clarity in the interface. Users should not have to think about how the product works, only about what they are trying to do.' },
+  { icon: Heart, title: 'Accessibility', description: 'Design should work for everyone. Accessibility is not a compliance checkbox, it is a quality standard that benefits all users.' },
+];
+
+const career = [
+  { company: 'ZS Associates', role: 'Principal UX Designer', tenure: '8 years', detail: 'Led experience design for an enterprise SaaS deployment platform used by life sciences clients globally. Built the design system, drove AI UX strategy, and owned end-to-end product design across multiple product lines.' },
+  { company: 'Bank of America', role: 'Senior UX Designer', tenure: 'Multi-year', detail: 'Designed high-stakes financial interfaces for consumer and business banking. Accessibility compliance, complex data visualization, and regulated-environment UX.' },
+  { company: 'TransUnion', role: 'UX Design Lead', tenure: 'Multi-year', detail: 'Led product design for fintech data products. Trust-centered UX for credit and identity data surfaces used by millions of consumers and enterprise buyers.' },
+  { company: 'Accenture', role: 'UX Designer', tenure: 'Multi-year', detail: 'Enterprise consulting engagements across industries. Employee experience redesign, process digitization, and large-scale organizational change UX.' },
+];
+
+const About: React.FC<AboutProps> = ({ setCurrentPage }) => {
+  React.useEffect(() => { window.scrollTo(0, 0); }, []);
+
+  const handleNav = (page: string) => {
+    window.scrollTo(0, 0);
+    setCurrentPage(page);
+  };
+
   return (
-    <div>
-      {/* Hero Section with Gradient Background */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-200 via-purple-200 to-indigo-200 dark:from-pink-900 dark:via-purple-900 dark:to-indigo-900"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-left max-w-3xl pt-32 pb-20">
-            <h1 className="text-5xl md:text-7xl text-gray-900 dark:text-white mb-6">
-              Transforming Ideas into<br />Digital Experiences
-            </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300">
-              Welcome to GO Design, where creativity and strategy come together to transform ideas into seamless digital experiences.
-            </p>
-          </div>
-        </div>
-      </section>
+    <main className="min-h-screen bg-tan-100 dark:bg-neutral-950">
 
-      {/* Main Content */}
-      <section className="py-16 bg-white dark:bg-gray-900">
+      {/* Hero */}
+      <section className="bg-white dark:bg-neutral-950 py-24 border-b border-line dark:border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-end">
             <div>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                I'm Timothy McGuire, an Experience Designer with over 12 years of experience helping businesses solve complex challenges through thoughtful, user-centered design.
+              <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-4">About</p>
+              <h1 className="text-4xl sm:text-5xl font-semibold text-ink dark:text-tan-500 tracking-tight leading-tight mb-6">
+                I help organizations design intelligent products that people understand, trust, and enjoy using.
+              </h1>
+              <p className="text-base text-muted dark:text-neutral-400 leading-relaxed mb-8">
+                I'm Timothy McGuire, founder of GO Design and an Experience Designer with 15+ years of experience helping businesses solve complex challenges through thoughtful, user-centered design. I specialize in enterprise SaaS, AI-native products, and the design systems that make both possible at scale.
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                At GO Design, I believe great design is about more than just aesthetics—it's about creating solutions that resonate with users, simplify workflows, and deliver measurable results. From redesigning SaaS platforms to crafting mobile-first experiences, I've worked with businesses of all sizes to turn their vision into reality.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                What sets us apart is our process. I dive deep into understanding your unique goals, leveraging research, data-driven insights, and innovative design principles to create impactful solutions. Collaboration is at the heart of everything I do, ensuring every step aligns with your vision and needs.
-              </p>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                Whether you're looking to reimagine a digital product, enhance your brand's online presence, or tackle a new challenge, I'm here to help you create designs that inspire and succeed.
-              </p>
+              <div className="flex gap-4">
+                <button
+                  onClick={() => handleNav('contact')}
+                  className="px-6 py-3 bg-ink dark:bg-white text-white dark:text-ink text-sm font-medium hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors"
+                >
+                  Get in touch
+                </button>
+                <button
+                  onClick={() => handleNav('solutions')}
+                  className="px-6 py-3 border border-line dark:border-white/20 text-ink dark:text-white text-sm font-medium hover:bg-tan dark:hover:bg-white/5 transition-colors"
+                >
+                  See our work
+                </button>
+              </div>
             </div>
-            <div className="flex justify-center">
+            <div>
               <img
                 src="https://img1.wsimg.com/isteam/ip/8750adee-7fef-47ca-9c3a-3982c0b9d811/Timothy-McGuire.png/:/rs=w:740,cg:true,m"
                 alt="Timothy McGuire"
-                className="w-full rounded-lg shadow-xl"
+                className="w-full border border-line dark:border-white/10"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Core Values Section */}
-      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+      {/* Personal narrative */}
+      <section className="bg-white dark:bg-neutral-950 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12">Core Values & Philosophy</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 max-w-3xl">
-            At GO Design, every project starts with a simple question: How can we make this better for the user? This guiding principle drives our approach to design, ensuring every solution we create is impactful, intuitive, and meaningful.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mb-4">
-                <Brain className="w-6 h-6 text-purple-600 dark:text-purple-400" />
+          <div className="grid lg:grid-cols-2 gap-16">
+            <div>
+              <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-6">Background</p>
+              <h2 className="text-2xl font-semibold text-ink dark:text-white mb-6 leading-snug">Fifteen years building products people use at work.</h2>
+              <div className="space-y-4 text-base text-muted dark:text-neutral-400 leading-relaxed">
+                <p>My career has run through some of the more demanding design environments in enterprise software: pharmaceutical sales operations at ZS Associates, financial products at Bank of America and TransUnion, and large-scale digital transformation at Accenture.</p>
+                <p>The through-line is complexity: products with multiple user roles, high-stakes decisions, dense information, and real consequences for getting the design wrong. I learned early that enterprise UX is a fundamentally different discipline from consumer design, and I have spent 15 years developing the patterns and judgment to do it well.</p>
+                <p>In the last three years, AI has become the most interesting design problem in enterprise software. I have spent that time building frameworks for trust, explainability, and human oversight that I now bring to GO Design's clients as a core offering.</p>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Human-Centered Thinking</h3>
-              <p className="text-gray-600 dark:text-gray-300">We prioritize understanding the people behind the screens. By listening, researching, and testing, we design experiences that resonate with real users.</p>
             </div>
-
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+            <div>
+              <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-6">What I believe</p>
+              <div className="space-y-px bg-line dark:bg-white/10">
+                {[
+                  { label: 'Design is a translation act', body: 'Between what a system can do and what a user can understand. Between what a business needs and what a user will accept. Getting the translation right is the work.' },
+                  { label: 'Complexity lives in the system, not the interface', body: 'The job is to absorb complexity into the architecture so users never have to confront it. A product that feels simple is usually the result of enormous design effort behind the scenes.' },
+                  { label: 'Trust is designed', body: "Users don't trust a product because it's technically accurate. They trust it because the design tells them, through every microcopy label, every state, every error message, exactly what is happening and why." },
+                ].map((item) => (
+                  <div key={item.label} className="bg-white dark:bg-neutral-950 p-6">
+                    <p className="text-sm font-semibold text-ink dark:text-white mb-2">{item.label}</p>
+                    <p className="text-sm text-muted dark:text-neutral-400 leading-relaxed">{item.body}</p>
+                  </div>
+                ))}
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Innovation Through Collaboration</h3>
-              <p className="text-gray-600 dark:text-gray-300">Great ideas are born from teamwork. We work closely with clients, stakeholders, and developers to craft solutions that align with your vision.</p>
-            </div>
-
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mb-4">
-                <Lightbulb className="w-6 h-6 text-green-600 dark:text-green-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Design for Impact</h3>
-              <p className="text-gray-600 dark:text-gray-300">Good design isn't just about aesthetics—it's about creating results. We measure success by the value we bring to your users and business.</p>
-            </div>
-
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-full flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-yellow-600 dark:text-yellow-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Simplicity with Purpose</h3>
-              <p className="text-gray-600 dark:text-gray-300">We believe in the power of clean, functional design. By focusing on what matters, we create experiences that are easy to navigate and enjoyable to use.</p>
-            </div>
-
-            <div className="p-6 bg-white dark:bg-gray-700 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center mb-4">
-                <Heart className="w-6 h-6 text-red-600 dark:text-red-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">Accessibility & Inclusion</h3>
-              <p className="text-gray-600 dark:text-gray-300">Design should be for everyone. That's why we follow best practices to ensure our solutions are accessible, inclusive, and welcoming to all users.</p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-16 text-center">
-            <p className="text-xl italic text-gray-600 dark:text-gray-300">
-              "At GO Design, we're not just creating digital products; we're crafting experiences that connect, inspire, and endure."
+      {/* Career */}
+      <section className="bg-tan dark:bg-neutral-900 py-24 border-t border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-3">Experience</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white">Where I have worked.</h2>
+          </div>
+          <div className="space-y-px bg-line dark:bg-white/10">
+            {career.map((item) => (
+              <div key={item.company} className="grid lg:grid-cols-3 bg-white dark:bg-neutral-950">
+                <div className="p-8 border-b lg:border-b-0 lg:border-r border-line dark:border-white/10">
+                  <p className="text-base font-semibold text-ink dark:text-white mb-1">{item.company}</p>
+                  <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest">{item.role}</p>
+                  <p className="text-xs text-muted dark:text-neutral-500 mt-1">{item.tenure}</p>
+                </div>
+                <div className="lg:col-span-2 p-8">
+                  <p className="text-sm text-muted dark:text-neutral-400 leading-relaxed">{item.detail}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Design Leadership */}
+      <section className="bg-white dark:bg-neutral-950 py-24 border-t border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-3">Leadership</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white mb-4">Design leadership experience.</h2>
+            <p className="text-base text-muted dark:text-neutral-400 max-w-2xl leading-relaxed">
+              Throughout my career I have led design functions, mentored junior designers, and built the processes that let cross-functional teams move faster without losing quality.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-px bg-line dark:bg-white/10">
+            <div className="bg-white dark:bg-neutral-950 p-8">
+              <div className="w-10 h-10 bg-tan dark:bg-white/5 flex items-center justify-center mb-6">
+                <Award className="w-5 h-5 text-blue dark:text-lavender" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm font-semibold text-ink dark:text-white mb-3">Principal & Lead Experience</h3>
+              <p className="text-sm text-muted dark:text-neutral-400 leading-relaxed">
+                Served as Principal UX Designer and Design Manager at multiple organizations, owning end-to-end design strategy from discovery through delivery.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-950 p-8">
+              <div className="w-10 h-10 bg-tan dark:bg-white/5 flex items-center justify-center mb-6">
+                <TrendingUp className="w-5 h-5 text-blue dark:text-lavender" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm font-semibold text-ink dark:text-white mb-3">Cross-Functional Alignment</h3>
+              <p className="text-sm text-muted dark:text-neutral-400 leading-relaxed">
+                Experienced at aligning product, engineering, data science, and executive stakeholders on design direction. Design decisions that stick because the right people were in the room.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-neutral-950 p-8">
+              <div className="w-10 h-10 bg-tan dark:bg-white/5 flex items-center justify-center mb-6">
+                <MessageSquare className="w-5 h-5 text-blue dark:text-lavender" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-sm font-semibold text-ink dark:text-white mb-3">Mentorship & Culture</h3>
+              <p className="text-sm text-muted dark:text-neutral-400 leading-relaxed">
+                Committed to building design cultures where craft is celebrated and junior designers grow through mentorship and feedback, not just by watching senior work happen around them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-tan dark:bg-neutral-900 py-24 border-t border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <p className="text-xs font-semibold text-blue dark:text-lavender uppercase tracking-widest mb-3">Values</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white mb-4">What I hold to.</h2>
+            <p className="text-base text-muted dark:text-neutral-400 max-w-2xl leading-relaxed">
+              Every project starts with a simple question: how can we make this better for the user? These are the principles that guide the answer.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-px bg-line dark:bg-white/10">
+            {values.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="bg-white dark:bg-neutral-950 p-6">
+                  <div className="w-8 h-8 bg-tan dark:bg-white/5 flex items-center justify-center mb-4">
+                    <Icon className="w-4 h-4 text-blue dark:text-lavender" strokeWidth={1.5} />
+                  </div>
+                  <h3 className="text-sm font-semibold text-ink dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-xs text-muted dark:text-neutral-400 leading-relaxed">{item.description}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-16 max-w-2xl">
+            <p className="text-xl italic text-muted dark:text-neutral-400 leading-relaxed">
+              "I'm not just creating digital products, I'm crafting experiences that connect, inspire, and endure."
             </p>
           </div>
         </div>
       </section>
-    </div>
+
+      <SectionCTA
+        heading="Want to work together?"
+        body="Tell me about your project and what you're trying to accomplish."
+        primaryLabel="Get in Touch"
+        primaryPage="contact"
+        secondaryLabel="See Our Work"
+        secondaryPage="solutions"
+        setCurrentPage={setCurrentPage}
+      />
+    </main>
   );
 };
 

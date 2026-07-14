@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X, Moon, Sun } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, Moon, Sun, ChevronDown, Bot, Building2, Users, Target, Mic2, BookOpen, Workflow, PenLine, Palette } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 interface NavbarProps {
@@ -7,167 +7,306 @@ interface NavbarProps {
   setCurrentPage: (page: string) => void;
 }
 
+const perspectivePages = [
+  { id: 'perspectives-our-philosophy', label: 'Our Philosophy', description: 'Principles guiding every design decision.', icon: BookOpen },
+  { id: 'perspectives-how-we-work', label: 'How We Work', description: 'Our process, tools, and collaboration style.', icon: Workflow },
+  { id: 'perspectives-ai-native-design', label: 'AI-Native Design', description: 'How we think about designing for AI products.', icon: Bot },
+  { id: 'perspectives-writing', label: 'Writing', description: 'Articles and essays on design and systems.', icon: PenLine },
+  { id: 'speaking-workshops', label: 'Speaking', description: 'Conference talks and panel appearances.', icon: Mic2 },
+];
+
+const workWithMePages = [
+  { id: 'enterprise-ux-consulting', label: 'Enterprise Consulting', description: 'Senior AI experience strategy for enterprise products.', icon: Building2 },
+  { id: 'fractional-saas-designer', label: 'Fractional Leadership', description: 'Senior design leadership on a flexible cadence.', icon: Users },
+  { id: 'strategy-sessions', label: 'Strategy Sessions', description: 'Focused advisory engagements with a senior design mind.', icon: Target },
+  { id: 'speaking-workshops', label: 'Speaking & Workshops', description: 'Talks and workshops for design teams and conferences.', icon: Mic2 },
+];
+
+type DropdownKey = 'perspectives' | 'work-with-me' | null;
+
 const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<DropdownKey>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<DropdownKey>(null);
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [colorTheme, setColorTheme] = useState<'editorial' | 'graphite'>('editorial');
+  const navRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout>>();
 
   useEffect(() => {
+    const stored = localStorage.getItem('color-theme');
+    const initial = stored === 'graphite' ? 'graphite' : 'editorial';
+    setColorTheme(initial);
+    if (initial === 'graphite') {
+      document.documentElement.setAttribute('data-color-theme', 'graphite');
+    }
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+  const toggleColorTheme = () => {
+    const next = colorTheme === 'editorial' ? 'graphite' : 'editorial';
+    setColorTheme(next);
+    localStorage.setItem('color-theme', next);
+    if (next === 'graphite') {
+      document.documentElement.setAttribute('data-color-theme', 'graphite');
+    } else {
+      document.documentElement.removeAttribute('data-color-theme');
+    }
+  };
 
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
-  const buttonClasses = "px-6 py-2 rounded-full bg-brand-600 text-white hover:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-500 transition-all";
-
-  const getLinkClasses = (page: string) => {
-    const baseClasses = "px-3 py-2 text-sm font-medium transition-colors relative";
-    const isActive = currentPage === page;
-
-    return `${baseClasses} ${
-      isActive
-        ? "text-neutral-950 dark:text-white after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-neutral-950 dark:after:bg-white font-semibold"
-        : "text-neutral-800 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white"
-    }`;
+  const openDropdown = (key: DropdownKey) => {
+    clearTimeout(timeoutRef.current);
+    setActiveDropdown(key);
   };
 
-  if (!mounted) {
-    return null;
-  }
+  const scheduleClose = () => {
+    timeoutRef.current = setTimeout(() => setActiveDropdown(null), 150);
+  };
+
+  const navigate = (page: string) => {
+    window.scrollTo(0, 0);
+    setCurrentPage(page);
+    setActiveDropdown(null);
+    setIsMenuOpen(false);
+    setMobileExpanded(null);
+  };
+
+  const isPerspectivePage = currentPage === 'perspectives' || perspectivePages.some(s => s.id === currentPage);
+  const isWorkWithMePage = currentPage === 'work-with-me' || workWithMePages.some(s => s.id === currentPage);
+
+  const getNavLinkClasses = (active: boolean) =>
+    `px-3 py-2 text-sm font-medium transition-colors relative inline-flex items-center gap-1 ${
+      active
+        ? 'text-black dark:text-white font-semibold'
+        : 'text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white'
+    }`;
+
+  const renderItem = (item: { id: string; label: string; description: string; icon: React.ElementType }) => {
+    const Icon = item.icon;
+    return (
+      <button
+        key={item.id}
+        onClick={() => navigate(item.id)}
+        className={`flex items-center gap-3 w-full text-left px-4 py-3 transition-colors ${
+          currentPage === item.id
+            ? 'bg-neutral-100 dark:bg-white/[0.06]'
+            : 'hover:bg-neutral-50 dark:hover:bg-white/[0.04]'
+        }`}
+      >
+        <div className="w-8 h-8 rounded-none bg-neutral-100 dark:bg-white/[0.08] flex items-center justify-center flex-shrink-0">
+          <Icon className="w-4 h-4 text-muted dark:text-neutral-400" />
+        </div>
+        <div>
+          <div className="text-sm font-medium text-black dark:text-white">
+            {item.label}
+          </div>
+          <div className="text-xs text-muted dark:text-neutral-500 leading-snug">
+            {item.description}
+          </div>
+        </div>
+      </button>
+    );
+  };
+
+  const renderDropdown = (
+    key: DropdownKey,
+    overviewPage: string,
+    overviewLabel: string,
+    items: { id: string; label: string; description: string; icon: React.ElementType }[],
+  ) => (
+    <div
+      className={`absolute top-full left-0 mt-2 w-80 bg-white dark:bg-neutral-950 border border-line dark:border-white/[0.1] rounded-none transition-all duration-200 origin-top ${
+        activeDropdown === key
+          ? 'opacity-100 scale-100 translate-y-0'
+          : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+      }`}
+    >
+      <div className="flex items-center justify-between px-5 pt-4 pb-2">
+        <span className="text-xs font-semibold uppercase tracking-wider text-muted dark:text-neutral-500">{overviewLabel}</span>
+        <button
+          onClick={() => navigate(overviewPage)}
+          className="text-xs font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors"
+        >
+          Overview
+        </button>
+      </div>
+      <div className="py-1 pb-3">
+        {items.map(renderItem)}
+      </div>
+    </div>
+  );
+
+  const renderMobileSection = (
+    key: DropdownKey,
+    label: string,
+    overviewPage: string,
+    items: { id: string; label: string; description: string; icon: React.ElementType }[],
+  ) => (
+    <div key={key}>
+      <button
+        className="flex items-center justify-between w-full px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]"
+        onClick={() => setMobileExpanded(mobileExpanded === key ? null : key)}
+      >
+        {label}
+        <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${mobileExpanded === key ? 'rotate-180' : ''}`} />
+      </button>
+      <div className={`overflow-hidden transition-all duration-200 ${mobileExpanded === key ? 'max-h-[40rem] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="flex items-center justify-between pl-6 pr-4 py-2">
+          <span className="text-xs font-semibold text-muted dark:text-neutral-500 uppercase tracking-wider">{label}</span>
+          <button
+            className="text-xs font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white"
+            onClick={() => navigate(overviewPage)}
+          >
+            Overview
+          </button>
+        </div>
+        {items.map((item) => renderItem(item))}
+      </div>
+    </div>
+  );
+
+  if (!mounted) return null;
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm dark:bg-neutral-950/90' : 'bg-transparent'
-    }`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-line dark:border-white/[0.1] dark:bg-neutral-950/95' : 'bg-transparent'}`}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={navRef}>
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => setCurrentPage('home')}>
-              <img
-                src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/go-new25.png"
-                alt="GO Design"
-                className="h-6 w-auto mr-1 dark:hidden"
-              />
-              <img
-                src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/logo%20assets/go-logo-new25-white.png"
-                alt="GO Design"
-                className="h-6 w-auto mr-1 hidden dark:block"
-              />
-              <span className="text-xl dark:text-white">Design</span>
+            <div className="flex-shrink-0 flex items-center cursor-pointer" onClick={() => navigate('home')}>
+              <svg
+                width="42"
+                height="42"
+                viewBox="0 0 32 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="mr-3 flex-shrink-0"
+                aria-hidden="true"
+              >
+                {/* Ring */}
+                <circle cx="16" cy="16" r="8" fill="none" strokeWidth="3.5" className="stroke-ink dark:stroke-white" />
+                {/* Blue square */}
+                <rect x="12.2" y="12.2" width="7.6" height="7.6" fill="#2563EB" />
+              </svg>
+              <span className="text-xl font-semibold text-black dark:text-white">GO Design</span>
             </div>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                <a
-                  href="#services"
-                  className={getLinkClasses('services')}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage('services');
-                  }}
+
+            <div className="hidden lg:block">
+              <div className="ml-8 flex items-baseline space-x-0">
+                <button className={getNavLinkClasses(currentPage === 'home')} onClick={() => navigate('home')}>Home</button>
+
+                <button className={getNavLinkClasses(currentPage === 'services')} onClick={() => navigate('services')}>Services</button>
+
+                <button className={getNavLinkClasses(currentPage === 'ai-experience-architecture')} onClick={() => navigate('ai-experience-architecture')}>
+                  AI Experience Architecture™
+                </button>
+
+                <button className={getNavLinkClasses(currentPage === 'solutions')} onClick={() => navigate('solutions')}>Solutions</button>
+
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDropdown('perspectives')}
+                  onMouseLeave={scheduleClose}
                 >
-                  Services
-                </a>
-                <a
-                  href="#"
-                  className={getLinkClasses('solutions')}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage('solutions');
-                  }}
+                  <button className={getNavLinkClasses(isPerspectivePage)} onClick={() => navigate('perspectives')}>
+                    Perspectives
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'perspectives' ? 'rotate-180' : ''}`} />
+                  </button>
+                  {renderDropdown('perspectives', 'perspectives', 'Perspectives', perspectivePages)}
+                </div>
+
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDropdown('work-with-me')}
+                  onMouseLeave={scheduleClose}
                 >
-                  Solutions
-                </a>
-                <a
-                  href="#"
-                  className={getLinkClasses('about')}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setCurrentPage('about');
-                  }}
-                >
-                  About
-                </a>
+                  <button className={getNavLinkClasses(isWorkWithMePage)} onClick={() => navigate('work-with-me')}>
+                    Work With Us
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'work-with-me' ? 'rotate-180' : ''}`} />
+                  </button>
+                  {renderDropdown('work-with-me', 'work-with-me', 'Work With Us', workWithMePages)}
+                </div>
+
+                <button className={getNavLinkClasses(currentPage === 'about')} onClick={() => navigate('about')}>About</button>
               </div>
             </div>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-4 flex items-center md:ml-6">
-              <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-1 rounded-full text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white focus:outline-none">
-                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-              </button>
-              <button className={`ml-4 ${buttonClasses}`} onClick={() => setCurrentPage('contact')}>Let's Talk</button>
-            </div>
-          </div>
-          <div className="flex md:hidden">
-            <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')} className="p-1 rounded-full text-neutral-700 hover:text-neutral-900 dark:text-neutral-300 dark:hover:text-white focus:outline-none mr-2">
-              {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+
+          <div className="hidden lg:flex items-center gap-4">
+            <button
+              onClick={toggleColorTheme}
+              title={colorTheme === 'editorial' ? 'Switch to Graphite theme' : 'Switch to Editorial theme'}
+              className="p-2 rounded-none text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.08] transition-colors"
+            >
+              <Palette size={18} />
             </button>
-            <button onClick={toggleMenu} className="inline-flex items-center justify-center p-2 rounded-md text-neutral-700 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white focus:outline-none">
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="p-2 rounded-none text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-white/[0.08] transition-colors"
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <button className="btn-primary btn-sm" onClick={() => navigate('contact')}>
+              Let's Talk
+            </button>
+          </div>
+
+          <div className="flex lg:hidden items-center gap-2">
+            <button
+              onClick={toggleColorTheme}
+              title={colorTheme === 'editorial' ? 'Switch to Graphite theme' : 'Switch to Editorial theme'}
+              className="p-2 rounded-none text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white"
+            >
+              <Palette size={18} />
+            </button>
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="p-2 rounded-none text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white"
+            >
+              {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            </button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-none text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white"
+            >
+              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white shadow-lg dark:bg-neutral-950">
-            <a
-              href="#services"
-              className="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800"
-              onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage('services');
-                setIsMenuOpen(false);
-              }}
-            >
-              Services
-            </a>
-            <a
-              href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800"
-              onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage('solutions');
-                setIsMenuOpen(false);
-              }}
-            >
-              Solutions
-            </a>
-            <a
-              href="#"
-              className="block px-3 py-2 rounded-md text-base font-medium text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-neutral-800"
-              onClick={(e) => {
-                e.preventDefault();
-                setCurrentPage('about');
-                setIsMenuOpen(false);
-              }}
-            >
-              About
-            </a>
-            <button
-              className={`mt-4 w-full ${buttonClasses}`}
-              onClick={() => {
-                setCurrentPage('contact');
-                setIsMenuOpen(false);
-              }}
-            >
-              Let's Talk
-            </button>
+        <div className="lg:hidden">
+          <div className="px-2 pt-2 pb-4 space-y-1 bg-white dark:bg-neutral-950 border-t border-line dark:border-white/[0.1] max-h-screen overflow-y-auto">
+            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('home')}>Home</button>
+            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('services')}>Services</button>
+            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('ai-experience-architecture')}>AI Experience Architecture™</button>
+            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('solutions')}>Solutions</button>
+            {renderMobileSection('perspectives', 'Perspectives', 'perspectives', perspectivePages)}
+            {renderMobileSection('work-with-me', 'Work With Us', 'work-with-me', workWithMePages)}
+            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('about')}>About</button>
+            <div className="px-4 pt-4">
+              <button className="btn-primary w-full" onClick={() => navigate('contact')}>
+                Let's Talk
+              </button>
+            </div>
           </div>
         </div>
       )}

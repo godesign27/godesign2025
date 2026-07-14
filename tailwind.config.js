@@ -4,7 +4,31 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['"Instrument Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      borderRadius: {
+        card: '0px',
+      },
       colors: {
+        tan: {
+          DEFAULT: 'var(--color-tan)',
+          50: '#FDFCFB',
+          100: 'var(--color-tan-100)',
+          200: '#F6F1EB',
+          300: '#F3EFE7',
+          400: '#EAE3D6',
+          500: 'var(--color-tan-500)',
+          600: '#CEC3AE',
+          700: '#B8A893',
+          800: '#9E8E79',
+          900: '#7D6E5D',
+        },
+        blue: 'var(--color-blue)',
+        lavender: 'var(--color-lavender)',
+        ink: 'var(--color-ink)',
+        muted: 'var(--color-muted)',
+        line: 'var(--color-line)',
         brand: {
           DEFAULT: '#722FEE',
           50: '#F5F3FF',
@@ -25,13 +49,13 @@ export default {
           100: '#EFEEFO',
           200: '#DBD9DE',
           300: '#BAB8C1',
-          400: '#94919F',
-          500: '#777384',
+          400: 'var(--color-neutral-400)',
+          500: 'var(--color-neutral-500)',
           600: '#615D6C',
           700: '#4F4C58',
           800: '#44414B',
-          900: '#3B3941',
-          950: '#19181B',
+          900: 'var(--color-neutral-900)',
+          950: 'var(--color-neutral-950)',
         },
         amber: {
           250: '#fcd34d',

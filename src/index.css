@@ -1,3 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ============================================================================
+   GO Design — Color Themes
+   Swaps the brand/accent/surface tokens only. Typography, spacing, radii,
+   and component structure are shared across every theme and defined below
+   in @layer base/components.
+
+   Themes:
+     "Editorial" (default) — ink/tan/blue/lavender, the current site palette.
+     "Graphite"             — deep graphite + ember accent, opt in via
+                               [data-color-theme="graphite"] on <html>.
+   ============================================================================ */
+:root {
+  /* Editorial (default) */
+  --color-ink: #111111;
+  --color-muted: #666666;
+  --color-line: #DDD5C4;
+  --color-tan: #F3EFE7;
+  --color-tan-100: #FAF8F4;
+  --color-tan-500: #DDD5C4;
+  --color-blue: #2563EB;
+  --color-lavender: #A29BFE;
+  --color-neutral-950: #19181B;
+  --color-neutral-900: #3B3941;
+  --color-neutral-500: #777384;
+  --color-neutral-400: #94919F;
+}
+
+[data-color-theme="editorial"] {
+  --color-ink: #111111;
+  --color-muted: #666666;
+  --color-line: #DDD5C4;
+  --color-tan: #F3EFE7;
+  --color-tan-100: #FAF8F4;
+  --color-tan-500: #DDD5C4;
+  --color-blue: #2563EB;
+  --color-lavender: #A29BFE;
+  --color-neutral-950: #19181B;
+  --color-neutral-900: #3B3941;
+  --color-neutral-500: #777384;
+  --color-neutral-400: #94919F;
+}
+
+[data-color-theme="graphite"] {
+  --color-ink: #26384A;
+  --color-muted: #6E6A64;
+  --color-line: #D7D3CC;
+  --color-tan: #F4F2EF;
+  --color-tan-100: #FAF9F7;
+  --color-tan-500: #F2F4F6;
+  --color-blue: #B34518;
+  --color-lavender: #CD5C2C;
+  --color-neutral-950: #12191F;
+  --color-neutral-900: #182229;
+  --color-neutral-500: #8B959D;
+  --color-neutral-400: #9BA6B0;
+}
+
+@layer base {
+  html {
+    font-family: 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-ink dark:bg-white text-white dark:text-ink font-medium rounded-none hover:bg-neutral-800 dark:hover:bg-neutral-100 transition-colors text-sm tracking-wide;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white dark:bg-transparent border border-line dark:border-white/20 text-ink dark:text-white font-medium rounded-none hover:bg-neutral-50 dark:hover:bg-white/[0.05] transition-colors text-sm tracking-wide;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-8 py-4 text-base;
+  }
+}

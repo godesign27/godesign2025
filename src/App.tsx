@@ -7,8 +7,8 @@ import { usePageTracking } from './hooks/usePageTracking';
 import Hero from './components/Hero';
 import ValueProposition from './components/ValueProposition';
 import Partners from './components/Partners';
+import HomeEditorial from './components/HomeEditorial';
 import SpecializedExpertise from './components/SpecializedExpertise';
-import SuccessStories from './components/SuccessStories';
 import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Services from './components/Services';
@@ -22,6 +22,18 @@ import CaseStudyDetail from './components/CaseStudyDetail';
 import CaseStudyDetail2 from './components/CaseStudyDetail2';
 import CaseStudyDetail3 from './components/CaseStudyDetail3';
 import FractionalSaasDesigner from './components/FractionalSaasDesigner';
+import AgenticExperience from './components/AgenticExperience';
+import AIExperienceArchitecturePage from './components/AIExperienceArchitecturePage';
+import EnterpriseUXConsulting from './components/EnterpriseUXConsulting';
+import SpeakingWorkshops from './components/SpeakingWorkshops';
+import StrategySessions from './components/StrategySessions';
+import WorkWithMe from './components/WorkWithMe';
+import Perspectives from './components/Perspectives';
+import MyPhilosophy from './components/MyPhilosophy';
+import HowIWork from './components/HowIWork';
+import PerspectiveDetail from './components/PerspectiveDetail';
+import WritingHub from './components/WritingHub';
+import ThemeShowcase from './components/ThemeShowcase';
 import SEOHead from './components/SEOHead';
 import { BASE_URL, SITE_NAME } from './lib/site';
 
@@ -56,11 +68,11 @@ function HomePage({ setCurrentPage, setSelectedCaseStudy }: {
           },
         }}
       />
-      <Hero />
-      <ValueProposition />
+      <Hero setCurrentPage={setCurrentPage} />
       <Partners />
+      <HomeEditorial setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
+      <ValueProposition />
       <SpecializedExpertise setCurrentPage={setCurrentPage} />
-      <SuccessStories setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
       <Testimonials />
       <CTA setCurrentPage={setCurrentPage} />
     </>
@@ -88,7 +100,7 @@ function ServicesPage({ setCurrentPage }: { setCurrentPage: (page: string) => vo
             name: 'Design Services',
             itemListElement: [
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UX/UI Design Consulting' } },
-              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Experience Research' } },
+              { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI + Agentic Experience' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand & Identity Design' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SaaS Product Design' } },
               { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile App Design' } },
@@ -127,7 +139,7 @@ function SolutionsPage({ setCurrentPage, setSelectedCaseStudy }: {
   );
 }
 
-function AboutPage() {
+function AboutPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
   return (
     <>
       <SEOHead
@@ -154,7 +166,7 @@ function AboutPage() {
           },
         ]}
       />
-      <About />
+      <About setCurrentPage={setCurrentPage} />
     </>
   );
 }
@@ -252,7 +264,7 @@ function MobilePage({ setCurrentPage }: { setCurrentPage: (page: string) => void
 
 function CaseStudy1Page({ setCurrentPage, setSelectedCaseStudy }: {
   setCurrentPage: (page: string) => void;
-  setSelectedCaseStudy: (study: string) => void;
+  setSelectedCaseStudy: (study: string | null) => void;
 }) {
   return (
     <>
@@ -280,7 +292,7 @@ function CaseStudy1Page({ setCurrentPage, setSelectedCaseStudy }: {
 
 function CaseStudy2Page({ setCurrentPage, setSelectedCaseStudy }: {
   setCurrentPage: (page: string) => void;
-  setSelectedCaseStudy: (study: string) => void;
+  setSelectedCaseStudy: (study: string | null) => void;
 }) {
   return (
     <>
@@ -308,7 +320,7 @@ function CaseStudy2Page({ setCurrentPage, setSelectedCaseStudy }: {
 
 function CaseStudy3Page({ setCurrentPage, setSelectedCaseStudy }: {
   setCurrentPage: (page: string) => void;
-  setSelectedCaseStudy: (study: string) => void;
+  setSelectedCaseStudy: (study: string | null) => void;
 }) {
   return (
     <>
@@ -357,6 +369,246 @@ function FractionalPage({ setCurrentPage }: { setCurrentPage: (page: string) => 
   );
 }
 
+function AgenticExperiencePage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Agentic Experience Design - AI & Agent UX | GO Design"
+        description="AI and agentic experience design for SaaS and enterprise products. Trust-by-design frameworks, mental model mapping, interaction pattern selection, and responsible AI design that helps teams turn AI into something usable, controlled, and built for the real world."
+        canonical="/agentic-experience"
+        keywords="agentic experience design, AI UX design, AI product design, trust-by-design framework, human-in-the-loop design, responsible AI design, AI interaction patterns, agentic AI UX"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Agentic Experience Design',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'AI and agentic experience design services including trust-by-design frameworks, mental model mapping, AI interaction pattern selection, and responsible AI design for SaaS and enterprise products.',
+          serviceType: 'AI & Agentic Experience Design',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <AgenticExperience setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function AIExperienceArchitecturePageWrapper({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="AI Experience Architecture™ - A Framework for Trustworthy AI Products | GO Design"
+        description="AI Experience Architecture™ is GO Design's framework for designing intelligent enterprise products that people understand, trust, and confidently adopt: five pillars covering signal architecture, human oversight, agentic design systems, trust architecture, and AI governance UX."
+        canonical="/ai-experience-architecture"
+        keywords="AI experience architecture, AI design framework, trust by design, agentic design systems, AI governance UX, human oversight design"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'AI Experience Architecture',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'A framework for designing intelligent enterprise products that people understand, trust, and confidently adopt.',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <AIExperienceArchitecturePage setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function EnterpriseUXConsultingPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Enterprise UX Consulting & AI Strategy | GO Design"
+        description="Senior UX expertise for complex enterprise products: platform redesign, UX audit and research, design systems, stakeholder alignment, and AI/UX strategy for enterprise product teams."
+        canonical="/services/enterprise-ux-consulting"
+        keywords="enterprise UX consulting, platform redesign, UX audit, design systems consulting, stakeholder alignment, enterprise AI strategy"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Enterprise UX Consulting',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'Senior UX consulting for complex enterprise products including platform redesign, UX audits, design systems, and AI/UX strategy.',
+          serviceType: 'Enterprise UX Consulting',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <EnterpriseUXConsulting setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function SpeakingWorkshopsPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Speaking & Workshops - AI Design, Enterprise UX, Design Systems | GO Design"
+        description="Conference talks and facilitated workshops on AI-native UX, agentic workflow design, design systems strategy, and enterprise UX principles, grounded in real product work."
+        canonical="/services/speaking-workshops"
+        keywords="UX speaking engagements, design workshops, AI design talks, design systems workshop, enterprise UX training"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Speaking & Workshops',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'Conference talks and facilitated workshops on AI design, design systems, and enterprise UX.',
+          serviceType: 'Speaking & Workshops',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <SpeakingWorkshops setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function StrategySessionsPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Strategy Sessions - Focused Time With a Senior Design Team | GO Design"
+        description="Short, structured design sessions for product teams and founders: design audits, AI UX strategy, advisory sessions, and team workshops. Come with a specific question, leave with a direct answer."
+        canonical="/services/strategy-sessions"
+        keywords="design strategy session, design audit, AI UX strategy session, design advisory, team workshop"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: 'Strategy Sessions',
+          provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+          description: 'Focused, structured design strategy sessions including design audits, AI UX strategy, and advisory sessions.',
+          serviceType: 'Strategy Sessions',
+          areaServed: { '@type': 'Country', name: 'United States' },
+        }}
+      />
+      <StrategySessions setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function WorkWithMePage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Work With Us - Engagement Models & Getting Started | GO Design"
+        description="Find the right way to work with GO Design: enterprise UX consulting, fractional SaaS design leadership, strategy sessions, speaking and workshops, or a full-scale product redesign."
+        canonical="/work-with-me"
+        keywords="hire UX design agency, design engagement models, fractional design leadership, enterprise design consulting"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: 'Work With Us',
+          url: `${BASE_URL}/work-with-me`,
+          isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
+        }}
+      />
+      <WorkWithMe setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function PerspectivesPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Perspectives - How We Think About Design | GO Design"
+        description="A collection of essays, frameworks, and working principles on design, AI-native product design, enterprise UX, and design systems from GO Design."
+        canonical="/perspectives"
+        keywords="design perspectives, design philosophy, AI-native design thinking, design process essays"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Perspectives',
+          url: `${BASE_URL}/perspectives`,
+          isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
+        }}
+      />
+      <Perspectives setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function MyPhilosophyPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Our Philosophy - Design Principles | GO Design"
+        description="The principles that guide every design decision at GO Design: clarity over cleverness, complexity in the system not the screen, trust earned through detail, systems thinking, and inclusive design."
+        canonical="/perspectives/our-philosophy"
+        keywords="design philosophy, design principles, UX design values"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Design is a translation act.',
+          publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
+          url: `${BASE_URL}/perspectives/our-philosophy`,
+        }}
+      />
+      <MyPhilosophy setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function HowIWorkPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="How We Work - Our Design Process | GO Design"
+        description="Our design process from discovery through delivery: discover, define, explore, build, and ship and learn, plus how we collaborate with product managers, engineers, and stakeholders."
+        canonical="/perspectives/how-we-work"
+        keywords="UX design process, design methodology, design collaboration, design handoff process"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'From ambiguous problem to shipped product.',
+          publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
+          url: `${BASE_URL}/perspectives/how-we-work`,
+        }}
+      />
+      <HowIWork setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function PerspectiveDetailPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="AI-Native Design - Perspectives | GO Design"
+        description="How we think about designing products where AI is a first-class participant: trust, human-in-the-loop patterns, error UX, and mental model mapping."
+        canonical="/perspectives/ai-native-design"
+        keywords="AI-native design, AI UX perspectives, human-in-the-loop design, AI trust design"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'AI-Native Design',
+          publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
+          url: `${BASE_URL}/perspectives/ai-native-design`,
+        }}
+      />
+      <PerspectiveDetail setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
+function WritingHubPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
+  return (
+    <>
+      <SEOHead
+        title="Writing - Essays on Design, AI, and Product | GO Design"
+        description="Essays and articles from GO Design on AI-native design, enterprise UX, design systems, and the craft of building products that real people use."
+        canonical="/perspectives/writing"
+        keywords="UX writing, design essays, AI design articles, design systems articles"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'Blog',
+          name: 'GO Design Writing',
+          publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
+          url: `${BASE_URL}/perspectives/writing`,
+        }}
+      />
+      <WritingHub setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -384,6 +636,17 @@ function App() {
       'case-study-2': '/case-study/2',
       'case-study-3': '/case-study/3',
       'fractional-saas-designer': '/fractional-saas-designer',
+      'agentic-experience': '/agentic-experience',
+      'ai-experience-architecture': '/ai-experience-architecture',
+      'enterprise-ux-consulting': '/services/enterprise-ux-consulting',
+      'speaking-workshops': '/services/speaking-workshops',
+      'strategy-sessions': '/services/strategy-sessions',
+      'work-with-me': '/work-with-me',
+      'perspectives': '/perspectives',
+      'perspectives-our-philosophy': '/perspectives/our-philosophy',
+      'perspectives-how-we-work': '/perspectives/how-we-work',
+      'perspectives-ai-native-design': '/perspectives/ai-native-design',
+      'perspectives-writing': '/perspectives/writing',
     };
     navigate(routes[page] ?? (page.startsWith('/') ? page : '/'));
   };
@@ -403,19 +666,30 @@ function App() {
       '/case-study/2': 'case-study-2',
       '/case-study/3': 'case-study-3',
       '/fractional-saas-designer': 'fractional-saas-designer',
+      '/agentic-experience': 'agentic-experience',
+      '/ai-experience-architecture': 'ai-experience-architecture',
+      '/services/enterprise-ux-consulting': 'enterprise-ux-consulting',
+      '/services/speaking-workshops': 'speaking-workshops',
+      '/services/strategy-sessions': 'strategy-sessions',
+      '/work-with-me': 'work-with-me',
+      '/perspectives': 'perspectives',
+      '/perspectives/our-philosophy': 'perspectives-our-philosophy',
+      '/perspectives/how-we-work': 'perspectives-how-we-work',
+      '/perspectives/ai-native-design': 'perspectives-ai-native-design',
+      '/perspectives/writing': 'perspectives-writing',
     };
     setCurrentPageState(pageMap[path] || 'home');
   }, [location.pathname]);
 
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-white dark:bg-brand-950">
+      <div className="min-h-screen bg-white dark:bg-neutral-950">
         <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
         <Routes>
           <Route path="/" element={<HomePage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/services" element={<ServicesPage setCurrentPage={setCurrentPage} />} />
           <Route path="/solutions" element={<SolutionsPage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
-          <Route path="/about" element={<AboutPage />} />
+          <Route path="/about" element={<AboutPage setCurrentPage={setCurrentPage} />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/saas-product-design" element={<SaasPage setCurrentPage={setCurrentPage} />} />
           <Route path="/marketing-web-design" element={<MarketingPage setCurrentPage={setCurrentPage} />} />
@@ -424,7 +698,19 @@ function App() {
           <Route path="/case-study/2" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-study/3" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/fractional-saas-designer" element={<FractionalPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/agentic-experience" element={<AgenticExperiencePage setCurrentPage={setCurrentPage} />} />
+          <Route path="/ai-experience-architecture" element={<AIExperienceArchitecturePageWrapper setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/enterprise-ux-consulting" element={<EnterpriseUXConsultingPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/speaking-workshops" element={<SpeakingWorkshopsPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/services/strategy-sessions" element={<StrategySessionsPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/work-with-me" element={<WorkWithMePage setCurrentPage={setCurrentPage} />} />
+          <Route path="/perspectives" element={<PerspectivesPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/perspectives/our-philosophy" element={<MyPhilosophyPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/perspectives/how-we-work" element={<HowIWorkPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/perspectives/ai-native-design" element={<PerspectiveDetailPage setCurrentPage={setCurrentPage} />} />
+          <Route path="/perspectives/writing" element={<WritingHubPage setCurrentPage={setCurrentPage} />} />
           <Route path="/analytics" element={<Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="w-6 h-6 border-2 border-neutral-300 border-t-neutral-800 rounded-full animate-spin" /></div>}><Analytics /></Suspense>} />
+          <Route path="/design-preview" element={<ThemeShowcase />} />
         </Routes>
         <Footer currentPage={currentPage} setCurrentPage={setCurrentPage} />
       </div>

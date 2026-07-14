@@ -1,317 +1,362 @@
-import React, { useEffect } from 'react';
-import { ArrowRight, CheckCircle2, Layers, BarChart3, GitBranch, ArrowUpRight, ChevronRight, SlidersHorizontal, GitMerge, Search, Paintbrush, Link2, Network } from 'lucide-react';
+import React from 'react';
+import SprintBoardIllustration from './illustrations/SprintBoardIllustration';
+import { BarChart3, Layers, GitBranch, Component, Workflow, ScanSearch, Sparkles, Combine, Network } from 'lucide-react';
+import Eyebrow from './Eyebrow';
+import PageBreadcrumb from './PageBreadcrumb';
+import RelatedContent from './RelatedContent';
+import SectionCTA from './SectionCTA';
 
 interface FractionalSaasDesignerProps {
   setCurrentPage: (page: string) => void;
 }
 
-const SectionLabel: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <span className="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-slate-400 dark:text-slate-500 mb-4">
-    {children}
-  </span>
-);
+function DashboardMockup() {
+  const rows = [
+    { name: 'User Onboarding Flow', status: 'Completed', priority: 'High', progress: 100 },
+    { name: 'Settings Restructure', status: 'In Progress', priority: 'High', progress: 68 },
+    { name: 'Navigation Audit', status: 'In Progress', priority: 'Medium', progress: 45 },
+    { name: 'Component Library v2', status: 'Planned', priority: 'Medium', progress: 12 },
+    { name: 'Dashboard Redesign', status: 'Planned', priority: 'Low', progress: 0 },
+  ];
 
-const DashboardVisual: React.FC = () => (
-  <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm overflow-hidden">
-    <div className="flex h-[420px] md:h-[480px]">
-      <div className="hidden md:flex w-56 border-r border-slate-100 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-900/60 flex-col">
-        <div className="p-5 border-b border-slate-100 dark:border-slate-700">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-slate-800 dark:bg-slate-600 flex items-center justify-center">
-              <span className="text-white text-xs font-bold">IG</span>
-            </div>
-            <span className="text-sm font-semibold text-slate-800 dark:text-slate-200">IG5 Platform</span>
+  return (
+    <div className="border border-line dark:border-white/[0.06] bg-white dark:bg-white/[0.03] overflow-hidden">
+      <div className="flex">
+        <div className="w-52 border-r border-line dark:border-white/[0.06] bg-tan dark:bg-neutral-950/80 p-4 hidden md:block">
+          <div className="flex items-center space-x-2 mb-8">
+            <div className="w-6 h-6 bg-ink dark:bg-white" />
+            <span className="text-sm font-semibold text-ink dark:text-white">IG5 Platform</span>
           </div>
-        </div>
-        <div className="p-3 flex-1">
-          <div className="space-y-0.5">
-            {['Dashboard', 'Cases', 'Reports', 'Workflows', 'Analytics', 'Settings'].map((item, i) => (
+          <nav className="space-y-1">
+            {['Dashboard', 'Projects', 'Components', 'Analytics', 'Settings'].map((item, i) => (
               <div
                 key={item}
-                className={`px-3 py-2 rounded-md text-[13px] font-medium ${
+                className={`px-3 py-2 text-[13px] font-medium ${
                   i === 0
-                    ? 'bg-slate-800 dark:bg-slate-600 text-white'
-                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300'
+                    ? 'bg-white dark:bg-white/[0.03] text-ink dark:text-white font-medium border border-line dark:border-white/[0.06]'
+                    : 'text-muted dark:text-neutral-500'
                 }`}
               >
                 {item}
               </div>
             ))}
-          </div>
+          </nav>
         </div>
-        <div className="p-4 border-t border-slate-100 dark:border-slate-700">
-          <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-slate-200 dark:bg-slate-600" />
+        <div className="flex-1 p-5 md:p-6">
+          <div className="flex items-center justify-between mb-6">
             <div>
-              <div className="text-xs font-medium text-slate-700 dark:text-slate-300">Admin User</div>
-              <div className="text-[11px] text-slate-400 dark:text-slate-500">admin@gov.org</div>
+              <h3 className="text-sm font-semibold text-ink dark:text-white">UX Improvement Backlog</h3>
+              <p className="text-xs text-muted dark:text-neutral-500 mt-0.5">5 initiatives tracked</p>
+            </div>
+            <div className="flex space-x-2">
+              <div className="px-3 py-1.5 text-xs font-medium bg-tan dark:bg-white/[0.08] text-muted dark:text-neutral-400">Filter</div>
+              <div className="px-3 py-1.5 text-xs font-medium bg-tan dark:bg-white/[0.08] text-muted dark:text-neutral-400">Sort</div>
             </div>
           </div>
-        </div>
-      </div>
-      <div className="flex-1 flex flex-col min-w-0">
-        <div className="px-5 md:px-8 py-5 border-b border-slate-100 dark:border-slate-700 flex items-center justify-between">
-          <div>
-            <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Dashboard</h3>
-            <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Overview of active cases and metrics</p>
+          <div className="grid grid-cols-12 gap-3 text-xs text-muted dark:text-neutral-500 font-medium uppercase tracking-wider pb-3 border-b border-line dark:border-white/[0.06] px-1">
+            <div className="col-span-5">Initiative</div>
+            <div className="col-span-2">Status</div>
+            <div className="col-span-2 hidden sm:block">Priority</div>
+            <div className="col-span-3">Progress</div>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="px-3 py-1.5 rounded-md border border-slate-200 dark:border-slate-600 text-xs text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-700">Last 30 days</div>
-            <div className="px-3 py-1.5 rounded-md bg-slate-800 dark:bg-slate-600 text-xs text-white font-medium">Export</div>
-          </div>
-        </div>
-        <div className="px-5 md:px-8 py-5">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            {[
-              { label: 'Active Cases', value: '1,284', change: '+12%' },
-              { label: 'Resolved', value: '856', change: '+8%' },
-              { label: 'Avg. Resolution', value: '4.2d', change: '-15%' },
-              { label: 'Satisfaction', value: '94%', change: '+3%' },
-            ].map((stat) => (
-              <div key={stat.label} className="p-3 md:p-4 rounded-lg border border-slate-100 dark:border-slate-700 bg-slate-50/50 dark:bg-slate-900/40">
-                <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium uppercase tracking-wide">{stat.label}</div>
-                <div className="text-lg md:text-xl font-semibold text-slate-800 dark:text-slate-200 mt-1">{stat.value}</div>
-                <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">{stat.change}</div>
+          {rows.map((row) => (
+            <div
+              key={row.name}
+              className="grid grid-cols-12 gap-3 items-center py-3.5 border-b border-line/50 dark:border-white/[0.04] px-1 last:border-0"
+            >
+              <div className="col-span-5 text-sm text-ink dark:text-neutral-200 font-medium truncate">
+                {row.name}
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="px-5 md:px-8 flex-1 overflow-hidden">
-          <div className="rounded-lg border border-slate-100 dark:border-slate-700 overflow-hidden">
-            <table className="w-full text-xs">
-              <thead>
-                <tr className="bg-slate-50 dark:bg-slate-900/60 border-b border-slate-100 dark:border-slate-700">
-                  <th className="text-left py-2.5 px-4 font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide text-[10px]">Case ID</th>
-                  <th className="text-left py-2.5 px-4 font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide text-[10px]">Subject</th>
-                  <th className="text-left py-2.5 px-4 font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide text-[10px] hidden md:table-cell">Status</th>
-                  <th className="text-left py-2.5 px-4 font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide text-[10px] hidden md:table-cell">Priority</th>
-                </tr>
-              </thead>
-              <tbody>
-                {[
-                  { id: 'IG5-2847', subject: 'Compliance review Q4', status: 'In Progress', priority: 'High', color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300' },
-                  { id: 'IG5-2846', subject: 'Audit trail verification', status: 'Open', priority: 'Medium', color: 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300' },
-                  { id: 'IG5-2845', subject: 'Policy update notification', status: 'Resolved', priority: 'Low', color: 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300' },
-                  { id: 'IG5-2844', subject: 'Access control remediation', status: 'In Progress', priority: 'High', color: 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300' },
-                  { id: 'IG5-2843', subject: 'Quarterly risk assessment', status: 'Open', priority: 'Medium', color: 'bg-sky-100 text-sky-700 dark:bg-sky-900/40 dark:text-sky-300' },
-                ].map((row) => (
-                  <tr key={row.id} className="border-b border-slate-50 dark:border-slate-700/50 last:border-0">
-                    <td className="py-2.5 px-4 font-mono text-slate-500 dark:text-slate-400">{row.id}</td>
-                    <td className="py-2.5 px-4 text-slate-700 dark:text-slate-300 font-medium">{row.subject}</td>
-                    <td className="py-2.5 px-4 hidden md:table-cell">
-                      <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold ${row.color}`}>
-                        {row.status}
-                      </span>
-                    </td>
-                    <td className="py-2.5 px-4 text-slate-500 dark:text-slate-400 hidden md:table-cell">{row.priority}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const WorkflowVisual: React.FC = () => (
-  <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm overflow-hidden">
-    <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-700">
-      <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Case Submission Workflow</h3>
-      <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Simplified 4-step process (previously 9 steps)</p>
-    </div>
-    <div className="p-6 md:p-8">
-      <div className="flex items-center justify-between mb-8">
-        {['Case Details', 'Classification', 'Evidence', 'Review'].map((step, i) => (
-          <React.Fragment key={step}>
-            <div className="flex flex-col items-center">
-              <div className={`w-9 h-9 rounded-full flex items-center justify-center text-sm font-semibold ${
-                i <= 1 ? 'bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900' : 'bg-slate-100 dark:bg-slate-700 text-slate-400 dark:text-slate-500'
-              }`}>
-                {i + 1}
+              <div className="col-span-2">
+                <span
+                  className={`inline-block px-2 py-0.5 text-xs font-medium ${
+                    row.status === 'Completed'
+                      ? 'bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400'
+                      : row.status === 'In Progress'
+                      ? 'bg-blue/10 text-blue dark:text-lavender'
+                      : 'bg-tan dark:bg-white/[0.08] text-muted dark:text-neutral-500'
+                  }`}
+                >
+                  {row.status}
+                </span>
               </div>
-              <span className={`text-[11px] mt-2 font-medium ${i <= 1 ? 'text-slate-700 dark:text-slate-300' : 'text-slate-400 dark:text-slate-500'}`}>{step}</span>
-            </div>
-            {i < 3 && (
-              <div className={`flex-1 h-px mx-2 md:mx-4 ${i < 1 ? 'bg-slate-800 dark:bg-slate-200' : 'bg-slate-200 dark:bg-slate-600'}`} />
-            )}
-          </React.Fragment>
-        ))}
-      </div>
-      <div className="space-y-4">
-        <div>
-          <label className="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">Classification Type</label>
-          <div className="grid grid-cols-3 gap-2">
-            {['Regulatory', 'Financial', 'Operational'].map((type, i) => (
-              <div key={type} className={`px-3 py-2.5 rounded-lg border text-xs font-medium text-center ${
-                i === 0 ? 'border-slate-800 dark:border-slate-200 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900' : 'border-slate-200 dark:border-slate-600 text-slate-500 dark:text-slate-400'
-              }`}>
-                {type}
+              <div className="col-span-2 hidden sm:block">
+                <span className={`text-xs font-medium ${
+                  row.priority === 'High' ? 'text-amber-600 dark:text-amber-400' : row.priority === 'Medium' ? 'text-muted dark:text-neutral-500' : 'text-muted dark:text-neutral-500'
+                }`}>
+                  {row.priority}
+                </span>
               </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <label className="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">Priority Level</label>
-          <div className="flex items-center gap-3">
-            <div className="flex-1 h-2 rounded-full bg-slate-100 dark:bg-slate-700 overflow-hidden">
-              <div className="h-full w-3/4 rounded-full bg-gradient-to-r from-slate-600 to-slate-800 dark:from-slate-400 dark:to-slate-200" />
-            </div>
-            <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">High</span>
-          </div>
-        </div>
-        <div>
-          <label className="block text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-1.5">Description</label>
-          <div className="w-full h-20 rounded-lg border border-slate-200 dark:border-slate-600 bg-slate-50/50 dark:bg-slate-900/40 p-3">
-            <div className="text-xs text-slate-400 dark:text-slate-500">Quarterly compliance review for fiscal year reporting...</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-);
-
-const DesignSystemVisual: React.FC = () => (
-  <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm overflow-hidden">
-    <div className="px-6 py-5 border-b border-slate-100 dark:border-slate-700">
-      <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">Design System</h3>
-      <p className="text-xs text-slate-400 dark:text-slate-500 mt-0.5">Standardized components and patterns</p>
-    </div>
-    <div className="p-6 md:p-8 space-y-8">
-      <div>
-        <h4 className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Color Tokens</h4>
-        <div className="flex gap-2">
-          {[
-            { color: 'bg-slate-900 dark:bg-slate-200', label: 'Primary' },
-            { color: 'bg-slate-600 dark:bg-slate-400', label: 'Secondary' },
-            { color: 'bg-sky-500', label: 'Accent' },
-            { color: 'bg-emerald-500', label: 'Success' },
-            { color: 'bg-amber-500', label: 'Warning' },
-            { color: 'bg-red-500', label: 'Error' },
-          ].map(({ color, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1.5">
-              <div className={`w-10 h-10 rounded-lg ${color}`} />
-              <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">{label}</span>
+              <div className="col-span-3 flex items-center space-x-2">
+                <div className="flex-1 h-1.5 bg-tan dark:bg-white/[0.08] overflow-hidden">
+                  <div
+                    className={`h-full ${
+                      row.progress === 100 ? 'bg-emerald-500' : row.progress > 0 ? 'bg-blue' : 'bg-line dark:bg-white/[0.08]'
+                    }`}
+                    style={{ width: `${row.progress}%` }}
+                  />
+                </div>
+                <span className="text-xs text-muted dark:text-neutral-500 w-8 text-right">{row.progress}%</span>
+              </div>
             </div>
           ))}
         </div>
       </div>
-      <div>
-        <h4 className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Typography Scale</h4>
-        <div className="space-y-2">
-          <div className="flex items-baseline gap-4">
-            <span className="text-[10px] text-slate-400 dark:text-slate-500 w-12 shrink-0">H1 / 32</span>
-            <span className="text-[32px] font-semibold text-slate-800 dark:text-slate-200 leading-tight">Heading</span>
-          </div>
-          <div className="flex items-baseline gap-4">
-            <span className="text-[10px] text-slate-400 dark:text-slate-500 w-12 shrink-0">H2 / 24</span>
-            <span className="text-2xl font-semibold text-slate-800 dark:text-slate-200">Subheading</span>
-          </div>
-          <div className="flex items-baseline gap-4">
-            <span className="text-[10px] text-slate-400 dark:text-slate-500 w-12 shrink-0">Body / 15</span>
-            <span className="text-[15px] text-slate-600 dark:text-slate-400">Body text for general content and descriptions.</span>
-          </div>
-          <div className="flex items-baseline gap-4">
-            <span className="text-[10px] text-slate-400 dark:text-slate-500 w-12 shrink-0">Cap / 11</span>
-            <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">Caption Label</span>
-          </div>
-        </div>
+    </div>
+  );
+}
+
+function WorkflowMockup() {
+  const steps = [
+    { label: 'Audit', desc: 'Workflow analysis', active: false, done: true },
+    { label: 'Map', desc: 'User flows', active: false, done: true },
+    { label: 'Design', desc: 'UI patterns', active: true, done: false },
+    { label: 'Validate', desc: 'Usability test', active: false, done: false },
+    { label: 'Ship', desc: 'Engineering handoff', active: false, done: false },
+  ];
+
+  return (
+    <div className="border border-line dark:border-white/[0.06] bg-white dark:bg-white/[0.03] p-6 md:p-8">
+      <div className="mb-6">
+        <h3 className="text-sm font-semibold text-ink dark:text-white">Design Sprint Workflow</h3>
+        <p className="text-xs text-muted dark:text-neutral-500 mt-0.5">Current iteration: Navigation Redesign</p>
       </div>
-      <div>
-        <h4 className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wide mb-3">Component Library</h4>
-        <div className="flex flex-wrap gap-2">
-          <button className="px-4 py-2 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 text-xs font-medium rounded-lg">Primary Action</button>
-          <button className="px-4 py-2 border border-slate-300 dark:border-slate-600 text-slate-600 dark:text-slate-300 text-xs font-medium rounded-lg">Secondary</button>
-          <button className="px-4 py-2 text-slate-500 dark:text-slate-400 text-xs font-medium rounded-lg underline underline-offset-2">Link Style</button>
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300">Active</span>
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">Pending</span>
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400">Archived</span>
+      <div className="flex items-center justify-between mb-8">
+        {steps.map((step, i) => (
+          <React.Fragment key={step.label}>
+            <div className="flex flex-col items-center">
+              <div
+                className={`w-9 h-9 flex items-center justify-center text-xs font-semibold ${
+                  step.done
+                    ? 'bg-emerald-500 text-white'
+                    : step.active
+                    ? 'bg-ink dark:bg-white text-white dark:text-ink'
+                    : 'bg-tan dark:bg-white/[0.08] text-muted dark:text-neutral-500'
+                }`}
+              >
+                {step.done ? (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  i + 1
+                )}
+              </div>
+              <span className={`text-xs mt-2 font-medium ${step.active ? 'text-ink dark:text-white' : 'text-muted dark:text-neutral-500'}`}>
+                {step.label}
+              </span>
+              <span className="text-[10px] text-muted dark:text-neutral-500 hidden sm:block">{step.desc}</span>
+            </div>
+            {i < steps.length - 1 && (
+              <div className={`flex-1 h-px mx-2 ${step.done ? 'bg-emerald-300 dark:bg-emerald-600' : 'bg-line dark:bg-white/[0.06]'}`} />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+      <div className="bg-tan dark:bg-neutral-950/60 p-5 border border-line dark:border-white/[0.06]">
+        <div className="flex items-center justify-between mb-4">
+          <div className="text-sm font-medium text-ink dark:text-white">Design Phase</div>
+          <span className="text-xs bg-ink dark:bg-white text-white dark:text-ink px-2.5 py-1">Active</span>
+        </div>
+        <div className="space-y-3">
+          {[
+            { task: 'Simplify navigation hierarchy', done: true },
+            { task: 'Reduce sidebar items from 14 to 8', done: true },
+            { task: 'Introduce contextual secondary nav', done: false },
+            { task: 'Update breadcrumb patterns', done: false },
+          ].map((task) => (
+            <div key={task.task} className="flex items-center space-x-3">
+              <div
+                className={`w-4 h-4 border flex items-center justify-center ${
+                  task.done ? 'bg-emerald-500 border-emerald-500' : 'border-line dark:border-white/[0.06]'
+                }`}
+              >
+                {task.done && (
+                  <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+              </div>
+              <span className={`text-sm ${task.done ? 'text-muted dark:text-neutral-500 line-through' : 'text-ink dark:text-neutral-400'}`}>
+                {task.task}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
+
+function DesignSystemMockup() {
+  return (
+    <div className="border border-line dark:border-white/[0.06] bg-white dark:bg-white/[0.03] p-6 md:p-8">
+      <div className="mb-6">
+        <h3 className="text-sm font-semibold text-ink dark:text-white">Design System</h3>
+        <p className="text-xs text-muted dark:text-neutral-500 mt-0.5">Standardized component library</p>
+      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+        <div>
+          <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-2">Primary</div>
+          <div className="space-y-1.5">
+            {['bg-ink', 'bg-neutral-700', 'bg-neutral-500', 'bg-neutral-300'].map((color) => (
+              <div key={color} className={`h-6 ${color}`} />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-2">Accent</div>
+          <div className="space-y-1.5">
+            {['bg-blue', 'bg-blue/70', 'bg-blue/40', 'bg-blue/20'].map((color) => (
+              <div key={color} className={`h-6 ${color}`} />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-2">Success</div>
+          <div className="space-y-1.5">
+            {['bg-emerald-600', 'bg-emerald-500', 'bg-emerald-400', 'bg-emerald-200'].map((color) => (
+              <div key={color} className={`h-6 ${color}`} />
+            ))}
+          </div>
+        </div>
+        <div>
+          <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-2">Neutral</div>
+          <div className="space-y-1.5">
+            {['bg-neutral-700', 'bg-neutral-400', 'bg-neutral-200', 'bg-tan'].map((color) => (
+              <div key={color} className={`h-6 ${color}`} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-line dark:border-white/[0.06] pt-5">
+        <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-3">Components</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          <div className="bg-tan dark:bg-neutral-950/60 p-4 border border-line dark:border-white/[0.06]">
+            <div className="text-[10px] text-muted dark:text-neutral-500 mb-2">Button</div>
+            <div className="space-y-2">
+              <div className="bg-ink dark:bg-white text-white dark:text-ink text-xs font-medium px-3 py-1.5 text-center">Primary</div>
+              <div className="bg-white dark:bg-white/[0.03] text-ink dark:text-neutral-400 text-xs font-medium px-3 py-1.5 text-center border border-line dark:border-white/[0.06]">Secondary</div>
+            </div>
+          </div>
+          <div className="bg-tan dark:bg-neutral-950/60 p-4 border border-line dark:border-white/[0.06]">
+            <div className="text-[10px] text-muted dark:text-neutral-500 mb-2">Input</div>
+            <div className="space-y-2">
+              <div className="bg-white dark:bg-white/[0.03] text-xs text-muted dark:text-neutral-500 px-3 py-1.5 border border-line dark:border-white/[0.06]">Placeholder text</div>
+              <div className="bg-white dark:bg-white/[0.03] text-xs text-ink dark:text-neutral-200 px-3 py-1.5 border-2 border-blue">Active state</div>
+            </div>
+          </div>
+          <div className="bg-tan dark:bg-neutral-950/60 p-4 border border-line dark:border-white/[0.06]">
+            <div className="text-[10px] text-muted dark:text-neutral-500 mb-2">Badge</div>
+            <div className="flex flex-wrap gap-1.5">
+              <span className="px-2 py-0.5 text-[10px] font-medium bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400">Active</span>
+              <span className="px-2 py-0.5 text-[10px] font-medium bg-amber-50 dark:bg-amber-500/10 text-amber-700 dark:text-amber-400">Pending</span>
+              <span className="px-2 py-0.5 text-[10px] font-medium bg-tan dark:bg-white/[0.08] text-muted dark:text-neutral-500">Draft</span>
+              <span className="px-2 py-0.5 text-[10px] font-medium bg-red-50 dark:bg-red-500/10 text-red-600 dark:text-red-400">Error</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="border-t border-line dark:border-white/[0.06] pt-5 mt-5">
+        <div className="text-[10px] uppercase tracking-wider text-muted dark:text-neutral-500 font-medium mb-3">Typography Scale</div>
+        <div className="space-y-2">
+          <div className="flex items-baseline space-x-4">
+            <span className="text-[10px] text-muted dark:text-neutral-500 w-12">H1</span>
+            <span className="text-lg font-semibold text-ink dark:text-white">Page Title</span>
+          </div>
+          <div className="flex items-baseline space-x-4">
+            <span className="text-[10px] text-muted dark:text-neutral-500 w-12">H2</span>
+            <span className="text-base font-medium text-ink dark:text-white">Section Header</span>
+          </div>
+          <div className="flex items-baseline space-x-4">
+            <span className="text-[10px] text-muted dark:text-neutral-500 w-12">Body</span>
+            <span className="text-sm text-muted dark:text-neutral-500">Standard paragraph text</span>
+          </div>
+          <div className="flex items-baseline space-x-4">
+            <span className="text-[10px] text-muted dark:text-neutral-500 w-12">Caption</span>
+            <span className="text-xs text-muted dark:text-neutral-500">Metadata and labels</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurrentPage }) => {
-  useEffect(() => {
+  React.useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = 'Fractional SaaS Designer | GO Design';
   }, []);
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 via-sky-100 to-slate-200 dark:from-slate-900 dark:via-sky-900 dark:to-slate-900"></div>
+    <div className="min-h-screen bg-tan-100 dark:bg-neutral-950">
+      {/* Hero Section with Breadcrumb */}
+      <section className="bg-white dark:bg-neutral-950 py-24 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <PageBreadcrumb
+            items={[{ label: 'Services', pageId: 'services' }, { label: 'Fractional SaaS Designer' }]}
+            setCurrentPage={setCurrentPage}
+          />
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
-          <nav className="flex py-4" aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2">
-              <li>
-                <button
-                  onClick={() => setCurrentPage('services')}
-                  className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white"
-                >
-                  Services
-                </button>
-              </li>
-              <ChevronRight className="w-4 h-4 text-gray-500" />
-              <li className="text-gray-900 dark:text-white font-medium">Fractional SaaS Designer</li>
-            </ol>
-          </nav>
-
-          <div className="py-16">
-            <h1 className="text-4xl md:text-7xl font-regular text-gray-900 dark:text-white mb-6">
-              Senior Product Design<br />
-              for SaaS Teams
-            </h1>
-            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl">
-              SaaS teams don't usually have a product problem—they have a UX and system evolution problem. I help teams modernize their product UX and design systems without slowing down engineering or requiring a full-time hire.
-            </p>
-            <p className="mt-4 text-base text-gray-500 dark:text-gray-400 max-w-2xl">
-              Through a flexible, embedded model, I work directly with product and engineering teams to simplify workflows, improve usability, and evolve the product experience in a way that compounds over time.
-            </p>
-            <div className="mt-10">
-              <button
-                onClick={() => setCurrentPage('contact')}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-medium rounded-lg hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors"
-              >
-                Start a Conversation <ArrowRight className="w-4 h-4" />
-              </button>
+          <div className="grid lg:grid-cols-2 gap-16 items-end pt-8">
+            <div>
+              <Eyebrow className="mb-4">Service</Eyebrow>
+              <h1 className="text-4xl sm:text-5xl font-semibold text-ink dark:text-tan-500 tracking-tight leading-tight mb-6">
+                Fractional SaaS Designer<br />
+                Embedded With Your Team
+              </h1>
+              <p className="text-base text-muted dark:text-neutral-400 leading-relaxed">
+                SaaS teams don't usually have a product problem, they have a UX and system evolution problem. Through a flexible, embedded model, we work directly with product and engineering teams to simplify workflows, improve usability, and evolve the product experience in a way that compounds over time.
+              </p>
+            </div>
+            <div className="hidden lg:flex flex-col gap-8">
+              <SprintBoardIllustration />
+              <div className="grid grid-cols-3 gap-px bg-line dark:bg-white/10">
+                {[
+                  { stat: 'Embed', label: 'In your workflow' },
+                  { stat: 'Sprint', label: 'Cadence design' },
+                  { stat: 'Ship', label: 'Dev-ready handoff' },
+                ].map((item) => (
+                  <div key={item.label} className="bg-tan-100 dark:bg-neutral-900 px-5 py-4">
+                    <p className="text-sm font-semibold text-ink dark:text-white mb-0.5">{item.stat}</p>
+                    <p className="text-xs text-muted dark:text-neutral-500">{item.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* The Common Problem */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-            <div>
-              <SectionLabel>The Problem</SectionLabel>
-              <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug">
-                Strong product. Eroding experience.
+      <section className="py-20 md:py-24 bg-white dark:bg-neutral-950 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16">
+            <div className="md:col-span-4">
+              <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">The Problem</p>
+              <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug">
+                Products grow. UX often doesn't keep up.
               </h2>
-              <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                Many SaaS products reach a point where the product is strong—but the user experience starts to lag behind. As features are added over time, teams often run into the same challenges.
-              </p>
             </div>
-            <div className="space-y-4">
-              {[
-                'Workflows become more complex and harder to navigate',
-                'Information architecture becomes fragmented across the product',
-                'UI patterns drift and become inconsistent',
-                'The overall look and feel starts to feel outdated',
-                'Design systems exist, but are not actively evolving',
-              ].map((item) => (
-                <div key={item} className="flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-600 mt-2 shrink-0" />
-                  <p className="text-[15px] text-slate-600 dark:text-slate-300 leading-relaxed">{item}</p>
-                </div>
-              ))}
-              <p className="text-[15px] text-slate-400 dark:text-slate-500 leading-relaxed pt-2">
-                The product continues to grow—but usability, clarity, and consistency begin to erode.
+            <div className="md:col-span-8">
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mb-8">
+                Many SaaS products reach a point where the product is strong, but the user experience starts to lag behind. As features are added over time, teams often run into the same challenges:
+              </p>
+              <ul className="space-y-4">
+                {[
+                  'Workflows become more complex and harder to navigate',
+                  'Information architecture becomes fragmented across the product',
+                  'UI patterns drift and become inconsistent',
+                  'The overall look and feel starts to feel outdated',
+                  'Design systems exist, but are not actively evolving',
+                ].map((item) => (
+                  <li key={item} className="flex items-start space-x-3">
+                    <span className="mt-2 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" />
+                    <span className="text-base leading-relaxed text-muted dark:text-neutral-400">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mt-8">
+                The product continues to grow, but usability, clarity, and consistency begin to erode.
               </p>
             </div>
           </div>
@@ -319,190 +364,198 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
       </section>
 
       {/* The Approach */}
-      <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-slate-800/40">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <SectionLabel>The Approach</SectionLabel>
-          <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[600px]">
-            Lightweight. Embedded. Incremental.
-          </h2>
-          <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[600px]">
-            Instead of a full redesign or heavy process, I work in a lightweight, embedded model alongside product and engineering teams. The focus is on identifying high-impact improvements and implementing them incrementally.
-          </p>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-20 md:py-24 bg-tan dark:bg-neutral-900 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[720px] mb-12 md:mb-16">
+            <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">The Approach</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-5">
+              Lightweight. Embedded. Incremental.
+            </h2>
+            <p className="text-base leading-relaxed text-muted dark:text-neutral-400">
+              Instead of a full redesign or heavy process, we work in a lightweight, embedded model alongside product and engineering teams. The focus is on identifying high-impact improvements and implementing them incrementally.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line dark:bg-white/10">
             {[
-              { icon: BarChart3, title: 'Analyze workflows', desc: 'Identify friction and inefficiencies in core user paths' },
-              { icon: Layers, title: 'Simplify navigation', desc: 'Reduce cognitive load through clearer task flows' },
-              { icon: GitBranch, title: 'Refine architecture', desc: 'Improve information clarity across the product' },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-                <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 mb-4" />
-                <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">{title}</h3>
-                <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">{desc}</p>
+              { icon: BarChart3, title: 'Analyze workflows', body: 'Identify friction and inefficiencies in core user paths' },
+              { icon: Layers, title: 'Simplify navigation', body: 'Reduce cognitive load through clearer task flows' },
+              { icon: GitBranch, title: 'Refine architecture', body: 'Improve information clarity across the product' },
+            ].map(({ icon: Icon, title, body }) => (
+              <div key={title} className="bg-white dark:bg-neutral-950 p-6">
+                <Icon className="w-5 h-5 text-blue dark:text-lavender mb-6" strokeWidth={1.5} />
+                <h3 className="text-sm font-semibold text-ink dark:text-white mb-2">{title}</h3>
+                <p className="text-sm leading-relaxed text-muted dark:text-neutral-400">{body}</p>
               </div>
             ))}
           </div>
-          <p className="mt-8 text-[14px] text-slate-400 dark:text-slate-500 leading-relaxed max-w-[540px]">
-            This approach prioritizes progress over perfection—small improvements that compound into meaningful change.
+
+          <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mt-12 max-w-[640px]">
+            This approach prioritizes progress over perfection: small improvements that compound into meaningful change.
           </p>
         </div>
       </section>
 
       {/* Dashboard Visual */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <SectionLabel>Product UI</SectionLabel>
-          <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[600px] mb-10">
-            Redesigned for clarity, speed, and confidence.
-          </h2>
-          <DashboardVisual />
+      <section className="py-20 md:py-24 bg-white dark:bg-neutral-950 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <DashboardMockup />
         </div>
       </section>
 
       {/* Impact */}
-      <section className="py-20 md:py-28 bg-slate-900 dark:bg-slate-950">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <SectionLabel><span className="text-slate-500">Client Context</span></SectionLabel>
-          <p className="text-[15px] text-slate-400 leading-relaxed max-w-[600px] mb-12">
-            This approach was applied in partnership with Agate Software, a SaaS company building government-focused products, including the IG5 platform. The product had strong functionality and domain depth, but the experience had become more complex and less cohesive over time.
-          </p>
-          <SectionLabel><span className="text-slate-500">Impact</span></SectionLabel>
-          <h2 className="text-[22px] md:text-[26px] font-semibold text-white leading-snug max-w-[600px] mb-10">
-            Measurable improvements across the board.
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <section className="py-20 md:py-24 bg-tan dark:bg-neutral-900 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[720px] mb-12 md:mb-16">
+            <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">Impact</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-4">
+              Measurable improvements across the product.
+            </h2>
+            <p className="text-base leading-relaxed text-muted dark:text-neutral-400">
+              Applied in partnership with Agate Software, a SaaS company building government-focused products including the IG5 platform. The product had strong functionality and domain depth, but the experience had become more complex and less cohesive over time.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-line dark:bg-white/10">
             {[
-              { metric: '~30%', label: 'Improvement in overall user experience' },
-              { metric: 'Faster', label: 'More intuitive task completion' },
-              { metric: 'Clearer', label: 'Navigation and reduced user friction' },
-              { metric: 'Stronger', label: 'Alignment between design and business goals' },
-            ].map(({ metric, label }) => (
-              <div key={label} className="p-6 rounded-xl border border-slate-700/50 bg-slate-800/50">
-                <div className="text-2xl md:text-3xl font-semibold text-white">{metric}</div>
-                <p className="text-[13px] text-slate-400 mt-2 leading-relaxed">{label}</p>
+              { metric: '~30%', label: 'UX improvement' },
+              { metric: 'Faster', label: 'Task completion' },
+              { metric: 'Clearer', label: 'Navigation & flow' },
+              { metric: 'Stronger', label: 'Design-to-business alignment' },
+            ].map((item) => (
+              <div key={item.label} className="bg-white dark:bg-neutral-950 p-6">
+                <div className="text-2xl md:text-3xl font-semibold text-ink dark:text-white leading-none mb-2">
+                  {item.metric}
+                </div>
+                <div className="text-sm text-muted dark:text-neutral-400">{item.label}</div>
               </div>
             ))}
           </div>
-          <p className="mt-10 text-[14px] text-slate-500 leading-relaxed max-w-[540px]">
+          <p className="text-sm leading-relaxed text-muted dark:text-neutral-400 mt-10 max-w-[640px]">
             Just as importantly, the product established a stronger foundation for continued evolution.
           </p>
         </div>
       </section>
 
       {/* Workflow Section (split) */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div className="lg:sticky lg:top-32">
-              <SectionLabel>Workflow Simplification</SectionLabel>
-              <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug">
-                From 9 steps to 4.
+      <section className="py-20 md:py-24 bg-white dark:bg-neutral-950 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+            <div className="md:col-span-5">
+              <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">Process</p>
+              <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-6">
+                Structured sprints. Clear deliverables.
               </h2>
-              <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                Complex multi-step processes were analyzed, consolidated, and redesigned to reduce cognitive load while maintaining the depth required for compliance workflows.
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mb-6">
+                Each improvement goes through a focused design sprint: audit existing patterns, map user flows, design refined interactions, validate with users, and hand off to engineering.
               </p>
-              <div className="mt-8 space-y-3">
-                {[
-                  'Consolidated redundant form fields',
-                  'Progressive disclosure of advanced options',
-                  'Smart defaults based on case type',
-                  'Inline validation and contextual guidance',
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0" />
-                    <span className="text-[14px] text-slate-600 dark:text-slate-300">{item}</span>
-                  </div>
-                ))}
-              </div>
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400">
+                This keeps the work scoped, measurable, and directly integrated with the team's delivery cadence.
+              </p>
             </div>
-            <WorkflowVisual />
+            <div className="md:col-span-7">
+              <WorkflowMockup />
+            </div>
           </div>
         </div>
       </section>
 
       {/* Design System Visual */}
-      <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-slate-800/40">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-            <div>
-              <SectionLabel>Design System Evolution</SectionLabel>
-              <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug">
-                Evolve—don't replace.
+      <section className="py-20 md:py-24 bg-tan dark:bg-neutral-900 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16 items-start">
+            <div className="md:col-span-7 order-2 md:order-1">
+              <DesignSystemMockup />
+            </div>
+            <div className="md:col-span-5 order-1 md:order-2">
+              <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">Design System</p>
+              <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-6">
+                Evolve the system. Don't replace it.
               </h2>
-              <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                A key part of this work is evolving the existing design system rather than replacing it. This avoids the cost and disruption of a full system rebuild while still moving the product forward.
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mb-6">
+                A key part of this work is evolving the existing design system rather than replacing it.
               </p>
-              <div className="mt-8 space-y-3">
+              <ul className="space-y-3">
                 {[
-                  'Standardize UI patterns across key areas',
+                  'Standardize UI patterns across key areas of the product',
                   'Improve consistency in components and interactions',
                   'Create a more scalable foundation for future features',
-                  'Modernize look and feel incrementally',
+                  'Modernize the overall look and feel incrementally',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-4 h-4 text-slate-400 dark:text-slate-500 shrink-0" />
-                    <span className="text-[14px] text-slate-600 dark:text-slate-300">{item}</span>
-                  </div>
+                  <li key={item} className="flex items-start space-x-3">
+                    <span className="mt-2 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" />
+                    <span className="text-sm leading-relaxed text-muted dark:text-neutral-400">{item}</span>
+                  </li>
                 ))}
-              </div>
+              </ul>
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mt-6">
+                This avoids the cost and disruption of a full system rebuild while still moving the product forward.
+              </p>
             </div>
-            <DesignSystemVisual />
           </div>
         </div>
       </section>
 
-      {/* How I Work */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <div className="max-w-[600px]">
-            <SectionLabel>How I Work</SectionLabel>
-            <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug">
-              Fractional. Embedded. No overhead.
-            </h2>
-            <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed">
-              I operate as a fractional, embedded product design partner. This model works well for teams that need senior design support without committing to a full-time hire.
-            </p>
-          </div>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 dark:bg-slate-700 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700">
-            {[
-              { title: 'Part-time engagement', desc: 'Aligned to team capacity and priorities' },
-              { title: 'Direct collaboration', desc: 'Work side-by-side with product and engineering' },
-              { title: 'No heavy process', desc: 'Minimal overhead, maximum output' },
-              { title: 'No disruption', desc: 'Fits within existing workflows and timelines' },
-              { title: 'High-impact focus', desc: 'Targeted improvements, not broad redesigns' },
-              { title: 'Senior perspective', desc: 'Systems thinking applied to product decisions' },
-            ].map(({ title, desc }) => (
-              <div key={title} className="p-6 bg-white dark:bg-gray-900">
-                <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">{title}</h3>
-                <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-1.5 leading-relaxed">{desc}</p>
+      {/* How We Work */}
+      <section className="py-20 md:py-24 bg-white dark:bg-neutral-950 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-12 gap-12 md:gap-16">
+            <div className="md:col-span-4">
+              <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">Engagement</p>
+              <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug">
+                How we work.
+              </h2>
+            </div>
+            <div className="md:col-span-8">
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mb-8">
+                We operate as a fractional, embedded product design partner.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-px bg-line dark:bg-white/10">
+                {[
+                  { title: 'Part-time engagement', desc: 'Aligned to team needs and capacity, not fixed overhead.' },
+                  { title: 'Direct collaboration', desc: 'Working alongside product and engineering, not in isolation.' },
+                  { title: 'No heavy process', desc: 'No unnecessary overhead or disruption to existing workflows.' },
+                  { title: 'High-impact focus', desc: 'Targeted improvements rather than broad redesigns.' },
+                ].map((item) => (
+                  <div key={item.title} className="bg-white dark:bg-neutral-950 p-6">
+                    <h3 className="text-sm font-semibold text-ink dark:text-white mb-1.5">{item.title}</h3>
+                    <p className="text-sm leading-relaxed text-muted dark:text-neutral-400">{item.desc}</p>
+                  </div>
+                ))}
               </div>
-            ))}
+              <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mt-8">
+                This model works well for teams that need senior design support without committing to a full-time hire.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* The Work */}
-      <section className="py-20 md:py-28 bg-slate-50/60 dark:bg-slate-800/40">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <SectionLabel>The Work</SectionLabel>
-          <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[600px]">
-            The work takes different forms.
-          </h2>
-          <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[600px]">
-            Depending on where the product is, I draw on these services to improve experience, consistency, and velocity—without disrupting what's already working.
-          </p>
-          <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-20 md:py-24 bg-tan dark:bg-neutral-900 border-b border-line dark:border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[720px] mb-12 md:mb-16">
+            <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">The Work</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-5">
+              The work takes different forms.
+            </h2>
+            <p className="text-base leading-relaxed text-muted dark:text-neutral-400">
+              Depending on where the product is, we draw on these services to improve experience, consistency, and velocity, without disrupting what's already working.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-px bg-line dark:bg-white/10">
             {[
-              { icon: SlidersHorizontal, title: 'Evolve design system', desc: 'Standardize patterns and modernize components without a full rebuild' },
-              { icon: GitMerge, title: 'Redesign key flows', desc: 'Rethink high-friction workflows end-to-end for clarity and speed' },
-              { icon: Search, title: 'Audit UI consistency', desc: 'Identify and resolve pattern drift across the product' },
-              { icon: Paintbrush, title: 'Modernize visual layer', desc: 'Update the look and feel to match current SaaS expectations' },
-              { icon: Link2, title: 'Align design + engineering', desc: 'Bridge the gap between design intent and implementation' },
-              { icon: Network, title: 'Map information architecture', desc: 'Restructure how content and features are organized across the product' },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="p-6 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-                <Icon className="w-5 h-5 text-slate-400 dark:text-slate-500 mb-4" />
-                <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">{title}</h3>
-                <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-2 leading-relaxed">{desc}</p>
+              { icon: Component, title: 'Evolve design system', body: 'Standardize patterns and modernize components without a full rebuild' },
+              { icon: Workflow, title: 'Redesign key flows', body: 'Rethink high-friction workflows end-to-end for clarity and speed' },
+              { icon: ScanSearch, title: 'Audit UI consistency', body: 'Identify and resolve pattern drift across the product' },
+              { icon: Sparkles, title: 'Modernize visual layer', body: 'Update the look and feel to match current SaaS expectations' },
+              { icon: Combine, title: 'Align design + engineering', body: 'Bridge the gap between design intent and implementation' },
+              { icon: Network, title: 'Map information architecture', body: 'Restructure how content and features are organized across the product' },
+            ].map(({ icon: Icon, title, body }) => (
+              <div key={title} className="bg-white dark:bg-neutral-950 p-6">
+                <Icon className="w-5 h-5 text-blue dark:text-lavender mb-6" strokeWidth={1.5} />
+                <h3 className="text-sm font-semibold text-ink dark:text-white mb-2">{title}</h3>
+                <p className="text-sm leading-relaxed text-muted dark:text-neutral-400">{body}</p>
               </div>
             ))}
           </div>
@@ -510,56 +563,52 @@ const FractionalSaasDesigner: React.FC<FractionalSaasDesignerProps> = ({ setCurr
       </section>
 
       {/* Forward-Looking */}
-      <section className="py-20 md:py-28">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8">
-          <div className="grid md:grid-cols-2 gap-16 md:gap-24">
-            <div>
-              <SectionLabel>Forward-Looking</SectionLabel>
-              <h2 className="text-[22px] md:text-[26px] font-semibold text-slate-900 dark:text-white leading-snug">
-                Building for what's next.
-              </h2>
-              <p className="mt-5 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed">
-                Beyond immediate improvements, the work positioned the product for what's next. The focus was on practical decisions that support long-term product growth.
-              </p>
-            </div>
-            <div className="space-y-4">
+      <section className="py-20 md:py-24 bg-white dark:bg-neutral-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-[720px]">
+            <p className="text-xs font-medium tracking-wide text-muted dark:text-neutral-400 uppercase mb-3">Looking Ahead</p>
+            <h2 className="text-2xl font-semibold text-ink dark:text-white leading-snug mb-6">
+              Building a foundation for what's next.
+            </h2>
+            <p className="text-base leading-relaxed text-muted dark:text-neutral-400 mb-6">
+              Beyond immediate improvements, the work positioned the product for what's next:
+            </p>
+            <ul className="space-y-4 mb-8">
               {[
-                { title: 'Flexible design system', desc: 'A more scalable foundation that adapts as the product evolves' },
-                { title: 'Modern product experience', desc: 'Aligned with current SaaS expectations and interaction patterns' },
-                { title: 'AI-ready foundation', desc: 'A structure that can support AI-assisted features where appropriate' },
-              ].map(({ title, desc }) => (
-                <div key={title} className="flex items-start gap-4 p-5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800">
-                  <ArrowUpRight className="w-5 h-5 text-slate-400 dark:text-slate-500 mt-0.5 shrink-0" />
-                  <div>
-                    <h3 className="text-sm font-semibold text-slate-800 dark:text-slate-200">{title}</h3>
-                    <p className="text-[13px] text-slate-500 dark:text-slate-400 mt-1 leading-relaxed">{desc}</p>
-                  </div>
-                </div>
+                'A more flexible and scalable design system',
+                'A modernized product experience aligned with current SaaS expectations',
+                'A foundation that can support AI-assisted features where appropriate',
+              ].map((item) => (
+                <li key={item} className="flex items-start space-x-3">
+                  <span className="mt-2 w-1.5 h-1.5 bg-neutral-300 dark:bg-neutral-600 flex-shrink-0" />
+                  <span className="text-base leading-relaxed text-muted dark:text-neutral-400">{item}</span>
+                </li>
               ))}
-            </div>
+            </ul>
+            <p className="text-base leading-relaxed text-muted dark:text-neutral-400">
+              The focus was on practical decisions that support long-term product growth.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Closing */}
-      <section className="py-20 md:py-28 border-t border-slate-100 dark:border-slate-800">
-        <div className="max-w-[1120px] mx-auto px-6 md:px-8 text-center">
-          <h2 className="text-[22px] md:text-[28px] font-semibold text-slate-900 dark:text-white leading-snug max-w-[680px] mx-auto">
-            Small, focused improvements—applied consistently—can significantly improve both user experience and product velocity.
-          </h2>
-          <p className="mt-6 text-[15px] text-slate-500 dark:text-slate-400 leading-relaxed max-w-[540px] mx-auto">
-            For SaaS teams where the product is strong but UX and systems need to catch up, this type of embedded, incremental approach provides a clear path forward.
-          </p>
-          <div className="mt-10">
-            <button
-              onClick={() => setCurrentPage('contact')}
-              className="inline-flex items-center gap-2 px-7 py-3.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-sm font-medium rounded-lg hover:bg-slate-800 dark:hover:bg-gray-100 transition-colors"
-            >
-              Start a Conversation <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-      </section>
+      <RelatedContent
+        setCurrentPage={setCurrentPage}
+        heading="Related"
+        items={[
+          { id: 'enterprise-ux-consulting', eyebrow: 'Service', label: 'Enterprise UX Consulting', description: 'Longer-form consulting for complex enterprise products.' },
+          { id: 'saas-product-design', eyebrow: 'Service', label: 'SaaS Product Design', description: 'End-to-end product design for software platforms.' },
+          { id: 'strategy-sessions', eyebrow: 'Service', label: 'Strategy Sessions', description: 'Focused one-on-one sessions for design challenges.' },
+        ]}
+      />
+
+      <SectionCTA
+        heading="Small improvements, consistently applied."
+        body="For SaaS teams where the product is strong but UX and systems need to catch up, this embedded, incremental approach provides a clear path forward."
+        primaryLabel="Let's Talk"
+        primaryPage="contact"
+        setCurrentPage={setCurrentPage}
+      />
     </div>
   );
 };

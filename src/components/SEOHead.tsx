@@ -10,7 +10,7 @@ interface SEOHeadProps {
   structuredData?: object | object[];
 }
 
-const OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+const OG_IMAGE = `${BASE_URL}/og-image.png`;
 
 function setMetaTag(property: string, content: string, isName = false) {
   const attr = isName ? 'name' : 'property';

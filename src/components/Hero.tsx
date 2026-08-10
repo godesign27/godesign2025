@@ -24,12 +24,12 @@ const Hero: React.FC<HeroProps> = ({ setCurrentPage }) => {
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <Eyebrow className="mb-6">Experience Design</Eyebrow>
+            <Eyebrow className="mb-6">AI Experience Architecture™</Eyebrow>
             <h1 className="text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] font-semibold text-ink dark:text-tan-500 tracking-tight leading-[1.05] mb-8">
-              Human-Centered Design, Built for Results.
+              Designing Intelligent Enterprise Systems.
             </h1>
             <p className="text-lg md:text-xl text-muted dark:text-neutral-400 max-w-xl leading-relaxed mb-10">
-              We apply responsible design practices that enhance usability, accessibility, and visual appeal, bringing human-centered thinking, creative problem-solving, and technology together to solve real business challenges.
+              We work at the intersection of agentic AI, design systems, and enterprise product — defining how intelligent systems should behave, what they communicate, and how the humans who depend on them maintain trust and oversight.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <button onClick={() => navigate('contact')} className="btn-primary btn-lg inline-flex items-center gap-2">

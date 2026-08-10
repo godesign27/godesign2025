@@ -1,44 +1,64 @@
 # GO Design, Inc.
 
-> GO Design is a Chicago-based UI/UX design agency founded by Timothy McGuire, specializing in SaaS product design, mobile app design, marketing web design, and fractional design services. With 12+ years of experience, GO Design transforms digital products for enterprise and startup clients nationwide.
+> GO Design is a Chicago-based design agency specializing in agentic AI design, agentic design systems, and enterprise SaaS. Founded and led by Timothy McGuire, an Agentic AI Design Director with 15+ years of experience, GO Design designs trust-by-design, human-in-the-loop AI products for enterprise and startup clients nationwide.
 
 ## About
 
-GO Design, Inc. is a professional UI/UX design agency headquartered in Chicago, Illinois. Founded by Timothy McGuire, the agency brings over 12 years of experience in user-centered design to every project. GO Design serves clients across the United States, from startups building their first product to Fortune 500 enterprises optimizing complex workflows.
+GO Design, Inc. is a design agency headquartered in Chicago, Illinois, founded by Timothy McGuire. The agency's core specialty is agentic AI design: designing products where AI agents act autonomously, and building the trust-by-design, human-in-the-loop, and agentic oversight patterns that make those products usable, transparent, and safe. GO Design also builds agentic design systems — component libraries and token architectures purpose-built for AI-native products — and applies 15+ years of enterprise UX practice to healthcare, fintech, and complex SaaS platforms.
+
+## What is agentic AI design?
+
+Agentic AI design is the discipline of designing products where AI agents act autonomously on a user's behalf — browsing, reasoning, executing multi-step tasks, and making decisions. It requires trust-by-design (predictable, transparent AI behavior), human-in-the-loop patterns (knowing when to pause for human review), agentic oversight UI (plan preview, progress visibility, interrupt affordances, audit trails), and graceful AI failure design.
+
+## What are agentic design systems?
+
+Agentic design systems are component libraries, token architectures, and pattern frameworks purpose-built for AI-native and agentic products. They extend traditional design systems with components for agent status indicators, confidence signaling, human-in-the-loop decision checkpoints, interrupt and override affordances, correction and feedback loops, and explainability panels.
 
 ## Services
 
-### UI/UX Design Consulting
-Full-spectrum UX/UI design consulting including user flows, information architecture, design systems, wireframing, prototyping, and heuristic analysis. GO Design's process is rooted in user research and data-driven decision making.
+### Agentic AI & Experience Design
+Designing AI-native products and agentic systems where trust, transparency, and human-in-the-loop control are built into every interaction. Trust-by-design frameworks, confidence signaling, graceful AI failure patterns, and agentic oversight UI.
+
+### Agentic Design Systems
+Token architecture, component libraries, and pattern frameworks purpose-built for AI-native and agentic products — agent status components, confidence signaling patterns, human-in-the-loop UI, and audit trail displays.
+
+### Enterprise UX Consulting
+Senior UX consulting for complex enterprise products: platform redesign, UX audits, stakeholder alignment, and AI/UX strategy for multi-role, multi-tenant SaaS platforms.
 
 ### SaaS Product Design
-End-to-end design for SaaS applications: user research, strategic thinking, design system creation, workflow optimization, and scalable interface design. Focused on driving user engagement, retention, and business growth.
+End-to-end design for SaaS applications: user research, information architecture, design systems, workflow optimization, and scalable interface design.
 
-### Mobile App Design
-Mobile-first design for iOS and Android platforms. Intuitive user experiences with multi-device optimization, responsive layouts, and beautiful interfaces that drive engagement.
-
-### Marketing Web Design
-High-converting marketing websites and landing pages with compelling storytelling, brand alignment, and conversion optimization. Featured projects include work for Aramark, Chrysler, and Accenture.
+### Mobile & Web Design
+Mobile-first design for iOS and Android, and high-converting marketing websites with compelling storytelling and conversion optimization.
 
 ### Fractional SaaS Designer
-Senior-level UI/UX design expertise available on a part-time, fractional basis. Services include design system evolution, workflow redesign, UI modernization, information architecture mapping, and AI-ready design foundations. Ideal for SaaS teams needing senior design perspective without full-time overhead.
+Senior-level design leadership on a fractional, retainer basis — design system evolution, workflow redesign, and Director-level UX without full-time overhead.
 
-### Experience Research
-User research capabilities including competitive analysis, user testing, persona development, heuristic analysis, and journey mapping.
+### Strategy Sessions
+Focused, single-session engagements: design audits, AI UX strategy sessions, advisory calls, and team workshops on agentic UX and trust-by-design.
 
-### Brand & Identity Design
-Complete brand identity design including logo creation, color system definition, typography selection, and comprehensive brand guidelines.
+## Solution Areas
+
+- **Enterprise SaaS** — Complex, multi-tenant platforms with role-based access and enterprise-grade design systems.
+- **AI-Native Products** — Products where AI is foundational: trust architecture, confidence signaling, human oversight, agentic UX patterns.
+- **Design Systems** — Token architecture and component libraries for teams shipping AI-native and enterprise products at speed.
+- **Healthcare UX** — Clinical and patient-facing experiences with HIPAA-aware design and human-centered workflows.
+- **Fintech UX** — Trustworthy, compliant financial product design, including regulatory UI and explainable AI.
+- **Product Modernization** — Redesigning legacy products while preserving business continuity and stakeholder trust.
 
 ## Notable Case Studies
 
 ### CoreTechs Healthcare SaaS
-Redesigned a healthcare SaaS platform for data-driven patient management. Delivered intuitive interfaces for value-based care, contract optimization, population risk management, and performance analytics.
+A five-year engagement transforming a raw analytics platform into a trusted enterprise SaaS product for healthcare payors and providers, covering value-based care, contract optimization, and population risk management.
 
 ### Accenture Employee Onboarding
-Redesigned the employee onboarding experience for 500,000+ global Accenture employees. Streamlined pre-boarding journeys, created intuitive task navigation, and implemented accessible design systems that measurably improved new hire confidence.
+Redesigned the employee onboarding experience for 500,000+ global Accenture employees, streamlining pre-boarding journeys and implementing accessible design systems.
 
 ### Jim Beam Cocktail Project
-Created a mobile-first cocktail recipe discovery platform for Suntory Lab and Jim Beam. Designed trending content rails, contextual CTAs, recipe save/share/print functionality, and a responsive web experience.
+A mobile-first cocktail recipe discovery platform for Suntory Lab and Jim Beam, built to move users from browse to pick to pour in a few taps.
+
+### Dremel.com Redesign
+An e-commerce redesign that increased desktop conversion 177% and mobile conversion 242% through user-centered product discovery.
 
 ## Contact
 
@@ -52,13 +72,27 @@ Created a mobile-first cocktail recipe discovery platform for Suntory Lab and Ji
 
 - [Home](https://godesign.one/)
 - [Services](https://godesign.one/services)
-- [Solutions & Case Studies](https://godesign.one/solutions)
-- [About](https://godesign.one/about)
-- [Contact](https://godesign.one/contact)
+- [Agentic AI & Experience Design](https://godesign.one/agentic-experience)
+- [AI Experience Architecture](https://godesign.one/ai-experience-architecture)
+- [Solutions Overview](https://godesign.one/solutions)
+- [Agentic Design Systems](https://godesign.one/solutions/design-systems)
+- [AI-Native Products](https://godesign.one/solutions/ai-native-products)
+- [Enterprise SaaS](https://godesign.one/solutions/enterprise-saas)
+- [Healthcare UX](https://godesign.one/solutions/healthcare-ux)
+- [Fintech UX](https://godesign.one/solutions/fintech-ux)
+- [Product Modernization](https://godesign.one/solutions/product-modernization)
+- [Case Studies](https://godesign.one/case-studies)
 - [SaaS Product Design](https://godesign.one/saas-product-design)
 - [Marketing Web Design](https://godesign.one/marketing-web-design)
-- [Mobile App Design](https://godesign.one/mobile-web-design)
+- [Mobile Web Design](https://godesign.one/mobile-web-design)
 - [Fractional SaaS Designer](https://godesign.one/fractional-saas-designer)
+- [Enterprise UX Consulting](https://godesign.one/services/enterprise-ux-consulting)
+- [Strategy Sessions](https://godesign.one/services/strategy-sessions)
+- [Speaking & Workshops](https://godesign.one/services/speaking-workshops)
+- [Work With Us](https://godesign.one/work-with-me)
+- [Perspectives](https://godesign.one/perspectives)
+- [About](https://godesign.one/about)
+- [Contact](https://godesign.one/contact)
 - [CoreTechs Case Study](https://godesign.one/case-study/1)
 - [Accenture Case Study](https://godesign.one/case-study/2)
 - [Jim Beam Case Study](https://godesign.one/case-study/3)

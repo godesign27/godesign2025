@@ -10,6 +10,7 @@ import Partners from './components/Partners';
 import HomeEditorial from './components/HomeEditorial';
 import SpecializedExpertise from './components/SpecializedExpertise';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import CTA from './components/CTA';
 import Services from './components/Services';
 import Solutions from './components/Solutions';
@@ -48,27 +49,75 @@ function HomePage({ setCurrentPage, setSelectedCaseStudy }: {
   return (
     <>
       <SEOHead
-        title="GO Design, Inc. - Expert UI/UX Design & Product Development | Chicago"
-        description="GO Design is a Chicago-based UI/UX design agency specializing in SaaS product design, mobile app design, and marketing websites. 12+ years of experience transforming digital products for brands like Accenture, Jim Beam, and CoreTechs. Schedule a free consultation."
+        title="GO Design, Inc. — Agentic AI Design & Agentic Design Systems | Chicago"
+        description="GO Design is a Chicago design agency specializing in agentic AI design, agentic design systems, and enterprise SaaS. 15+ years designing trust-by-design, human-in-the-loop AI products for Accenture, TransUnion, and CoreTechs. Schedule a free consultation."
         canonical="/"
-        keywords="UI/UX design agency Chicago, SaaS product design, mobile app design, marketing web design, user experience design, digital product development, fractional designer"
-        structuredData={{
-          '@context': 'https://schema.org',
-          '@type': 'WebPage',
-          name: 'GO Design, Inc. - Expert UI/UX Design & Product Development',
-          description: 'Chicago-based UI/UX design agency specializing in SaaS product design, mobile app design, and marketing websites.',
-          url: BASE_URL,
-          isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
-          about: {
-            '@type': 'ProfessionalService',
-            name: SITE_NAME,
-            areaServed: [
-              { '@type': 'City', name: 'Chicago' },
-              { '@type': 'State', name: 'Illinois' },
-              { '@type': 'Country', name: 'United States' },
+        keywords="agentic AI design, agentic design systems, agentic UX design, AI-native product design, trust-by-design, human-in-the-loop UX, enterprise UX design agency, Chicago design agency"
+        structuredData={[
+          {
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'GO Design, Inc. — Agentic AI Design & Agentic Design Systems',
+            description: 'Chicago design agency specializing in agentic AI design, agentic design systems, and enterprise SaaS.',
+            url: BASE_URL,
+            isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
+            about: {
+              '@type': 'ProfessionalService',
+              name: SITE_NAME,
+              areaServed: [
+                { '@type': 'City', name: 'Chicago' },
+                { '@type': 'State', name: 'Illinois' },
+                { '@type': 'Country', name: 'United States' },
+              ],
+            },
+          },
+          {
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What does GO Design specialize in?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "GO Design is a Chicago design agency specializing in agentic AI design, agentic design systems, and enterprise SaaS platforms. Founded and led by Timothy McGuire, an Agentic AI Design Director with 15+ years of experience, we design trust-by-design, human-in-the-loop AI products for healthcare, fintech, pharma, and enterprise software clients including Accenture, TransUnion, and CoreTechs.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is an agentic AI designer?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "An agentic AI designer specializes in designing products where AI agents act autonomously — browsing, reasoning, executing multi-step tasks, and making decisions on a user's behalf. The discipline requires expertise in trust-by-design, human-in-the-loop patterns, agentic oversight UI, and graceful AI failure design.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What are agentic design systems?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Agentic design systems are component libraries, token architectures, and pattern frameworks purpose-built for AI-native and agentic products, including components for agent status indicators, confidence signaling, and human-in-the-loop decision checkpoints.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is GO Design available for agentic AI design consulting?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. We accept agentic AI design consulting engagements, fractional design director partnerships, and focused AI UX strategy sessions.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I hire GO Design?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Contact us and describe your product, your users, and what you're trying to build. We respond to every inquiry and will let you know if the engagement fits.",
+                },
+              },
             ],
           },
-        }}
+        ]}
       />
       <Hero setCurrentPage={setCurrentPage} />
       <Partners />
@@ -76,6 +125,7 @@ function HomePage({ setCurrentPage, setSelectedCaseStudy }: {
       <ValueProposition />
       <SpecializedExpertise setCurrentPage={setCurrentPage} />
       <Testimonials />
+      <FAQ />
       <CTA setCurrentPage={setCurrentPage} />
     </>
   );
@@ -173,14 +223,14 @@ const solutionSEO: Record<string, { title: string; description: string; keywords
     keywords: 'enterprise SaaS design, multi-tenant platform UX, role-based access design, enterprise information architecture',
   },
   'solutions-ai-native-products': {
-    title: 'AI-Native Product Design - Trust Architecture & Agentic UX | GO Design',
-    description: 'Designing products where AI is a first-class participant: trust architecture, confidence signaling, human oversight interfaces, and agentic UX patterns.',
-    keywords: 'AI-native product design, agentic UX, trust architecture, human oversight design, AI confidence signaling',
+    title: 'Agentic AI Design - AI-Native Products & Trust Architecture | GO Design',
+    description: 'Agentic AI design for products where AI is a first-class participant: trust-by-design architecture, confidence signaling, human-in-the-loop oversight interfaces, and agentic UX patterns.',
+    keywords: 'agentic AI design, AI-native product design, agentic UX, trust-by-design, human-in-the-loop design, AI confidence signaling',
   },
   'solutions-design-systems': {
-    title: 'Design Systems - Token Architecture & Component Libraries | GO Design',
-    description: 'Token architecture, component libraries, and pattern frameworks purpose-built for AI-native and agentic products, giving teams a shared language for shipping at speed.',
-    keywords: 'design systems, token architecture, component library design, pattern frameworks, design system governance',
+    title: 'Agentic Design Systems - Token Architecture & Component Libraries | GO Design',
+    description: 'Agentic design systems: token architecture, component libraries, and pattern frameworks purpose-built for AI-native and agentic products, giving teams a shared language for shipping at speed.',
+    keywords: 'agentic design systems, design systems, token architecture, component library design, pattern frameworks, design system governance',
   },
   'solutions-healthcare-ux': {
     title: 'Healthcare UX Design - Clinical & Patient Experiences | GO Design',
@@ -228,8 +278,8 @@ function AboutPage({ setCurrentPage }: { setCurrentPage: (page: string) => void 
   return (
     <>
       <SEOHead
-        title="About GO Design - Timothy McGuire, 12+ Years Experience Design | Chicago"
-        description="Meet Timothy McGuire, founder of GO Design with 12+ years of experience in user-centered design. Specializing in SaaS platform redesign, mobile-first experiences, and digital transformation. Based in Chicago, serving clients nationwide."
+        title="About GO Design - Timothy McGuire, 15+ Years Experience Design | Chicago"
+        description="Meet Timothy McGuire, founder of GO Design with 15+ years of experience in user-centered design. Specializing in enterprise SaaS, AI-native products, and design systems. Based in Chicago, serving clients nationwide."
         canonical="/about"
         keywords="Timothy McGuire designer, Chicago UX designer, experience designer, SaaS design expert, user-centered design, digital transformation consultant"
         structuredData={[
@@ -458,10 +508,10 @@ function AgenticExperiencePage({ setCurrentPage }: { setCurrentPage: (page: stri
   return (
     <>
       <SEOHead
-        title="Agentic Experience Design - AI & Agent UX | GO Design"
-        description="AI and agentic experience design for SaaS and enterprise products. Trust-by-design frameworks, mental model mapping, interaction pattern selection, and responsible AI design that helps teams turn AI into something usable, controlled, and built for the real world."
+        title="Agentic AI Design & Agentic Experience | GO Design"
+        description="Agentic AI design and agentic experience design for SaaS and enterprise products. Trust-by-design frameworks, human-in-the-loop patterns, and agentic oversight UI that turn AI into something usable, controlled, and built for the real world."
         canonical="/agentic-experience"
-        keywords="agentic experience design, AI UX design, AI product design, trust-by-design framework, human-in-the-loop design, responsible AI design, AI interaction patterns, agentic AI UX"
+        keywords="agentic AI design, agentic experience design, agentic UX design, AI UX design, trust-by-design framework, human-in-the-loop design, agentic oversight UI, agentic AI UX"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'Service',

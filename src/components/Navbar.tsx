@@ -1,11 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Moon, Sun, ChevronDown, Bot, Building2, Users, Target, Mic2, BookOpen, Workflow, PenLine, Palette } from 'lucide-react';
+import { Menu, X, Moon, Sun, ChevronDown, Bot, Building2, Users, Target, Mic2, BookOpen, Workflow, PenLine, Palette, Heart, BarChart3, RefreshCcw, Briefcase } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 interface NavbarProps {
   currentPage: string;
   setCurrentPage: (page: string) => void;
 }
+
+const solutionPages = [
+  { id: 'solutions-enterprise-saas', label: 'Enterprise SaaS', description: 'Complex multi-tenant platform design.', icon: Building2 },
+  { id: 'solutions-ai-native-products', label: 'AI-Native Products', description: 'Designing products where AI is foundational.', icon: Bot },
+  { id: 'solutions-design-systems', label: 'Design Systems', description: 'Scalable component and pattern libraries.', icon: Palette },
+  { id: 'solutions-healthcare-ux', label: 'Healthcare UX', description: 'Clinical and patient-facing experiences.', icon: Heart },
+  { id: 'solutions-fintech-ux', label: 'Fintech UX', description: 'Trustworthy, compliant financial product design.', icon: BarChart3 },
+  { id: 'solutions-product-modernization', label: 'Product Modernization', description: 'Redesigning legacy products and interfaces.', icon: RefreshCcw },
+  { id: 'case-studies', label: 'Case Studies', description: 'Work samples and results across industries.', icon: Briefcase },
+];
 
 const perspectivePages = [
   { id: 'perspectives-our-philosophy', label: 'Our Philosophy', description: 'Principles guiding every design decision.', icon: BookOpen },
@@ -22,7 +32,7 @@ const workWithMePages = [
   { id: 'speaking-workshops', label: 'Speaking & Workshops', description: 'Talks and workshops for design teams and conferences.', icon: Mic2 },
 ];
 
-type DropdownKey = 'perspectives' | 'work-with-me' | null;
+type DropdownKey = 'solutions' | 'perspectives' | 'work-with-me' | null;
 
 const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,6 +99,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
     setMobileExpanded(null);
   };
 
+  const isSolutionsPage = currentPage === 'solutions' || solutionPages.some(s => s.id === currentPage);
   const isPerspectivePage = currentPage === 'perspectives' || perspectivePages.some(s => s.id === currentPage);
   const isWorkWithMePage = currentPage === 'work-with-me' || workWithMePages.some(s => s.id === currentPage);
 
@@ -186,7 +197,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
   if (!mounted) return null;
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm border-b border-line dark:border-white/[0.1] dark:bg-neutral-950/95' : 'bg-transparent'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 dark:bg-[color-mix(in_srgb,var(--color-neutral-950)_95%,transparent)] backdrop-blur-sm border-b border-line dark:border-white/[0.1]' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" ref={navRef}>
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -218,7 +229,17 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
                   AI Experience Architecture™
                 </button>
 
-                <button className={getNavLinkClasses(currentPage === 'solutions')} onClick={() => navigate('solutions')}>Solutions</button>
+                <div
+                  className="relative"
+                  onMouseEnter={() => openDropdown('solutions')}
+                  onMouseLeave={scheduleClose}
+                >
+                  <button className={getNavLinkClasses(isSolutionsPage)} onClick={() => navigate('solutions')}>
+                    Solutions
+                    <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                  </button>
+                  {renderDropdown('solutions', 'solutions', 'Solutions', solutionPages)}
+                </div>
 
                 <div
                   className="relative"
@@ -298,7 +319,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
             <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('home')}>Home</button>
             <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('services')}>Services</button>
             <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('ai-experience-architecture')}>AI Experience Architecture™</button>
-            <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('solutions')}>Solutions</button>
+            {renderMobileSection('solutions', 'Solutions', 'solutions', solutionPages)}
             {renderMobileSection('perspectives', 'Perspectives', 'perspectives', perspectivePages)}
             {renderMobileSection('work-with-me', 'Work With Us', 'work-with-me', workWithMePages)}
             <button className="block w-full text-left px-4 py-3 text-sm font-medium text-muted dark:text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-white/[0.04]" onClick={() => navigate('about')}>About</button>

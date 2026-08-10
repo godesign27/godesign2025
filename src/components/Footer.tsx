@@ -66,9 +66,10 @@ const Footer: React.FC<FooterProps> = ({ currentPage: _currentPage, setCurrentPa
             <h3 className={headingCls}>Solutions</h3>
             <ul className="space-y-2.5">
               {[
-                { id: 'case-study-1', label: 'Healthcare SaaS' },
-                { id: 'case-study-2', label: 'Enterprise Onboarding' },
-                { id: 'case-study-3', label: 'Consumer Experience' },
+                { id: 'solutions-enterprise-saas', label: 'Enterprise SaaS' },
+                { id: 'solutions-ai-native-products', label: 'AI-Native Products' },
+                { id: 'solutions-design-systems', label: 'Design Systems' },
+                { id: 'case-studies', label: 'Case Studies' },
                 { id: 'solutions', label: 'All Solutions' },
               ].map((item) => (
                 <li key={item.id}>

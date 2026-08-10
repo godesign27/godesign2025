@@ -13,6 +13,8 @@ import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Services from './components/Services';
 import Solutions from './components/Solutions';
+import SolutionsLanding from './components/SolutionsLanding';
+import SolutionDetail from './components/SolutionDetail';
 import About from './components/About';
 import Contact from './components/Contact';
 import SaasProductDesign from './components/SaasProductDesign';
@@ -114,7 +116,32 @@ function ServicesPage({ setCurrentPage }: { setCurrentPage: (page: string) => vo
   );
 }
 
-function SolutionsPage({ setCurrentPage, setSelectedCaseStudy }: {
+function SolutionsLandingPage({ setCurrentPage, setSelectedCaseStudy }: {
+  setCurrentPage: (page: string) => void;
+  setSelectedCaseStudy: (study: string) => void;
+}) {
+  return (
+    <>
+      <SEOHead
+        title="Solutions - Case Studies & Areas of Practice | GO Design"
+        description="Explore GO Design's solution areas and case studies: enterprise SaaS, AI-native products, design systems, healthcare UX, fintech UX, and product modernization, backed by real client work."
+        canonical="/solutions"
+        keywords="UX solutions, design portfolio, enterprise SaaS design, AI-native product design, design systems, healthcare UX, fintech UX, product modernization"
+        structuredData={{
+          '@context': 'https://schema.org',
+          '@type': 'CollectionPage',
+          name: 'Solutions',
+          description: 'Solution areas and case studies covering enterprise SaaS, AI-native products, design systems, healthcare UX, fintech UX, and product modernization.',
+          url: `${BASE_URL}/solutions`,
+          isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
+        }}
+      />
+      <SolutionsLanding setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
+    </>
+  );
+}
+
+function CaseStudiesPage({ setCurrentPage, setSelectedCaseStudy }: {
   setCurrentPage: (page: string) => void;
   setSelectedCaseStudy: (study: string) => void;
 }) {
@@ -123,18 +150,76 @@ function SolutionsPage({ setCurrentPage, setSelectedCaseStudy }: {
       <SEOHead
         title="Design Portfolio & Case Studies - Healthcare SaaS, Enterprise UX | GO Design"
         description="Explore GO Design's portfolio of digital transformation projects. Case studies featuring CoreTechs healthcare SaaS, Accenture enterprise onboarding for 500K+ employees, and Jim Beam's cocktail discovery platform. Real results from user-centered design."
-        canonical="/solutions"
+        canonical="/case-studies"
         keywords="UX case studies, design portfolio, healthcare SaaS design, enterprise UX design, digital transformation, CoreTechs, Accenture, Jim Beam"
         structuredData={{
           '@context': 'https://schema.org',
           '@type': 'CollectionPage',
           name: 'Design Portfolio & Case Studies',
           description: 'Portfolio of digital transformation projects including healthcare SaaS, enterprise onboarding, and consumer experience design.',
-          url: `${BASE_URL}/solutions`,
+          url: `${BASE_URL}/case-studies`,
           isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL },
         }}
       />
       <Solutions setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
+    </>
+  );
+}
+
+const solutionSEO: Record<string, { title: string; description: string; keywords: string }> = {
+  'solutions-enterprise-saas': {
+    title: 'Enterprise SaaS Design - Complex Platform UX | GO Design',
+    description: 'Designing complex, multi-tenant SaaS platforms that scale without sacrificing usability: role-based access, dense information architecture, and enterprise-grade design systems.',
+    keywords: 'enterprise SaaS design, multi-tenant platform UX, role-based access design, enterprise information architecture',
+  },
+  'solutions-ai-native-products': {
+    title: 'AI-Native Product Design - Trust Architecture & Agentic UX | GO Design',
+    description: 'Designing products where AI is a first-class participant: trust architecture, confidence signaling, human oversight interfaces, and agentic UX patterns.',
+    keywords: 'AI-native product design, agentic UX, trust architecture, human oversight design, AI confidence signaling',
+  },
+  'solutions-design-systems': {
+    title: 'Design Systems - Token Architecture & Component Libraries | GO Design',
+    description: 'Token architecture, component libraries, and pattern frameworks purpose-built for AI-native and agentic products, giving teams a shared language for shipping at speed.',
+    keywords: 'design systems, token architecture, component library design, pattern frameworks, design system governance',
+  },
+  'solutions-healthcare-ux': {
+    title: 'Healthcare UX Design - Clinical & Patient Experiences | GO Design',
+    description: 'Clinical and patient-facing experiences where clarity, trust, and compliance are non-negotiable, with HIPAA-aware design and human-centered workflows.',
+    keywords: 'healthcare UX design, clinical workflow design, patient-facing UX, HIPAA-aware design',
+  },
+  'solutions-fintech-ux': {
+    title: 'Fintech UX Design - Trustworthy Financial Products | GO Design',
+    description: 'Designing financial products that are trustworthy, compliant, and genuinely easy to use: risk communication, regulatory UI, and explainable AI in financial contexts.',
+    keywords: 'fintech UX design, financial product design, regulatory UI, risk communication design',
+  },
+  'solutions-product-modernization': {
+    title: 'Product Modernization - Legacy Product Redesign | GO Design',
+    description: 'Redesigning legacy products that have accumulated years of complexity, debt, and user frustration, while keeping business continuity and stakeholder trust intact.',
+    keywords: 'product modernization, legacy product redesign, platform modernization UX',
+  },
+};
+
+function SolutionDetailPage({ page, setCurrentPage }: { page: string; setCurrentPage: (page: string) => void }) {
+  const seo = solutionSEO[page];
+  return (
+    <>
+      {seo && (
+        <SEOHead
+          title={seo.title}
+          description={seo.description}
+          canonical={`/${page.replace('solutions-', 'solutions/')}`}
+          keywords={seo.keywords}
+          structuredData={{
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: seo.title.split(' - ')[0],
+            provider: { '@type': 'ProfessionalService', name: SITE_NAME, url: BASE_URL },
+            description: seo.description,
+            areaServed: { '@type': 'Country', name: 'United States' },
+          }}
+        />
+      )}
+      <SolutionDetail page={page} setCurrentPage={setCurrentPage} />
     </>
   );
 }
@@ -627,6 +712,13 @@ function App() {
       'home': '/',
       'services': '/services',
       'solutions': '/solutions',
+      'case-studies': '/case-studies',
+      'solutions-enterprise-saas': '/solutions/enterprise-saas',
+      'solutions-ai-native-products': '/solutions/ai-native-products',
+      'solutions-design-systems': '/solutions/design-systems',
+      'solutions-healthcare-ux': '/solutions/healthcare-ux',
+      'solutions-fintech-ux': '/solutions/fintech-ux',
+      'solutions-product-modernization': '/solutions/product-modernization',
       'about': '/about',
       'contact': '/contact',
       'saas-product-design': '/saas-product-design',
@@ -657,6 +749,13 @@ function App() {
       '/': 'home',
       '/services': 'services',
       '/solutions': 'solutions',
+      '/case-studies': 'case-studies',
+      '/solutions/enterprise-saas': 'solutions-enterprise-saas',
+      '/solutions/ai-native-products': 'solutions-ai-native-products',
+      '/solutions/design-systems': 'solutions-design-systems',
+      '/solutions/healthcare-ux': 'solutions-healthcare-ux',
+      '/solutions/fintech-ux': 'solutions-fintech-ux',
+      '/solutions/product-modernization': 'solutions-product-modernization',
       '/about': 'about',
       '/contact': 'contact',
       '/saas-product-design': 'saas-product-design',
@@ -688,7 +787,14 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/services" element={<ServicesPage setCurrentPage={setCurrentPage} />} />
-          <Route path="/solutions" element={<SolutionsPage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/solutions" element={<SolutionsLandingPage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/case-studies" element={<CaseStudiesPage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/solutions/enterprise-saas" element={<SolutionDetailPage page="solutions-enterprise-saas" setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions/ai-native-products" element={<SolutionDetailPage page="solutions-ai-native-products" setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions/design-systems" element={<SolutionDetailPage page="solutions-design-systems" setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions/healthcare-ux" element={<SolutionDetailPage page="solutions-healthcare-ux" setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions/fintech-ux" element={<SolutionDetailPage page="solutions-fintech-ux" setCurrentPage={setCurrentPage} />} />
+          <Route path="/solutions/product-modernization" element={<SolutionDetailPage page="solutions-product-modernization" setCurrentPage={setCurrentPage} />} />
           <Route path="/about" element={<AboutPage setCurrentPage={setCurrentPage} />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/saas-product-design" element={<SaasPage setCurrentPage={setCurrentPage} />} />

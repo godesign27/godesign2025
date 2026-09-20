@@ -90,7 +90,12 @@ function LiveViewport({
   fallbackImage: string;
 }) {
   const canEmbed = typeof window !== 'undefined'
-    && ['timothymcguire.com', 'www.timothymcguire.com'].includes(window.location.hostname);
+    && [
+      'timothymcguire.com',
+      'www.timothymcguire.com',
+      'godesign.one',
+      'www.godesign.one',
+    ].includes(window.location.hostname);
   let frameClass: string;
   switch (viewport) {
     case 'desktop':

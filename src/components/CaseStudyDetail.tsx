@@ -7,8 +7,7 @@ const CORETECHS_PROD_SRC = 'https://coretechs.timothymcguire.workers.dev/v2';
 const LIVE_SRC =
   import.meta.env.VITE_CORETECHS_LIVE_URL || CORETECHS_PROD_SRC;
 const LIVE_DS_SRC = `${LIVE_SRC.replace(/\/$/, '')}/design-system/tokens/color`;
-const PRODUCT_PREVIEW =
-  'https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Dashboard%20-%20Summary.png';
+const PRODUCT_PREVIEW = '/coretechs-v2-dashboard.png';
 const DESIGN_SYSTEM_PREVIEW =
   'https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/button-component.png';
 

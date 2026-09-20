@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Moon, Sun, ChevronDown, Bot, Building2, Users, Target, Mic2, BookOpen, Workflow, PenLine, Palette, Heart, BarChart3, RefreshCcw, Briefcase } from 'lucide-react';
+import { Menu, X, Moon, Sun, ChevronDown, Bot, Box, Building2, Users, Target, Mic2, BookOpen, Workflow, PenLine, Palette, Heart, BarChart3, RefreshCcw, Briefcase } from 'lucide-react';
 import { useTheme } from 'next-themes';
 
 interface NavbarProps {
@@ -26,6 +26,7 @@ const perspectivePages = [
 ];
 
 const workWithMePages = [
+  { id: 'service-offerings', label: 'Service Offerings', description: 'Compare scoped engagements for AI products and design systems.', icon: Box },
   { id: 'enterprise-ux-consulting', label: 'Enterprise Consulting', description: 'Senior AI experience strategy for enterprise products.', icon: Building2 },
   { id: 'fractional-saas-designer', label: 'Fractional Leadership', description: 'Senior design leadership on a flexible cadence.', icon: Users },
   { id: 'strategy-sessions', label: 'Strategy Sessions', description: 'Focused advisory engagements with a senior design mind.', icon: Target },
@@ -101,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
 
   const isSolutionsPage = currentPage === 'solutions' || solutionPages.some(s => s.id === currentPage);
   const isPerspectivePage = currentPage === 'perspectives' || perspectivePages.some(s => s.id === currentPage);
-  const isWorkWithMePage = currentPage === 'work-with-me' || workWithMePages.some(s => s.id === currentPage);
+  const isWorkWithMePage = currentPage === 'work-with-me' || currentPage.startsWith('offering-') || workWithMePages.some(s => s.id === currentPage);
 
   const getNavLinkClasses = (active: boolean) =>
     `px-3 py-2 text-sm font-medium transition-colors relative inline-flex items-center gap-1 ${

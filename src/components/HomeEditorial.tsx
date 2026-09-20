@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layers, Eye, GitBranch, Search, BookOpen, Workflow, Bot, PenLine, Mic2, ArrowRight } from 'lucide-react';
 import Eyebrow from './Eyebrow';
+import { CORETECHS_CARD_IMAGE } from '../lib/caseStudies';
 
 interface HomeEditorialProps {
   setCurrentPage: (page: string) => void;
@@ -112,7 +113,7 @@ const HomeEditorial: React.FC<HomeEditorialProps> = ({ setCurrentPage, setSelect
           <div className="grid md:grid-cols-2 gap-12 items-start">
             <div className="bg-white dark:bg-neutral-900 border border-line dark:border-white/10 p-2">
               <img
-                src="https://knddrhyoqawaccpztdiw.supabase.co/storage/v1/object/public/go-images/Coretechs/Dashboard%20-%20Summary.png"
+                src={CORETECHS_CARD_IMAGE}
                 alt="CoreTechs Dashboard"
                 className="w-full h-72 object-cover object-top"
               />

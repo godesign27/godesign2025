@@ -31,6 +31,8 @@ import EnterpriseUXConsulting from './components/EnterpriseUXConsulting';
 import SpeakingWorkshops from './components/SpeakingWorkshops';
 import StrategySessions from './components/StrategySessions';
 import WorkWithMe from './components/WorkWithMe';
+import ServiceOfferings from './components/ServiceOfferings';
+import { serviceOfferings, offeringPageId, offeringPath } from './data/serviceOfferings';
 import Perspectives from './components/Perspectives';
 import MyPhilosophy from './components/MyPhilosophy';
 import HowIWork from './components/HowIWork';
@@ -406,7 +408,7 @@ function CaseStudy1Page({ setCurrentPage, setSelectedCaseStudy }: {
       <SEOHead
         title="CoreTechs Healthcare SaaS Case Study - Data-Driven Patient Management | GO Design"
         description="How GO Design transformed CoreTechs' healthcare SaaS platform with data-driven insights. Redesigned UI for value-based patient management, contract optimization, population risk management, and performance analytics."
-        canonical="/case-study/1"
+        canonical="/case-studies/coretechs"
         ogType="article"
         keywords="healthcare SaaS case study, CoreTechs, patient management UX, healthcare data platform, medical software design, value-based care design"
         structuredData={{
@@ -416,7 +418,7 @@ function CaseStudy1Page({ setCurrentPage, setSelectedCaseStudy }: {
           author: { '@type': 'Person', name: 'Timothy McGuire' },
           publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
           description: 'Case study: Redesigning CoreTechs healthcare SaaS platform for value-based patient management and data-driven decision making.',
-          url: `${BASE_URL}/case-study/1`,
+          url: `${BASE_URL}/case-studies/coretechs`,
           about: { '@type': 'Thing', name: 'Healthcare SaaS Design' },
         }}
       />
@@ -434,7 +436,7 @@ function CaseStudy2Page({ setCurrentPage, setSelectedCaseStudy }: {
       <SEOHead
         title="Accenture Employee Onboarding Case Study - Enterprise UX for 500K+ Users | GO Design"
         description="How GO Design redesigned Accenture's employee onboarding experience for 500,000+ global employees. Streamlined pre-boarding, intuitive task navigation, accessible design systems, and measurable improvements in new hire confidence."
-        canonical="/case-study/2"
+        canonical="/case-studies/accenture"
         ogType="article"
         keywords="Accenture case study, enterprise onboarding UX, employee experience design, large-scale UX, onboarding redesign, accessible design"
         structuredData={{
@@ -444,7 +446,7 @@ function CaseStudy2Page({ setCurrentPage, setSelectedCaseStudy }: {
           author: { '@type': 'Person', name: 'Timothy McGuire' },
           publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
           description: 'Case study: Redesigning Accenture employee onboarding experience to inspire confidence from day one across a global workforce.',
-          url: `${BASE_URL}/case-study/2`,
+          url: `${BASE_URL}/case-studies/accenture`,
           about: { '@type': 'Thing', name: 'Enterprise UX Design' },
         }}
       />
@@ -462,7 +464,7 @@ function CaseStudy3Page({ setCurrentPage, setSelectedCaseStudy }: {
       <SEOHead
         title="Jim Beam Cocktail Project Case Study - Mobile-First Recipe Platform | GO Design"
         description="How GO Design created Jim Beam's Cocktail Project, a mobile-first recipe discovery platform. Designed trending content rails, contextual CTAs, recipe save/share functionality, and responsive web experience for Suntory Lab and Jim Beam."
-        canonical="/case-study/3"
+        canonical="/case-studies/jim-beam"
         ogType="article"
         keywords="Jim Beam case study, cocktail app design, mobile recipe platform, consumer experience design, Suntory Lab, beverage brand design"
         structuredData={{
@@ -472,7 +474,7 @@ function CaseStudy3Page({ setCurrentPage, setSelectedCaseStudy }: {
           author: { '@type': 'Person', name: 'Timothy McGuire' },
           publisher: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
           description: 'Case study: Designing a frictionless cocktail recipe discovery platform for Jim Beam and Suntory Lab.',
-          url: `${BASE_URL}/case-study/3`,
+          url: `${BASE_URL}/case-studies/jim-beam`,
           about: { '@type': 'Thing', name: 'Consumer Experience Design' },
         }}
       />
@@ -744,6 +746,41 @@ function WritingHubPage({ setCurrentPage }: { setCurrentPage: (page: string) => 
   );
 }
 
+function ServiceOfferingsPage({ slug, setCurrentPage }: {
+  slug?: string;
+  setCurrentPage: (page: string) => void;
+}) {
+  const offering = serviceOfferings.find((item) => item.slug === slug);
+  const canonical = offering ? offeringPath(offering.slug) : '/service-offerings';
+  const title = offering ? `${offering.name} | GO Design Service Offering` : 'Agentic AI & Design System Service Offerings | GO Design';
+  const description = offering?.summary ?? 'Compare scoped GO Design engagements for agentic AI products, trust audits, agentic design systems, fractional design leadership, workshops, and advisory support.';
+
+  return (
+    <>
+      <SEOHead
+        title={title}
+        description={description}
+        canonical={canonical}
+        ogType={offering ? 'article' : 'website'}
+        keywords="agentic AI design services, agentic UX audit, trust audit, agentic design system, fractional AI design director, AI design workshops"
+        structuredData={offering ? {
+          '@context': 'https://schema.org', '@type': 'Service', name: offering.name,
+          serviceType: offering.name, description: offering.summary, url: `${BASE_URL}${canonical}`,
+          provider: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL },
+          areaServed: { '@type': 'Country', name: 'United States' },
+        } : {
+          '@context': 'https://schema.org', '@type': 'ItemList', name: 'GO Design Service Offerings',
+          itemListElement: serviceOfferings.map((item, index) => ({
+            '@type': 'ListItem', position: index + 1, name: item.name,
+            url: `${BASE_URL}${offeringPath(item.slug)}`,
+          })),
+        }}
+      />
+      <ServiceOfferings slug={slug} setCurrentPage={setCurrentPage} />
+    </>
+  );
+}
+
 function App() {
   const navigate = useNavigate();
   const location = useLocation();
@@ -774,9 +811,9 @@ function App() {
       'saas-product-design': '/saas-product-design',
       'marketing-web-design': '/marketing-web-design',
       'mobile-web-design': '/mobile-web-design',
-      'case-study-1': '/case-study/1',
-      'case-study-2': '/case-study/2',
-      'case-study-3': '/case-study/3',
+      'case-study-1': '/case-studies/coretechs',
+      'case-study-2': '/case-studies/accenture',
+      'case-study-3': '/case-studies/jim-beam',
       'fractional-saas-designer': '/fractional-saas-designer',
       'agentic-experience': '/agentic-experience',
       'ai-experience-architecture': '/ai-experience-architecture',
@@ -784,6 +821,8 @@ function App() {
       'speaking-workshops': '/services/speaking-workshops',
       'strategy-sessions': '/services/strategy-sessions',
       'work-with-me': '/work-with-me',
+      'service-offerings': '/service-offerings',
+      ...Object.fromEntries(serviceOfferings.map((offering) => [offeringPageId(offering.slug), offeringPath(offering.slug)])),
       'perspectives': '/perspectives',
       'perspectives-our-philosophy': '/perspectives/our-philosophy',
       'perspectives-how-we-work': '/perspectives/how-we-work',
@@ -814,6 +853,9 @@ function App() {
       '/case-study/1': 'case-study-1',
       '/case-study/2': 'case-study-2',
       '/case-study/3': 'case-study-3',
+      '/case-studies/coretechs': 'case-study-1',
+      '/case-studies/accenture': 'case-study-2',
+      '/case-studies/jim-beam': 'case-study-3',
       '/fractional-saas-designer': 'fractional-saas-designer',
       '/agentic-experience': 'agentic-experience',
       '/ai-experience-architecture': 'ai-experience-architecture',
@@ -821,6 +863,8 @@ function App() {
       '/services/speaking-workshops': 'speaking-workshops',
       '/services/strategy-sessions': 'strategy-sessions',
       '/work-with-me': 'work-with-me',
+      '/service-offerings': 'service-offerings',
+      ...Object.fromEntries(serviceOfferings.map((offering) => [offeringPath(offering.slug), offeringPageId(offering.slug)])),
       '/perspectives': 'perspectives',
       '/perspectives/our-philosophy': 'perspectives-our-philosophy',
       '/perspectives/how-we-work': 'perspectives-how-we-work',
@@ -853,6 +897,9 @@ function App() {
           <Route path="/case-study/1" element={<CaseStudy1Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-study/2" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-study/3" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/case-studies/coretechs" element={<CaseStudy1Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/case-studies/accenture" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/case-studies/jim-beam" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/fractional-saas-designer" element={<FractionalPage setCurrentPage={setCurrentPage} />} />
           <Route path="/agentic-experience" element={<AgenticExperiencePage setCurrentPage={setCurrentPage} />} />
           <Route path="/ai-experience-architecture" element={<AIExperienceArchitecturePageWrapper setCurrentPage={setCurrentPage} />} />
@@ -860,6 +907,10 @@ function App() {
           <Route path="/services/speaking-workshops" element={<SpeakingWorkshopsPage setCurrentPage={setCurrentPage} />} />
           <Route path="/services/strategy-sessions" element={<StrategySessionsPage setCurrentPage={setCurrentPage} />} />
           <Route path="/work-with-me" element={<WorkWithMePage setCurrentPage={setCurrentPage} />} />
+          <Route path="/service-offerings" element={<ServiceOfferingsPage setCurrentPage={setCurrentPage} />} />
+          {serviceOfferings.map((offering) => (
+            <Route key={offering.slug} path={offeringPath(offering.slug)} element={<ServiceOfferingsPage slug={offering.slug} setCurrentPage={setCurrentPage} />} />
+          ))}
           <Route path="/perspectives" element={<PerspectivesPage setCurrentPage={setCurrentPage} />} />
           <Route path="/perspectives/our-philosophy" element={<MyPhilosophyPage setCurrentPage={setCurrentPage} />} />
           <Route path="/perspectives/how-we-work" element={<HowIWorkPage setCurrentPage={setCurrentPage} />} />

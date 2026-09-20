@@ -57,6 +57,15 @@ Redesigned the employee onboarding experience for 500,000+ global Accenture empl
 ### Jim Beam Cocktail Project
 A mobile-first cocktail recipe discovery platform for Suntory Lab and Jim Beam, built to move users from browse to pick to pour in a few taps.
 
+## Scoped Service Offerings
+
+- **Agentic UX / Trust Audit** — A focused one-to-two-week review of trust calibration, human oversight, confidence signals, and design-system consistency.
+- **Agentic Design System Build** — A scoped component, pattern, documentation, and adoption engagement for teams building AI-native products.
+- **Fractional Agentic AI Design Director** — Embedded senior design leadership for product direction, design reviews, and team enablement.
+- **Workshops / Team Enablement** — Facilitated sessions that build a shared language for trustworthy AI experiences.
+- **Agentic Ops & Governance** — A proposed post-launch experience-governance retainer; currently on hold.
+- **Advisory Hours** — Capped strategic support for existing clients.
+
 ### Dremel.com Redesign
 An e-commerce redesign that increased desktop conversion 177% and mobile conversion 242% through user-centered product discovery.
 
@@ -90,9 +99,14 @@ An e-commerce redesign that increased desktop conversion 177% and mobile convers
 - [Strategy Sessions](https://godesign.one/services/strategy-sessions)
 - [Speaking & Workshops](https://godesign.one/services/speaking-workshops)
 - [Work With Us](https://godesign.one/work-with-me)
+- [Service Offerings](https://godesign.one/service-offerings)
+- [Agentic UX / Trust Audit](https://godesign.one/services/agentic-ux-audit)
+- [Agentic Design System Build](https://godesign.one/services/agentic-design-system-build)
+- [Fractional Agentic AI Design Director](https://godesign.one/services/fractional-agentic-ai-director)
+- [Workshops / Team Enablement](https://godesign.one/services/workshops-team-enablement)
 - [Perspectives](https://godesign.one/perspectives)
 - [About](https://godesign.one/about)
 - [Contact](https://godesign.one/contact)
-- [CoreTechs Case Study](https://godesign.one/case-study/1)
-- [Accenture Case Study](https://godesign.one/case-study/2)
-- [Jim Beam Case Study](https://godesign.one/case-study/3)
+- [CoreTechs Case Study](https://godesign.one/case-studies/coretechs)
+- [Accenture Case Study](https://godesign.one/case-studies/accenture)
+- [Jim Beam Case Study](https://godesign.one/case-studies/jim-beam)

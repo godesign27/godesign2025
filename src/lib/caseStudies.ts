@@ -13,6 +13,10 @@ export const CASE_STUDY_ROUTES: Record<string, { page: string; path: string }> =
     page: 'case-study-3',
     path: '/case-studies/jim-beam',
   },
+  'ZS Associates - Agentic Design System': {
+    page: 'case-study-zs',
+    path: '/case-studies/zs',
+  },
 };
 
 export function getCaseStudyRoute(title: string): { page: string; path: string } {

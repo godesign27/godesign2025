@@ -24,6 +24,8 @@ import MobileWebDesign from './components/MobileWebDesign';
 import CaseStudyDetail from './components/CaseStudyDetail';
 import CaseStudyDetail2 from './components/CaseStudyDetail2';
 import CaseStudyDetail3 from './components/CaseStudyDetail3';
+import CaseStudyZS from './components/CaseStudyZS';
+import CaseStudyAccess from './components/CaseStudyAccess';
 import FractionalSaasDesigner from './components/FractionalSaasDesigner';
 import AgenticExperience from './components/AgenticExperience';
 import AIExperienceArchitecturePage from './components/AIExperienceArchitecturePage';
@@ -483,6 +485,29 @@ function CaseStudy3Page({ setCurrentPage, setSelectedCaseStudy }: {
   );
 }
 
+function CaseStudyZSPage({ setCurrentPage, setSelectedCaseStudy }: {
+  setCurrentPage: (page: string) => void;
+  setSelectedCaseStudy: (study: string | null) => void;
+}) {
+  return (
+    <>
+      <SEOHead
+        title="Protected ZS Associates Case Study | GO Design"
+        description="This ZS Associates case study is shared by request."
+        canonical="/case-studies/zs"
+        noindex
+      />
+      <CaseStudyAccess
+        id="zs"
+        title="ZS Associates"
+        description="This case study covers client work and is shared by request. Enter the passphrase to continue."
+      >
+        <CaseStudyZS setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />
+      </CaseStudyAccess>
+    </>
+  );
+}
+
 function FractionalPage({ setCurrentPage }: { setCurrentPage: (page: string) => void }) {
   return (
     <>
@@ -814,6 +839,7 @@ function App() {
       'case-study-1': '/case-studies/coretechs',
       'case-study-2': '/case-studies/accenture',
       'case-study-3': '/case-studies/jim-beam',
+      'case-study-zs': '/case-studies/zs',
       'fractional-saas-designer': '/fractional-saas-designer',
       'agentic-experience': '/agentic-experience',
       'ai-experience-architecture': '/ai-experience-architecture',
@@ -856,6 +882,7 @@ function App() {
       '/case-studies/coretechs': 'case-study-1',
       '/case-studies/accenture': 'case-study-2',
       '/case-studies/jim-beam': 'case-study-3',
+      '/case-studies/zs': 'case-study-zs',
       '/fractional-saas-designer': 'fractional-saas-designer',
       '/agentic-experience': 'agentic-experience',
       '/ai-experience-architecture': 'ai-experience-architecture',
@@ -900,6 +927,7 @@ function App() {
           <Route path="/case-studies/coretechs" element={<CaseStudy1Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-studies/accenture" element={<CaseStudy2Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/case-studies/jim-beam" element={<CaseStudy3Page setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
+          <Route path="/case-studies/zs" element={<CaseStudyZSPage setCurrentPage={setCurrentPage} setSelectedCaseStudy={setSelectedCaseStudy} />} />
           <Route path="/fractional-saas-designer" element={<FractionalPage setCurrentPage={setCurrentPage} />} />
           <Route path="/agentic-experience" element={<AgenticExperiencePage setCurrentPage={setCurrentPage} />} />
           <Route path="/ai-experience-architecture" element={<AIExperienceArchitecturePageWrapper setCurrentPage={setCurrentPage} />} />

@@ -8,6 +8,7 @@ interface SEOHeadProps {
   ogType?: string;
   keywords?: string;
   structuredData?: object | object[];
+  noindex?: boolean;
 }
 
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
@@ -56,6 +57,7 @@ export default function SEOHead({
   ogType = 'website',
   keywords,
   structuredData,
+  noindex = false,
 }: SEOHeadProps) {
   useEffect(() => {
     const fullUrl = `${BASE_URL}${canonical}`;
@@ -63,6 +65,11 @@ export default function SEOHead({
     document.title = title;
 
     setMetaTag('description', description, true);
+    setMetaTag(
+      'robots',
+      noindex ? 'noindex, nofollow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+      true,
+    );
     if (keywords) setMetaTag('keywords', keywords, true);
 
     setMetaTag('og:title', title);
@@ -87,8 +94,7 @@ export default function SEOHead({
     return () => {
       removeStructuredData('page');
     };
-  }, [title, description, canonical, ogType, keywords, structuredData]);
+  }, [title, description, canonical, ogType, keywords, structuredData, noindex]);
 
   return null;
 }
-
